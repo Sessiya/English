@@ -9,7 +9,7 @@ async function checkAnswer() {
     responseDiv.innerHTML = "Checking...";  // Javobni tekshirib bo'layotganini bildirish
 
     try {
-        // Backendga so'rov yuborish
+        // Backendga so'rov yuborish (yangi yo'l '/check-text' deb to'g'irlash)
         const response = await fetch('http://localhost:3000/check-text', {
             method: 'POST',
             headers: {
