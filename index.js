@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(cors()); // CORSni yoqish
+app.use(cors({ origin: '*' })); // Barcha manbalar uchun ruxsat berish
 
 // Root (/) yo'lini belgilash
 app.get('/', (req, res) => {
@@ -34,7 +34,7 @@ app.post('/check-text', async (req, res) => {
     const generatedText = response.data.choices[0].text.trim();
 
     // Foydalanuvchining javobini va OpenAI javobini solishtirish
-    const correct = generatedText.toLowerCase() === "i am a student.";  // Bu yerda siz tekshirmoqchi bo'lgan to'g'ri javobni o'zgartirishingiz mumkin
+    const correct = generatedText.toLowerCase() === "i am a student.";  // To'g'ri javobni o'zgartirish mumkin
 
     res.json({
       correct,
