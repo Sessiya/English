@@ -10,7 +10,7 @@ async function checkAnswer() {
 
     try {
         // Backendga so'rov yuborish
-        const response = await fetch('http://localhost:3000/check-text', {
+        const response = await fetch('https://english-1.onrender.com/check-text', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
