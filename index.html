@@ -3,77 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Lesson 1</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #4a90e2;
-            text-align: center;
-        }
-        h2 {
-            color: #34495e;
-        }
-        .section {
-            margin-top: 20px;
-        }
-        .highlight {
-            color: #e74c3c;
-            font-weight: bold;
-        }
-        .example {
-            background-color: #ecf0f1;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-    </style>
+    <title>English Lesson - Check Your Answer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Lesson 1: Introduction to Basic English</h1>
+        <h1>First Lesson: Simple Sentences</h1>
+        <p>Let's start with some basic sentences. Translate the following sentence:</p>
+        <p><strong>I am a student.</strong></p>
+        <p>Write your translation below:</p>
+
+        <textarea id="userAnswer" rows="4" cols="50" placeholder="Write your answer here"></textarea><br>
+        <button onclick="checkAnswer()">Check Answer</button>
         
-        <div class="section">
-            <h2>Greetings</h2>
-            <p>Englishda qanday salomlashish mumkin:</p>
-            <div class="example">
-                <p><span class="highlight">Hello</span> - Salom</p>
-                <p><span class="highlight">Good morning</span> - Xayrli tong</p>
-                <p><span class="highlight">Good evening</span> - Xayrli kech</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Introducing Yourself</h2>
-            <p>O'zingizni qanday tanishtirish haqida misollar:</p>
-            <div class="example">
-                <p>My name is <span class="highlight">[Your Name]</span>. - Mening ismim [Sizning ismingiz].</p>
-                <p>I am from <span class="highlight">[Your Country]</span>. - Men [Sizning mamlakatingiz] danman.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Common Phrases</h2>
-            <p>Ingliz tilidagi asosiy iboralar:</p>
-            <div class="example">
-                <p><span class="highlight">Thank you</span> - Rahmat</p>
-                <p><span class="highlight">Please</span> - Iltimos</p>
-                <p><span class="highlight">Excuse me</span> - Kechirasiz</p>
-            </div>
-        </div>
+        <div id="response"></div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
