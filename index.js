@@ -7,7 +7,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(cors({ origin: '*' })); // Barcha manbalar uchun ruxsat berish
+app.use(cors({ origin: 'https://Sessiya.github.io/English' })); // CORSni sozlash
 
 // Root (/) yo'lini belgilash
 app.get('/', (req, res) => {
