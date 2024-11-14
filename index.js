@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const axios = require('axios'); // OpenAI API
+const axios = require('axios');
+const cors = require('cors'); // CORSni yoqish
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+app.use(cors()); // CORSni yoqish
 
 // Root (/) yo'lini belgilash
 app.get('/', (req, res) => {
@@ -39,6 +41,7 @@ app.post('/check-text', async (req, res) => {
       message: correct ? "Correct answer!" : "Incorrect answer. Try again."
     });
   } catch (error) {
+    console.error(error); // Xatolikni konsolga chiqarish
     res.status(500).send('API so‘rovida xato yuz berdi');
   }
 });
