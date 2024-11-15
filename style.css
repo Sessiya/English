@@ -1,0 +1,149 @@
+/* Global Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #f0f4f8);
+    color: #4A4A4A;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+header {
+    background: linear-gradient(135deg, #007acc, #00c6ff);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 5px solid #005f8f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 50px;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Alphabet Section */
+.alphabet .letter {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 15px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.alphabet .letter:hover {
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.unli {
+    background-color: #ff9a8b; /* Vowels */
+}
+
+.undosh {
+    background-color: #83b9f2; /* Consonants */
+}
+
+/* Button Styles */
+button {
+    padding: 12px 20px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #005f8f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Textarea Styles */
+textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    border-color: #007acc;
+    outline: none;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background: linear-gradient(135deg, #007acc, #00c6ff);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth scroll effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+    .alphabet .letter {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    button {
+        font-size: 16px;
+    }
+    textarea {
+        font-size: 16px;
+    }
+    section {
+        padding: 20px;
+    }
+}
