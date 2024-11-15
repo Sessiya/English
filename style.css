@@ -158,6 +158,12 @@ html {
         font-size: 16px; /* Adjust font size for mobile */
     }
 
+    iframe {
+        width: 100%; /* Make iframe responsive */
+        height: 300px; /* Adjust iframe height */
+        border: none; /* Remove iframe border */
+    }
+
     /* Adjust layout for better mobile viewing */
     .alphabet {
         display: flex;
@@ -190,6 +196,11 @@ html {
     textarea {
         font-size: 17px;
     }
+
+    iframe {
+        width: 100%; /* Full width for iframe on tablets */
+        height: 400px;
+    }
 }
 
 /* For large desktop screens (min-width: 1025px) */
@@ -215,6 +226,11 @@ html {
 
     textarea {
         font-size: 18px;
+    }
+
+    iframe {
+        width: 100%; /* Full width for iframe on desktop */
+        height: 500px;
     }
 
     .alphabet {
