@@ -1,54 +1,126 @@
-/* Media Queries for Responsive Design */
-
-/* Mobil qurilmalar uchun (max-width: 768px) */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 24px; /* Sarlavha shriftini kichraytirish */
-    }
-
-    nav ul {
-        text-align: center; /* Menyu elementlarini markazlashtirish */
-    }
-
-    nav ul li {
-        display: block; /* Menyu elementlarini bir-birining ostiga qo'yish */
-        margin: 10px 0; /* Menyu elementlar orasiga bo'shliq qo'shish */
-    }
-
-    .content {
-        padding: 15px; /* Kontent uchun bo'shliqni kichraytirish */
-    }
-}
-
-/* Desktop qurilmalar uchun (min-width: 769px) */
-@media (min-width: 769px) {
-    .content {
-        max-width: 800px; /* Maksimal kenglikni belgilash */
-        margin: 0 auto; /* Kontentni markazlashtirish */
-    }
-}
-body {
-    font-family: 'Lato', sans-serif;
-    background: linear-gradient(135deg, #ffffff, #f0f4f8);
-    color: #4A4A4A;
+/* Global styling */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    line-height: 1.6;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+}
+
+.featured h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.news {
+    display: flex;
+    gap: 20px;
+}
+
+.news-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries */
+
+/* For mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .news {
+        flex-direction: column;
+    }
+
+    .news-item {
+        margin-bottom: 20px;
+    }
+}
+
+/* For desktop screens (min-width: 769px) */
+@media (min-width: 769px) {
+    .news {
+        display: flex;
+    }
+
+    .news-item {
+        flex: 1;
+        margin-bottom: 0;
+    }
+}
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-}
-
-header {
-    background: linear-gradient(135deg, #007acc, #00c6ff);
-    color: white;
-    padding: 30px 20px;
-    text-align: center;
-    border-bottom: 5px solid #005f8f;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -57,11 +129,6 @@ header h1 {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
-main {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
 
 section {
     margin-bottom: 50px;
@@ -139,15 +206,6 @@ textarea {
 textarea:focus {
     border-color: #007acc;
     outline: none;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    background: linear-gradient(135deg, #007acc, #00c6ff);
-    color: white;
-    padding: 15px 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Smooth scroll effect */
