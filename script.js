@@ -109,10 +109,10 @@ function deleteTask(index) {
     loadTasks(); // Reload tasks
 }
 
+    // Yilni olish va o'zgartirish
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
 // On window load, load tasks
 window.onload = function() {
     loadTasks();
-
-    // Yilni olish va o'zgartirish
-    document.getElementById('current-year').textContent = new Date().getFullYear();
 };
