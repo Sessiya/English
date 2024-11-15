@@ -1,74 +1,30 @@
-/* Default styles for desktop */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+/* Media Queries for Responsive Design */
 
-/* Container for the alphabet */
-.alphabet {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* Letter styling */
-.letter {
-    margin: 5px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    border: 2px solid #4CAF50;
-}
-
-/* Speaking section styling */
-.speaking-item {
-    margin: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.speaking-item button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Responsive layout for mobile */
-@media screen and (max-width: 768px) {
-    /* Adjust the font size for mobile devices */
-    h1, h2 {
-        font-size: 18px;
+/* Mobil qurilmalar uchun (max-width: 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px; /* Sarlavha shriftini kichraytirish */
     }
 
-    /* Alphabet letters stack vertically on mobile */
-    .alphabet {
-        flex-direction: column;
-        align-items: center;
+    nav ul {
+        text-align: center; /* Menyu elementlarini markazlashtirish */
     }
 
-    /* Adjust letter size for mobile */
-    .letter {
-        font-size: 14px;
-        width: auto;
+    nav ul li {
+        display: block; /* Menyu elementlarini bir-birining ostiga qo'yish */
+        margin: 10px 0; /* Menyu elementlar orasiga bo'shliq qo'shish */
     }
 
-    /* Adjust padding for speaking items */
-    .speaking-item {
-        padding: 10px;
+    .content {
+        padding: 15px; /* Kontent uchun bo'shliqni kichraytirish */
     }
+}
 
-    .speaking-item button {
-        width: 100%;
-        padding: 12px;
+/* Desktop qurilmalar uchun (min-width: 769px) */
+@media (min-width: 769px) {
+    .content {
+        max-width: 800px; /* Maksimal kenglikni belgilash */
+        margin: 0 auto; /* Kontentni markazlashtirish */
     }
 }
 body {
