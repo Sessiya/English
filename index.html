@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'zbekcha sahifa</title>
+    <style>
+        /* Tilni tanlash uchun select elementining dizayni */
+        #language-selector {
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 25px;
+            border: 2px solid #4CAF50; /* Sariq chegarasi */
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 20px;  /* Yuqori burchakdan 20px */
+            right: 20px; /* O'ng burchakdan 20px */
+            z-index: 1000; /* O'ziga xos yuqori qatlam */
+        }
+
+        /* Hover qilishda border va background rangini o'zgartirish */
+        #language-selector:hover {
+            border-color: #45a049;
+            background-color: #e7f5e1;
+        }
+
+        /* Active holatda */
+        #language-selector:active {
+            background-color: #c9e4b8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        // Sahifa yuklanganda tilni tekshirib, tanlangan tilni saqlash
+        window.onload = function() {
+            const language = localStorage.getItem('language') || 'uz'; // Agar tilni saqlanmagan bo'lsa, o'zbekcha bo'lsin
+            document.getElementById('language-selector').value = language;
+        };
+
+        // Tilni o'zgartirganda, sahifani almashtirish
+        function changeLanguage() {
+            const language = document.getElementById('language-selector').value;
+            localStorage.setItem('language', language); // Tanlangan tilni localStorage'da saqlaymiz
+            loadLanguagePage(language);
+        }
+
+        // Tanlangan tilga mos sahifani yuklash
+        function loadLanguagePage(language) {
+            if (language === 'uz') {
+                window.location.href = '1_uz.html'; // O'zbekcha sahifa
+            } else if (language === 'en') {
+                window.location.href = '1_en.html'; // Inglizcha sahifa
+            } else if (language === 'ru') {
+                window.location.href = '1_ru.html'; // Ruscha sahifa
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Tilni tanlash uchun select element -->
+    <select id="language-selector" onchange="changeLanguage()">
+        <option value="uz" selected>O'zbekcha</option>
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+    </select>
+
+    <h1>O'zbekcha sahifa</h1>
+</body>
+</html>
