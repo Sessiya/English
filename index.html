@@ -5,33 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingliz Tili - English language - Английский язык</title>
     <style>
-        /* Umumiy body uchun ba'zi uslublar */
+        /* Barcha elementlar uchun umumiy uslublar */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9; /* Yengil fon rangi */
+            background-color: #f4f4f9; /* Oq fon rangi */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            text-align: center;
         }
 
-        /* Til tanlash joyini yanada ko'rinadigan qilish uchun */
+        /* Til tanlash joyi uchun maxsus uslub */
         #language-selector {
-            font-size: 16px;
+            font-size: 18px;
             padding: 10px;
-            margin: 10px;
             width: 200px;
             cursor: pointer;
             background-color: #fff; /* Oq fon rangi */
             border: 2px solid #ccc; /* Chegara rangi */
-            border-radius: 5px; /* Burchaklar yumshatilgan */
+            border-radius: 5px; /* Burchaklarni yumshatish */
         }
 
-        /* Agar element yashirin bo'lsa, ko'rsatilishini ta'minlash */
-        select {
-            display: inline-block;
+        /* Tanlangan element uchun fon rangi */
+        #language-selector:focus {
+            outline: none;
+            border-color: #5b9bd5;
         }
     </style>
     <script>
@@ -62,6 +63,7 @@
     </script>
 </head>
 <body>
+    <!-- Tilni tanlash joyi -->
     <select id="language-selector" onchange="changeLanguage()">
         <option value="uz" selected>O'zbekcha</option>
         <option value="en">English</option>
