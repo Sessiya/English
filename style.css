@@ -1,3 +1,22 @@
+#custom-style-container #language-selector {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#custom-style-container button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#custom-style-container button:hover {
+    background-color: #005fa3;
+}
 /* Tungi rejim uchun asosiy ranglar */
 .dark-mode {
     background: linear-gradient(135deg, #2e3b4e, #1b2430);
