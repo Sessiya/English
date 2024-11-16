@@ -4,38 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingliz Tili - English language - Английский язык</title>
+    <style>
+        /* Til tanlash joyini yanada ko'rinadigan qilish uchun */
+        #language-selector {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px;
+            width: 150px;
+            cursor: pointer;
+        }
+    </style>
     <script>
         // Sahifa yuklanganda tilni tekshirib, tanlangan tilni saqlash
-window.onload = function() {
-  const language = localStorage.getItem('language') || 'uz'; // Agar tilni saqlanmagan bo'lsa, o'zbekcha bo'lsin
-  document.getElementById('language-selector').value = language;
-  loadLanguagePage(language);
-};
+        window.onload = function() {
+            const language = localStorage.getItem('language') || 'uz'; // Agar tilni saqlanmagan bo'lsa, o'zbekcha bo'lsin
+            document.getElementById('language-selector').value = language;
+            loadLanguagePage(language);
+        };
 
-// Tilni o'zgartirganda, sahifani almashtirish
-function changeLanguage() {
-  const language = document.getElementById('language-selector').value;
-  localStorage.setItem('language', language);
-  loadLanguagePage(language);
-}
+        // Tilni o'zgartirganda, sahifani almashtirish
+        function changeLanguage() {
+            const language = document.getElementById('language-selector').value;
+            localStorage.setItem('language', language);
+            loadLanguagePage(language);
+        }
 
-// Tanlangan tilga mos sahifani yuklash
-function loadLanguagePage(language) {
-  if (language === 'uz') {
-    window.location.href = '1_uz.html'; // O'zbekcha sahifa
-  } else if (language === 'en') {
-    window.location.href = '1_en.html'; // Inglizcha sahifa
-  } else if (language === 'ru') {
-    window.location.href = '1_ru.html'; // Ruscha sahifa
-  }
-}
+        // Tanlangan tilga mos sahifani yuklash
+        function loadLanguagePage(language) {
+            if (language === 'uz') {
+                window.location.href = '1_uz.html'; // O'zbekcha sahifa
+            } else if (language === 'en') {
+                window.location.href = '1_en.html'; // Inglizcha sahifa
+            } else if (language === 'ru') {
+                window.location.href = '1_ru.html'; // Ruscha sahifa
+            }
+        }
     </script>
 </head>
 <body>
     <select id="language-selector" onchange="changeLanguage()">
-  <option value="uz" selected>O'zbekcha</option>
-  <option value="en">English</option>
-  <option value="ru">Русский</option>
+        <option value="uz" selected>O'zbekcha</option>
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
     </select>
 </body>
 </html>
