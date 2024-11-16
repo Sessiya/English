@@ -1,30 +1,3 @@
-const translations = {
-    uz: {
-        "alphabet-title": "Alifbo:",
-        "alphabet-note": "Harflar ustiga bosish orqali ularni talaffuzini eshitish mumkin!",
-        "alphabet-desc": "Ingliz tili alifbosi 26 ta harfdan iborat bo‘lib...",
-    },
-    ru: {
-        "alphabet-title": "Алфавит:",
-        "alphabet-note": "Нажмите на буквы, чтобы услышать их произношение!",
-        "alphabet-desc": "Английский алфавит состоит из 26 букв...",
-    },
-    en: {
-        "alphabet-title": "Alphabet:",
-        "alphabet-note": "Click on the letters to hear their pronunciation!",
-        "alphabet-desc": "The English alphabet consists of 26 letters...",
-    },
-};
-
-function changeLanguage(lang) {
-    const elements = document.querySelectorAll("[data-lang]");
-    elements.forEach((element) => {
-        const key = element.getAttribute("data-lang");
-        if (translations[lang][key]) {
-            element.textContent = translations[lang][key];
-        }
-    });
-}
 // Theme toggle button
 const themeToggle = document.getElementById("theme-toggle");
 
