@@ -1,3 +1,32 @@
+        /* Tilni tanlash uchun select elementining dizayni */
+        #language-selector {
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 25px;
+            border: 2px solid #4CAF50; /* Sariq chegarasi */
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 20px;  /* Yuqori burchakdan 20px */
+            right: 20px; /* O'ng burchakdan 20px */
+            z-index: 1000; /* O'ziga xos yuqori qatlam */
+        }
+
+        /* Hover qilishda border va background rangini o'zgartirish */
+        #language-selector:hover {
+            border-color: #45a049;
+            background-color: #e7f5e1;
+        }
+
+        /* Active holatda */
+        #language-selector:active {
+            background-color: #c9e4b8;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
 /* Tungi rejim uchun asosiy ranglar */
 .dark-mode {
     background: linear-gradient(135deg, #2e3b4e, #1b2430);
