@@ -5,13 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingliz Tili - English language - Английский язык</title>
     <style>
+        /* Umumiy body uchun ba'zi uslublar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* Yengil fon rangi */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
         /* Til tanlash joyini yanada ko'rinadigan qilish uchun */
         #language-selector {
             font-size: 16px;
             padding: 10px;
             margin: 10px;
-            width: 150px;
+            width: 200px;
             cursor: pointer;
+            background-color: #fff; /* Oq fon rangi */
+            border: 2px solid #ccc; /* Chegara rangi */
+            border-radius: 5px; /* Burchaklar yumshatilgan */
+        }
+
+        /* Agar element yashirin bo'lsa, ko'rsatilishini ta'minlash */
+        select {
+            display: inline-block;
         }
     </style>
     <script>
