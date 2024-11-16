@@ -1,3 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+#modeButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#modeButton:hover {
+    background-color: #0056b3;
+}
+
 /* Global Styles */
 body {
     font-family: 'Lato', sans-serif;
