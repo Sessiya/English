@@ -5,6 +5,30 @@ function speakLetter(letter) {
     window.speechSynthesis.speak(speech);
 }
 
+const modeButton = document.getElementById('modeButton');
+const body = document.body;
+
+// LocalStorage-dagi ma'lumotni o'qish va dastlabki rejimni o'rnatish
+const savedMode = localStorage.getItem('theme');
+if (savedMode === 'dark-mode') {
+    body.classList.add('dark-mode');
+    modeButton.textContent = 'Kunduzgi rejim';
+} else {
+    modeButton.textContent = 'Tungi rejim';
+}
+
+// Tugma bosilganda rejimni almashtirish
+modeButton.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        modeButton.textContent = 'Kunduzgi rejim';
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        modeButton.textContent = 'Tungi rejim';
+        localStorage.setItem('theme', 'light-mode');
+    }
+});
+
 // Speak Word
 function speakWord(word) {
     const speech = new SpeechSynthesisUtterance(word);
