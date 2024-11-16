@@ -1,3 +1,30 @@
+/* Tungi rejim uchun asosiy ranglar */
+.dark-mode {
+    background: linear-gradient(135deg, #2e3b4e, #1b2430);
+    color: #ffffff;
+}
+
+/* Header, tugmalar va boshqa elementlar uchun stil */
+.dark-mode header {
+    background: linear-gradient(135deg, #1a2938, #16222b);
+    border-bottom-color: #0e1620;
+}
+
+.dark-mode button {
+    background-color: #2e3b4e;
+    color: #ffffff;
+}
+
+.dark-mode textarea {
+    background-color: #3c4a5a;
+    color: #ffffff;
+    border-color: #5a6a7b;
+}
+
+.dark-mode section {
+    background-color: #2b3648;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 /* Global Styles */
 body {
     font-family: 'Lato', sans-serif;
