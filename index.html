@@ -1,58 +1,42 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingliz Tili - English language - Английский язык</title>
+    <title>Til Tanlash</title>
     <style>
-        /* Barcha elementlar uchun umumiy uslublar */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9; /* Oq fon rangi */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            text-align: center;
+            background-color: #f4f4f9; /* Orqa fon */
         }
 
-        /* Til tanlash joyi uchun maxsus uslub */
-        #language-selector {
+        select {
             font-size: 18px;
             padding: 10px;
             width: 200px;
             cursor: pointer;
-            background-color: #fff; /* Oq fon rangi */
-            border: 2px solid #ccc; /* Chegara rangi */
-            border-radius: 5px; /* Burchaklarni yumshatish */
-        }
-
-        /* Tanlangan element uchun fon rangi */
-        #language-selector:focus {
-            outline: none;
-            border-color: #5b9bd5;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 5px;
         }
     </style>
     <script>
-        // Sahifa yuklanganda tilni tekshirib, tanlangan tilni saqlash
+        // Sahifa yuklanayotganda tanlangan tilni tekshirish
         window.onload = function() {
-            const language = localStorage.getItem('language') || 'uz'; // Agar tilni saqlanmagan bo'lsa, o'zbekcha bo'lsin
+            const language = localStorage.getItem('language') || 'uz';  // O'zbekcha til bo'lsa, default qilib olamiz
             document.getElementById('language-selector').value = language;
-            loadLanguagePage(language);
         };
 
-        // Tilni o'zgartirganda, sahifani almashtirish
+        // Til o'zgarganda, tilni saqlash va sahifani o'zgartirish
         function changeLanguage() {
             const language = document.getElementById('language-selector').value;
-            localStorage.setItem('language', language);
-            loadLanguagePage(language);
-        }
-
-        // Tanlangan tilga mos sahifani yuklash
-        function loadLanguagePage(language) {
+            localStorage.setItem('language', language); // Tilni saqlaymiz
             if (language === 'uz') {
                 window.location.href = '1_uz.html'; // O'zbekcha sahifa
             } else if (language === 'en') {
@@ -64,7 +48,6 @@
     </script>
 </head>
 <body>
-    <!-- Tilni tanlash joyi -->
     <select id="language-selector" onchange="changeLanguage()">
         <option value="uz" selected>O'zbekcha</option>
         <option value="en">English</option>
