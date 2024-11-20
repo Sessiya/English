@@ -3,102 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1-kun: Ingliz tiliga kirish</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ingliz tiliga kirish: Kengaytirilgan dars</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <style>
+        /* Tungi rejim va asosiy dizayn */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #007bff;
+        }
+
+        body.dark-mode {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --accent-color: #1e90ff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color);
+        }
+
+        button, input {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid var(--accent-color);
+            border-radius: 5px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        button:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        .toggle-dark-mode {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
+    <button class="toggle-dark-mode" onclick="toggleDarkMode()">🌙 Tungi rejim</button>
     <header>
-        <h1>Bugungi birinchi darsimizni boshlaymiz</h1>
+        <h1>Ingliz tiliga kirish: Birinchi darsimiz</h1>
     </header>
     <main>
         <section>
-            <h2>1-kun: Ingliz tiliga kirish</h2>
-            <h3>Mavzu: Alphabet, Oddiy So‘zlar va Sodda Gaplar</h3>
-            <p><strong>Maqsad:</strong></p>
+            <h2>Darsning umumiy ko‘rinishi</h2>
+            <p>
+                Bugungi darsimizda siz ingliz tilining eng asosiy elementlarini o‘rganasiz: 
+                alfavit, oddiy so‘zlar, va sodda gaplar. Ushbu dars talabalarga talaffuzni yaxshilash, 
+                lug‘at boyligini oshirish va oddiy muloqotni boshlash imkonini beradi.
+            </p>
+        </section>
+
+        <section>
+            <h2>1. Alfavit va Uning Talaffuzi</h2>
+            <p><strong>Vazifalar:</strong></p>
             <ul>
-                <li>Ingliz tilidagi harflar talaffuzini bilish.</li>
-                <li>Birinchi 10 ta so‘z va oddiy gaplarni o‘rganish.</li>
-                <li>Talaffuzni yaxshilash.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>1. Harflar va Tovushlar</h3>
-            <p><strong>Vazifa:</strong></p>
-            <ol>
-                <li>YouTube’da quyidagi videoni tomosha qiling: 
-                    <em>"English Alphabet Pronunciation"</em> 
-                    (<a href="https://www.youtube.com/results?search_query=Rachel's+English+alphabet" target="_blank">Rachel’s English</a> yoki 
-                    <a href="https://www.youtube.com/results?search_query=BBC+Learning+English+alphabet" target="_blank">BBC Learning English</a> tavsiya qilinadi).</li>
-                <li>Har bir harfni talaffuz qiling:
-                    <p><strong>A, B, C, D, E, F, G...</strong></p>
+                <li>Ingliz alifbosini to‘liq o‘rganish va talaffuz qilish.</li>
+                <li>YouTube'dagi quyidagi videolarni tomosha qiling:
+                    <a href="https://www.youtube.com/results?search_query=English+Alphabet+Pronunciation" target="_blank">Rachel’s English</a> yoki 
+                    <a href="https://www.youtube.com/results?search_query=BBC+Learning+English+alphabet" target="_blank">BBC Learning English</a>.
                 </li>
-                <li>Harflarni yozing va talaffuzni mashq qiling.</li>
-            </ol>
+                <li>Har bir harfni talaffuz qiling va yozing:</li>
+            </ul>
+            <p><strong>Alfavit:</strong></p>
+            <div>
+                <button onclick="playAudio('audio/A.mp3')">A</button>
+                <button onclick="playAudio('audio/B.mp3')">B</button>
+                <button onclick="playAudio('audio/C.mp3')">C</button>
+                <!-- Harf tugmalari davom etadi... -->
+            </div>
         </section>
 
         <section>
-            <h3>2. So‘zlar va Ularning Mazmuni</h3>
-            <p><strong>So‘zlar:</strong> Bugun quyidagi 10 ta so‘zni yodlashimiz kerak:</p>
+            <h2>2. So‘zlar va Ularning Gaplari</h2>
+            <p>Quyidagi so‘zlarni va ularning mazmunini o‘rganing:</p>
             <ul>
-                <li>apple (olma)</li>
-                <li>ball (to‘p)</li>
-                <li>cat (mushuk)</li>
-                <li>dog (it)</li>
-                <li>egg (tuxum)</li>
-                <li>fish (baliq)</li>
-                <li>house (uy)</li>
-                <li>jump (sakramoq)</li>
-                <li>king (shoh)</li>
-                <li>love (sevgi)</li>
+                <li>apple (olma) - <button onclick="playAudio('audio/apple.mp3')">Eshitish</button></li>
+                <li>ball (to‘p) - <button onclick="playAudio('audio/ball.mp3')">Eshitish</button></li>
+                <li>cat (mushuk) - <button onclick="playAudio('audio/cat.mp3')">Eshitish</button></li>
+                <!-- So‘zlar davom etadi... -->
             </ul>
-            <p><strong>Yodlash usuli:</strong></p>
-            <ul>
-                <li>Har bir so‘zni yozing.</li>
-                <li>Har bir so‘z bilan oddiy gap tuzing. 
-                    <p><strong>Misollar:</strong></p>
-                    <ul>
-                        <li>I eat an apple.</li>
-                        <li>The dog runs.</li>
-                        <li>I love my house.</li>
-                    </ul>
-                </li>
-            </ul>
+            <p>Har bir so‘z bilan gap tuzing va quyidagi maydonga yozing:</p>
+            <input type="text" placeholder="Masalan: I eat an apple" id="exampleSentence">
+            <button onclick="saveSentence()">Saqlash</button>
         </section>
 
         <section>
-            <h3>3. Tinglash va Takrorlash</h3>
-            <p><strong>Vazifa:</strong></p>
+            <h2>3. Mashqlar</h2>
+            <p>Quyidagi gaplarni tarjima qiling va yozing:</p>
             <ol>
-                <li>Tinglash uchun <em>"Learn English Basic Words"</em> degan oddiy videoni tanlang.</li>
-                <li>Videodagi so‘z va gaplarni qayta-qayta tinglab, takrorlang.</li>
+                <li>The cat is on the table.</li>
+                <li>I have a ball.</li>
+                <li>The king is in the house.</li>
             </ol>
+            <textarea id="translations" placeholder="Bu yerga javoblaringizni yozing..."></textarea>
+            <button onclick="submitTranslations()">Yuborish</button>
         </section>
 
         <section>
-            <h3>4. Mashq va Amaliyot</h3>
-            <ol>
-                <li>Quyidagi gaplarni tarjima qiling va yozing:
-                    <ul>
-                        <li>The cat is on the table.</li>
-                        <li>I have a ball.</li>
-                        <li>The king is in the house.</li>
-                    </ul>
-                </li>
-                <li>O‘zingiz mustaqil 3-5 ta gap tuzing va menga yozib yuboring.</li>
-            </ol>
-        </section>
-
-        <section>
-            <h3>Motivatsiya</h3>
-            <p>Bugun harakatlaringiz boshlanish nuqtasidir. Har bir o‘rganilgan so‘z va gap sizni IELTS maqsadingizga yaqinlashtiradi. Qaysi payt qiyin bo‘lsa, shunchaki davom eting. Siz buni eplaysiz!</p>
-            <p>Ertangi darsda asosiy grammatikani boshlaymiz va yangi so‘zlar o‘rganamiz. Bajarib bo‘lgach, natijalarni yuboring!</p>
+            <h2>Motivatsiya</h2>
+            <p>
+                O‘rganishni boshlash qiyin, ammo har bir kichik qadam sizni muvaffaqiyatga olib boradi. 
+                O‘zingizga ishoning va davom eting! Siz bunga erishasiz!
+            </p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Ingliz tili darslari</p>
+        <p>&copy; 2024 Ingliz tili darslari. Barcha huquqlar himoyalangan.</p>
     </footer>
+
+    <script>
+        // Tungi rejimni yoqish/o‘chirish funksiyasi
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Audio eshitish funksiyasi
+        function playAudio(audioPath) {
+            const audio = new Audio(audioPath);
+            audio.play();
+        }
+
+        // Foydalanuvchi javoblarini saqlash
+        function saveSentence() {
+            const sentence = document.getElementById('exampleSentence').value;
+            alert("Sizning gapingiz saqlandi: " + sentence);
+        }
+
+        function submitTranslations() {
+            const translations = document.getElementById('translations').value;
+            alert("Javoblaringiz yuborildi: " + translations);
+        }
+    </script>
 </body>
 </html>
-  
