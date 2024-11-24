@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>2-Dars: Ingliz tilida asosiy fe'llar</h1>
+        <h1>2-Dars: Ingliz Tilida Oddiy So'zlar</h1>
         <button 
         id="theme-toggle" 
         class="theme-toggle" 
@@ -17,83 +17,88 @@
     </header>
 
     <main>
-        <section id="basic-verbs-section">
-            <h2>Asosiy Fe'llar:</h2>
-            <span class="word">Ingliz tilida ko'p ishlatiladigan ba'zi asosiy fe'llar:</span><br><br>
-            <div class="speaking-item">
-                <span class="word">To be (bo'lish)</span>
-                <button onclick="speakWord('To be')">&#128266;</button>
+        <section id="common-words-section">
+            <h2>Oddiy So'zlar:</h2>
+            <h2 style="font-size: 16px; color: red">So'zlar ustiga bosish orqali ularning talaffuzini eshitish mumkin!</h2><br>
+            <span class="word">Ingliz tilida eng keng tarqalgan so'zlar quyidagilar:</span>
+            <div class="common-words">
+                <div class="word-item" onclick="speakWord('Yes')">Yes</div>
+                <div class="word-item" onclick="speakWord('No')">No</div>
+                <div class="word-item" onclick="speakWord('Please')">Please</div>
+                <div class="word-item" onclick="speakWord('Sorry')">Sorry</div>
+                <div class="word-item" onclick="speakWord('Thank you')">Thank you</div>
+                <div class="word-item" onclick="speakWord('Good morning')">Good morning</div>
+                <div class="word-item" onclick="speakWord('Good night')">Good night</div>
+                <div class="word-item" onclick="speakWord('Goodbye')">Goodbye</div>
+            </div>
+        </section>
+
+        <section id="vocabulary-section">
+            <h2>Yangi So'zlar:</h2>
+            <span class="word">O'rganishga qiziqarli yangi so'zlar:</span>
+            <div class="new-words">
+                <div class="word-item" onclick="speakWord('Book')">Book</div>
+                <div class="word-item" onclick="speakWord('Pen')">Pen</div>
+                <div class="word-item" onclick="speakWord('Table')">Table</div>
+                <div class="word-item" onclick="speakWord('Chair')">Chair</div>
+                <div class="word-item" onclick="speakWord('Window')">Window</div>
+                <div class="word-item" onclick="speakWord('Door')">Door</div>
+                <div class="word-item" onclick="speakWord('Computer')">Computer</div>
+                <div class="word-item" onclick="speakWord('Phone')">Phone</div>
+            </div>
+        </section>
+
+        <section id="sentence-practice-section">
+            <h2>Oddiy Gaplar:</h2>
+            <div class="sentence-item">
+                <span class="sentence">I am a student.</span>
+                <button onclick="speakSentence('I am a student.')">&#128266;</button>
                 <p class="description">
-                    "To be" - <strong>Tarjima:</strong> "Bo'lish" <br>
-                    <strong>Izoh:</strong> Bu fe'l asosan holat yoki mavjudlikni ifodalashda ishlatiladi. "Am I?", "He is", "We are" kabi shakllarda qo'llanadi.
+                    "I am a student." - <strong>Tarjima:</strong> "Men talibman" <br>
+                    <strong>Izoh:</strong> Bu o'zini tanishtirish uchun ishlatiladigan oddiy gap.
                 </p>
             </div>
 
-            <div class="speaking-item">
-                <span class="word">To have (ega bo‘lish)</span>
-                <button onclick="speakWord('To have')">&#128266;</button>
+            <div class="sentence-item">
+                <span class="sentence">You are my friend.</span>
+                <button onclick="speakSentence('You are my friend.')">&#128266;</button>
                 <p class="description">
-                    "To have" - <strong>Tarjima:</strong> "Ega bo'lish" <br>
-                    <strong>Izoh:</strong> Bu fe'l "ega bo‘lish" yoki "bor" ma’nosini anglatadi. Misol: "I have a book."
+                    "You are my friend." - <strong>Tarjima:</strong> "Sen mening do'stimsan" <br>
+                    <strong>Izoh:</strong> Bu gap insonlar o'rtasidagi do'stlikni ifodalash uchun ishlatiladi.
                 </p>
             </div>
 
-            <div class="speaking-item">
-                <span class="word">To do (qilish)</span>
-                <button onclick="speakWord('To do')">&#128266;</button>
+            <div class="sentence-item">
+                <span class="sentence">She is a teacher.</span>
+                <button onclick="speakSentence('She is a teacher.')">&#128266;</button>
                 <p class="description">
-                    "To do" - <strong>Tarjima:</strong> "Qilish" <br>
-                    <strong>Izoh:</strong> Bu fe'l ko‘p ishlatiladigan fe’l bo‘lib, ko‘p hollarda yordamchi fe’l sifatida ishlatiladi. Misol: "Do you like English?"
+                    "She is a teacher." - <strong>Tarjima:</strong> "U o'qituvchi" <br>
+                    <strong>Izoh:</strong> Bu gap insonni yoki biror kasbni ta'riflash uchun ishlatiladi.
                 </p>
             </div>
 
-            <div class="speaking-item">
-                <span class="word">To go (borish)</span>
-                <button onclick="speakWord('To go')">&#128266;</button>
+            <div class="sentence-item">
+                <span class="sentence">I like music.</span>
+                <button onclick="speakSentence('I like music.')">&#128266;</button>
                 <p class="description">
-                    "To go" - <strong>Tarjima:</strong> "Borish" <br>
-                    <strong>Izoh:</strong> Bu fe'l "borish" ma’nosini bildiradi. Misol: "I go to school every day."
-                </p>
-            </div>
-
-            <div class="speaking-item">
-                <span class="word">To eat (yemak)</span>
-                <button onclick="speakWord('To eat')">&#128266;</button>
-                <p class="description">
-                    "To eat" - <strong>Tarjima:</strong> "Yemak" <br>
-                    <strong>Izoh:</strong> Bu fe’l "yemak" ma’nosini bildiradi. Misol: "I eat pizza."
+                    "I like music." - <strong>Tarjima:</strong> "Men musiqa yoqtiraman" <br>
+                    <strong>Izoh:</strong> Bu gap insonning qiziqishlari haqida gapirish uchun ishlatiladi.
                 </p>
             </div>
         </section>
 
-        <section id="video-recommendations">
-            <h2>Video tavsiyalar:</h2>
-            <div class="video-item">
-                <button onclick="window.location.href='https://www.youtube.com/results?search_query=English+verbs'">Watch Video</button>
-                <span class="video-name">English Verbs</span>
-            </div>
-
-            <div class="video-item">
-                <button onclick="window.location.href='https://www.youtube.com/results?search_query=How+to+use+to+be+in+English'">Watch Video</button>
-                <span class="video-name">How to use "To Be" in English</span>
-            </div>
-
-            <div class="video-item">
-                <button onclick="window.location.href='https://www.youtube.com/results?search_query=To+have+and+its+uses+in+English'">Watch Video</button>
-                <span class="video-name">"To Have" and its Uses in English</span>
-            </div>
+        <section id="video-recommendations-section">
+            <h2>Video Tavsiyalar:</h2>
+            <p>Bularni o'rganish uchun foydali videolar:</p>
+            <button onclick="window.location.href='https://www.youtube.com/results?search_query=Learn+English+for+beginners'">Watch Video: Learn English for Beginners</button>
+            <button onclick="window.location.href='https://www.youtube.com/results?search_query=English+pronunciation+for+beginners'">Watch Video: English Pronunciation for Beginners</button>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Ingliz Tili Darslari</p>
+        <p>&copy; 2024 Ingliz Tili O'rgatish. Barcha huquqlar himoyalangan.</p>
     </footer>
 
-    <script>
-        function speakWord(word) {
-            const msg = new SpeechSynthesisUtterance(word);
-            window.speechSynthesis.speak(msg);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
