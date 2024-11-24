@@ -3,102 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingliz Tili - 2-dars</title>
-    <link rel="stylesheet" href="style.css">
+    <title>1-dars: Salomlashish va O'zingizni Tanishtirish</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>2-Dars: Ingliz Tilida Oddiy So'zlar</h1>
-        <button 
-        id="theme-toggle" 
-        class="theme-toggle" 
-        style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 10px 15px; background-color: #007acc; color: white; border: none; border-radius: 50%; font-size: 18px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease, transform 0.3s ease;"
-        >🌞</button>
-    </header>
+    <div class="header">
+        <h1>1-dars: Salomlashish va O'zingizni Tanishtirish</h1>
+    </div>
 
-    <main>
-        <section id="common-words-section">
-            <h2>Oddiy So'zlar:</h2>
-            <h2 style="font-size: 16px; color: red">So'zlar ustiga bosish orqali ularning talaffuzini eshitish mumkin!</h2><br>
-            <span class="word">Ingliz tilida eng keng tarqalgan so'zlar quyidagilar:</span>
-            <div class="common-words">
-                <div class="word-item" onclick="speakWord('Yes')">Yes</div>
-                <div class="word-item" onclick="speakWord('No')">No</div>
-                <div class="word-item" onclick="speakWord('Please')">Please</div>
-                <div class="word-item" onclick="speakWord('Sorry')">Sorry</div>
-                <div class="word-item" onclick="speakWord('Thank you')">Thank you</div>
-                <div class="word-item" onclick="speakWord('Good morning')">Good morning</div>
-                <div class="word-item" onclick="speakWord('Good night')">Good night</div>
-                <div class="word-item" onclick="speakWord('Goodbye')">Goodbye</div>
-            </div>
-        </section>
+    <div class="menu">
+        <ul>
+            <li><a href="#soz-boyligi">So'z Boyligi</a></li>
+            <li><a href="#grammatika">Grammatika</a></li>
+            <li><a href="#mashqlar">Mashqlar</a></li>
+            <li><a href="#video">Video</a></li>
+        </ul>
+    </div>
 
-        <section id="vocabulary-section">
-            <h2>Yangi So'zlar:</h2>
-            <span class="word">O'rganishga qiziqarli yangi so'zlar:</span>
-            <div class="new-words">
-                <div class="word-item" onclick="speakWord('Book')">Book</div>
-                <div class="word-item" onclick="speakWord('Pen')">Pen</div>
-                <div class="word-item" onclick="speakWord('Table')">Table</div>
-                <div class="word-item" onclick="speakWord('Chair')">Chair</div>
-                <div class="word-item" onclick="speakWord('Window')">Window</div>
-                <div class="word-item" onclick="speakWord('Door')">Door</div>
-                <div class="word-item" onclick="speakWord('Computer')">Computer</div>
-                <div class="word-item" onclick="speakWord('Phone')">Phone</div>
-            </div>
-        </section>
+    <div class="content">
+        <h2 id="soz-boyligi">So'z Boyligi</h2>
+        <ul>
+            <li><b>Salom</b> - Hello</li>
+            <li><b>Ismim</b> - My name is</li>
+            <li><b>Qanday</b> - How</li>
+            <li><b>Yaxshi</b> - Good</li>
+            <li><b>Hursand</b> - Happy</li>
+        </ul>
 
-        <section id="sentence-practice-section">
-            <h2>Oddiy Gaplar:</h2>
-            <div class="sentence-item">
-                <span class="sentence">I am a student.</span>
-                <button onclick="speakSentence('I am a student.')">&#128266;</button>
-                <p class="description">
-                    "I am a student." - <strong>Tarjima:</strong> "Men talibman" <br>
-                    <strong>Izoh:</strong> Bu o'zini tanishtirish uchun ishlatiladigan oddiy gap.
-                </p>
-            </div>
+        <h2 id="grammatika">Grammatika</h2>
+        <p><b>Amaliyot:</b> Salomlashishda quyidagi ifodalar ishlatiladi:</p>
+        <ul>
+            <li>Hi, my name is [Ismingiz].</li>
+            <li>How are you? - I'm good, thank you!</li>
+        </ul>
 
-            <div class="sentence-item">
-                <span class="sentence">You are my friend.</span>
-                <button onclick="speakSentence('You are my friend.')">&#128266;</button>
-                <p class="description">
-                    "You are my friend." - <strong>Tarjima:</strong> "Sen mening do'stimsan" <br>
-                    <strong>Izoh:</strong> Bu gap insonlar o'rtasidagi do'stlikni ifodalash uchun ishlatiladi.
-                </p>
-            </div>
+        <h2 id="mashqlar">Mashqlar</h2>
+        <p>Quyidagi jumlalarni to'ldiring:</p>
+        <ul>
+            <li>Hi, my name is ____. (ismingizni yozing)</li>
+            <li>How are you? - I'm ____.</li>
+        </ul>
+    </div>
 
-            <div class="sentence-item">
-                <span class="sentence">She is a teacher.</span>
-                <button onclick="speakSentence('She is a teacher.')">&#128266;</button>
-                <p class="description">
-                    "She is a teacher." - <strong>Tarjima:</strong> "U o'qituvchi" <br>
-                    <strong>Izoh:</strong> Bu gap insonni yoki biror kasbni ta'riflash uchun ishlatiladi.
-                </p>
-            </div>
+    <div class="video" id="video">
+        <h2>Video</h2>
+        <p>Quyidagi video sizga yordam beradi:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/?search_query=How+to+introduce+yourself+in+English" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
-            <div class="sentence-item">
-                <span class="sentence">I like music.</span>
-                <button onclick="speakSentence('I like music.')">&#128266;</button>
-                <p class="description">
-                    "I like music." - <strong>Tarjima:</strong> "Men musiqa yoqtiraman" <br>
-                    <strong>Izoh:</strong> Bu gap insonning qiziqishlari haqida gapirish uchun ishlatiladi.
-                </p>
-            </div>
-        </section>
-
-        <section id="video-recommendations-section">
-            <h2>Video Tavsiyalar:</h2>
-            <p>Bularni o'rganish uchun foydali videolar:</p>
-            <button onclick="window.location.href='https://www.youtube.com/results?search_query=Learn+English+for+beginners'">Watch Video: Learn English for Beginners</button>
-            <button onclick="window.location.href='https://www.youtube.com/results?search_query=English+pronunciation+for+beginners'">Watch Video: English Pronunciation for Beginners</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Ingliz Tili O'rgatish. Barcha huquqlar himoyalangan.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="footer">
+        <p>&copy; 2024 Ingliz tili darslari. Barcha huquqlar himoyalangan.</p>
+    </div>
 </body>
 </html>
