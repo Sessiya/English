@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingliz Tili - 2-dars</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>2-Dars: Ingliz Fe'llari</h1>
+        <button 
+            id="theme-toggle" 
+            class="theme-toggle" 
+            style="position: fixed; top: 20px; right: 20px; z-index: 1000; padding: 10px 15px; background-color: #007acc; color: white; border: none; border-radius: 50%; font-size: 18px; cursor: pointer; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease, transform 0.3s ease;"
+        >🌞</button>
+    </header>
+
+    <main>
+        <section id="verbs-section">
+            <h2>Fe'llar (Verbs):</h2>
+            <p class="word">
+                Ingliz tilidagi fe'llar harakatlarni yoki holatlarni bildiradi. Hozirda siz bilan eng oddiy va ko'p ishlatiladigan fe'llarni ko'rib chiqamiz.
+            </p>
+
+            <div class="verb-item">
+                <span class="word">To be</span>
+                <button onclick="speakWord('To be')">&#128266;</button>
+                <p class="description">
+                    "To be" - <strong>Tarjima:</strong> "bo‘lish" <br>
+                    <strong>Izoh:</strong> Bu fe'l ingliz tilida eng ko'p ishlatiladigan fe'l bo‘lib, holatni ifodalaydi. Misol: I am (Menman), He is (U), They are (Ular).
+                </p>
+            </div>
+
+            <div class="verb-item">
+                <span class="word">To have</span>
+                <button onclick="speakWord('To have')">&#128266;</button>
+                <p class="description">
+                    "To have" - <strong>Tarjima:</strong> "ega bo‘lmoq" <br>
+                    <strong>Izoh:</strong> Bu fe'l egalikni ifodalaydi. Misol: I have a book (Menda kitob bor).
+                </p>
+            </div>
+
+            <div class="verb-item">
+                <span class="word">To go</span>
+                <button onclick="speakWord('To go')">&#128266;</button>
+                <p class="description">
+                    "To go" - <strong>Tarjima:</strong> "borish" <br>
+                    <strong>Izoh:</strong> Bu fe'l harakatni ifodalaydi. Misol: I go to school (Men maktabga boraman).
+                </p>
+            </div>
+
+            <div class="verb-item">
+                <span class="word">To eat</span>
+                <button onclick="speakWord('To eat')">&#128266;</button>
+                <p class="description">
+                    "To eat" - <strong>Tarjima:</strong> "yemoq" <br>
+                    <strong>Izoh:</strong> Bu fe'l ovqatlanishni ifodalaydi. Misol: I eat pizza (Men pizza yiyorum).
+                </p>
+            </div>
+
+            <div class="verb-item">
+                <span class="word">To speak</span>
+                <button onclick="speakWord('To speak')">&#128266;</button>
+                <p class="description">
+                    "To speak" - <strong>Tarjima:</strong> "gapirmoq" <br>
+                    <strong>Izoh:</strong> Bu fe'l gapirishni ifodalaydi. Misol: I speak English (Men ingliz tilida gapiraman).
+                </p>
+            </div>
+        </section>
+
+        <section id="practice-section">
+            <h2>Amaliyot (Practice)</h2>
+            <p class="word">
+                Quyidagi jumlalarni to'g'ri fe'l bilan to'ldiring.
+            </p>
+            <ul>
+                <li><span class="word">I ____ to the market.</span> (go, has)</li>
+                <li><span class="word">They ____ a car.</span> (have, is)</li>
+                <li><span class="word">She ____ very happy.</span> (am, is)</li>
+                <li><span class="word">We ____ pizza.</span> (eat, are)</li>
+            </ul>
+
+            <button onclick="checkAnswers()">Javoblarni tekshirish</button>
+        </section>
+
+        <section id="video-section">
+            <h2>Video Tavsiyalar</h2>
+            <p>Ingliz tilidagi fe'llarni o'rganish uchun quyidagi videolarni tomosha qiling.</p>
+            <div class="video-item">
+                <span class="video-name">Learn English Verbs</span>
+                <button onclick="watchVideo('Learn English Verbs')">Watch Video</button>
+            </div>
+
+            <div class="video-item">
+                <span class="video-name">Common English Verbs</span>
+                <button onclick="watchVideo('Common English Verbs')">Watch Video</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Fe'l talaffuzini eshitish
+        function speakWord(word) {
+            const audio = new SpeechSynthesisUtterance(word);
+            window.speechSynthesis.speak(audio);
+        }
+
+        // Video tomosha qilish
+        function watchVideo(videoName) {
+            const searchQuery = encodeURIComponent(videoName);
+            window.location.href = `https://www.youtube.com/results?search_query=${searchQuery}`;
+        }
+
+        // Amaliyot javoblarini tekshirish
+        function checkAnswers() {
+            alert('Javoblarni tekshirish uchun kod qo\'shish kerak.');
+        }
+    </script>
+</body>
+</html>
