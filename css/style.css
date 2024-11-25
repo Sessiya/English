@@ -1,0 +1,415 @@
+    .calendar {
+      width: 100%;
+      margin: 20px auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    body.dark-mode .calendar {
+      background-color: #333;
+    }
+
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+    }
+
+    body.dark-mode .calendar-header {
+      background-color: #444;
+    }
+
+    .calendar-header h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .calendar-body {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      padding: 10px;
+      color: #333;
+    }
+
+    body.dark-mode .calendar-body {
+      color: #ddd;
+    }
+
+    .day {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    body.dark-mode .day:hover {
+      background-color: #555;
+    }
+
+    .day-header {
+      font-weight: bold;
+      color: #4caf50;
+    }
+
+    body.dark-mode .day-header {
+      color: #8bc34a;
+    }
+
+    .today {
+      background-color: #4caf50;
+      color: #fff;
+    }
+
+    body.dark-mode .today {
+      background-color: #8bc34a;
+    }
+
+    .red-day {
+      color: red;
+    }
+
+    body.dark-mode .red-day {
+      color: #f44336;
+    }
+
+    .nav-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    body.dark-mode .nav-btn {
+      color: #bbb;
+    }
+/* Telefon ekranlarida (max-width: 600px) */
+@media screen and (max-width: 600px) {
+  .calendar {
+    max-width: 100%; /* Ekran o'lchamiga moslashadi */
+  }
+
+  .day {
+    font-size: 14px; /* Kichik ekranlarda matnni kichraytirish */
+    padding: 5px; /* Ichki bo'shliqni kamaytirish */
+  }
+
+  .nav-btn {
+    font-size: 16px; /* Navigatsiya tugmasi hajmini kichraytirish */
+  }
+}
+.icon { padding: 3px 6px 3px 1px; vertical-align: middle; }
+
+.icon-inline { padding-right: 6px; vertical-align: middle; }
+
+    /* Dark Mode Button Style */
+    #dark-mode-toggle {
+      margin-left: 10px;
+      background-color: transparent;
+      border: none;
+      color: #4caf50;
+      cursor: pointer;
+    }
+
+    body.dark-mode #dark-mode-toggle {
+      color: #bbb;
+    }
+html {
+  scroll-behavior: smooth;
+}
+    /* Umumiy uslub */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #000;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Tungi rejim */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    /* Tugma uslubi */
+    #dark-mode-toggle {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      color: inherit;
+    }
+
+    /* Menyu uslubi */
+    .menu {
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    body.dark-mode .menu {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+
+    /* Karta uslubi */
+    .card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+  flex-wrap: wrap; /* Kartalar bir-biriga yaqinlashganda yangi qatorda joylashadi */
+  padding: 0 10px; /* Agar ekranning kichik qismlarida bo'lsa, bo'sh joy berish */
+    }
+
+    .card {
+  width: 100%; /* Standart karta kengligi */
+  margin: 10px; /* Karta elementlari o'rtasida bo'sh joy */
+  box-sizing: border-box; /* Padding va borderni elementning umumiy o'lchamiga kiritish */
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+	    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    body.dark-mode .card a {
+      color: #66ccff;
+    }
+
+    /* Xabar maydoni */
+    .phdr2, .phdr {
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background-color: black;
+      color: #000;
+    }
+
+    body.dark-mode .footer {
+      background-color: #202020;
+      color: #e0e0e0;
+    }
+/* .phdr2 uchun dizayn */
+.phdr2 {
+  background: #83b91e url(https://Sessiya.github.io/2000/css/phdr.gif) repeat-x;
+  margin: 1px 2px;
+  border: 1px solid #efefef;
+  color: #fff;
+  padding: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tungi rejim: .phdr2 */
+body.dark-mode .phdr2 {
+  background: #1e4421 url(https://Sessiya.github.io/2000/css/phdr.gif) repeat-x;
+  color: #e0e0e0;
+}
+
+/* .phdr uchun dizayn */
+.phdr {
+  margin: 1px 5px;
+  background: #55b74f url(https://Sessiya.github.io/2000/css/cont.gif) repeat-x bottom;
+  border: 1px solid #efefef;
+  color: #fff;
+  padding: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tungi rejim: .phdr */
+body.dark-mode .phdr {
+  background: #2b5a3b url(https://Sessiya.github.io/2000/css/cont.gif) repeat-x bottom;
+  color: #e0e0e0;
+}
+
+/* .menu va umumiy bloklar */
+.menu, .list1, .list2 {
+  background-color: #ffffff;
+  border: 1px solid #bcf8b8;
+  margin: 1px 2px;
+  color: #527317;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tungi rejim: .menu, .list1, .list2 */
+body.dark-mode .menu, 
+body.dark-mode .list1, 
+body.dark-mode .list2 {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border-color: #3f3f3f;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* .menu hover holati */
+.menu a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #005500;
+}
+
+/* Tungi rejim: hover */
+body.dark-mode .menu a:hover {
+  color: #88ff88;
+}
+
+/* Footer uchun dizayn */
+.footer {
+  background: black url(https://Sessiya.github.io/2000/css/footer.gif) repeat-x;
+  margin: 1px 2px;
+  border: 1px solid #efefef;
+  color: #fff;
+  padding: 6px;
+  font-size: 14px;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Umumiy uslublar */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ekranni butunlay qoplash */
+  margin: 0;
+}
+
+/* Footerni doimiy pastda saqlash */
+.footer {
+  margin-top: auto; /* Bo'sh joyni yuqoriga suradi */
+  text-align: left;
+  padding: 10px;
+  background-color: black;
+  color: #fff;
+  font-size: 14px;
+  border-top: 1px solid #efefef;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .footer {
+  background-color: #202020 url(https://Sessiya.github.io/2000/css/footer.gif) repeat-x;
+  color: #e0e0e0;
+}
+/* Tungi rejim: Footer */
+body.dark-mode .footer {
+  background: #1e4421;
+  color: #d4d4d4;
+}
+
+/* Havolalar dizayni */
+.footer a:link, 
+.footer a:visited {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.phdr a:link, 
+.phdr a {
+  color: #6a8f2a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body.dark-mode .phdr a:link, 
+body.dark-mode .phdr a {
+  color: #88ff88;
+}
+/* Umumiy uslub */
+.my-box {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #333;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Tungi rejim */
+body.dark-mode .my-box {
+  background-color: #333;
+  color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+    /* Motivatsiya qismi */
+    .motivation {
+      font-family: 'Caveat', cursive;
+      font-size: 20px;
+      line-height: 1.8;
+      color: #333;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode .motivation {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+        .star {
+            font-size: 30px;
+            color: gray;
+            cursor: pointer;
+        }
+        .star.selected {
+            color: gold;
+	}
