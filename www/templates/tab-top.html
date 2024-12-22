@@ -1,0 +1,209 @@
+<ion-view class="topbrokers">
+  <ion-content class="top-content" has-bouncing="false" overflow-scroll="true">
+	<div class="gradient-bg"></div>
+  	<div ng-if="!brokersVisible" class="brokers-content">
+  		<div class="gradient-bg"></div>
+	  	<div class="brokers-header before">
+	  		<h2><t>Close 50 profitable trades</t></h2>
+			<p><t>Access top real trading platforms and connect with pro traders we follow</t></p>
+	  	</div>
+	  	<div class="brokers-locked"></div>
+	  	<div class="progress">
+	  		<span class="progress-bar-bg">
+	  			<span class="progress-bar" style="width: {{ progressBar }}%"></span>
+	  		</span>
+	  		<span class="text-progress">{{lastUserWins}}/50</span>
+	  	</div>
+	  	<span class="or"><t>OR</t></span>
+			<div ng-click="showBrokers(true)" class="lucky"><span class="fake-checkmark"></span><t>I'm feeling lucky</t></div>
+  	</div>
+
+  	<div ng-if="brokersVisible" class="brokers-content">
+	  	<div class="brokers-header" ng-if="platformType == 0">
+	  		<h1><t>Made to Trade</t><span class="icon-verified"></span></h1>
+			<p><t>Get trading with verified platforms today</t></p>
+	  	</div>
+	  	<div class="brokers-header" ng-if="platformType == 1">
+	  		<h1><t>Made to Copy</t><span class="icon-verified"></span></h1>
+			<p><t>Follow or Copy verified Pro traders today</t></p>
+	  	</div>
+		<div class="brokers-traders-switch">
+			<span class="brokers" ng-class="{'selected': platformType == 0}" ng-click="switchPlatformType(0)"><t>Real trading platforms</t></span>
+			<span class="traders" ng-class="{'selected': platformType == 1}" ng-click="switchPlatformType(1)"><t>Pro traders</t></span>
+		</div>
+		<div class="broker-wrapper" ng-repeat="broker in brokerData track by $index" ng-if="(platformType == 0 && $index == 0) || (platformType == 0 && (allBrokersVisible || isUserPro))" ng-show="!shouldHideBroker(broker.id)">
+			<div class="broker" ng-click="openLink(broker.link, 'Top_Brokers_{{broker.id}}')">
+				<div class="badge-wrapper" ng-if="broker.badges">
+					<span class="bbadge {{badge.id}}" ng-repeat="badge in broker.badges">{{badge.text}}</span>
+				</div>
+				<span class="esma">{{broker.esmaText || 'Trade with money you can afford. 68% Lose with this broker'}}</span>
+				<div class="inner-wrapper">
+					<div class="row top-row">
+						<div class="col-left">
+							<div class="logo-wrapper">
+								<img ng-src="{{broker.img}}" referrerpolicy="no-referrer"/>
+								<div class="url">{{broker.domain}}</div>
+							</div>
+						</div>
+						<div class="col-right">
+							<div class="broker-title" ng-class="{'beginners-show': broker.badges.beginnersEnabled, 'winner-2022-show': broker.badges[1], 'bonus-show': broker.badges[2]}">
+								{{broker.title}}
+								<span class="icon-verified"></span>
+							</div>
+							<div class="broker-subtitle">{{broker.subtitle || 'Forex, Stocks, Crypto'}}</div>
+						</div>
+					</div>
+					<div class="row bottom-row">
+						<div class="col-left">
+							<div class="col-trust">
+								<div class="row">
+									<span class="trust-score-image"></span><t>{{broker.trust.name}}</t>
+								</div>
+								<div class="row">
+									{{broker.trust.value || '4.5'}}
+								</div>
+							</div>
+							<div class="col-features" ng-repeat="feature in broker.features">
+								<div class="row">
+									{{feature.name}}
+								</div>
+								<div class="row">
+									{{feature.value}}
+								</div>
+							</div>
+						</div>
+						<div class="col-right">
+							<img ng-src="./img/broker-open-image.png" referrerpolicy="no-referrer"/>
+							<div class="col-start-from">
+								<div class="row">
+									{{broker.depositText || 'Start from'}}
+								</div>
+								<div class="row">
+									{{broker.deposit}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p class="broker-disclaimer" ng-show="broker.disclaimer">{{broker.disclaimer}}</p>
+		</div>
+
+		<div class="traders-wrapper" ng-if="platformType == 1">
+			<span class="gain-thingy"><t>12 Month Gain</t></span>
+			<div class="trader-row" ng-repeat="trader in traderData track by $index" ng-if="$index == 0 || allTradersVisible || isUserPro" ng-click="openLink(trader.link, 'Top_Traders_{{trader.id}}')">
+				<div class="trader-col pic">
+					<img ng-src="{{trader.image}}" referrerpolicy="no-referrer"/>
+				</div>
+				<div class="trader-col info">
+					<div class="inner-row name">{{trader.name}}<span class="icon-verified"></span></div>
+					<div class="inner-row trader-info">
+						<span class="icon-copiers"></span><b>{{trader.copiers}}</b> <t>copiers</t> | <t>Risk</t> <b>{{trader.riskScore}}</b>
+					</div>
+				</div>
+				<div class="trader-col trader-gain-view">
+					<div class="inner-row gain"><span ng-if="trader.gain >= 0">+</span>{{trader.gain | number:0}}%</div>
+					<div class="inner-row view-button"><span class="icon-view"></span><t>view</t></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ad" ng-if="!allBrokersVisible && platformType == 0 && !isUserPro">
+			<span class="icon-ad" ng-click="watchAd('brokers')"></span>
+			<p ng-click="watchAd('brokers')"><t>Click <span class="green">here</span> to watch AD & see all the platforms</t><br><t>or</t></p>
+			<p ng-click="goToPro()" class="flex-center"><span class="go-pro-text"><t>GO PRO</t></span></p>
+		</div>
+
+		<div class="ad" ng-if="!allTradersVisible && platformType == 1 && !isUserPro">
+			<span class="icon-ad" ng-click="watchAd('traders')"></span>
+			<p ng-click="watchAd('traders')"><t>Click <span class="green">here</span> to watch AD & see all the Pro traders</t><br><t>or</t></p>
+			<p ng-click="goToPro()" class="flex-center"><span class="go-pro-text"><t>GO PRO</t></span></p>
+		</div>
+
+		<div class="disclaimer-above-faq" ng-show="disclaimerBrokers" ng-bind-html="disclaimerBrokers" ng-if="platformType == 0"></div>
+		<div class="trader-disclaimer" ng-show="disclaimerTraders" ng-bind-html="disclaimerTraders" ng-if="platformType == 1"></div>
+
+		
+		<div class="trader-disclaimer" ng-if="platformType == 1 && !disclaimerTraders"><t>Stay updated: more PRO traders from other platforms on the way.</t><br/><br/><t>Past results aren't future promises. Explore our evolving list of pro traders. If risk isn't your game, observe their strategies rather than copying them!</t></div>
+
+		<div class="faq" ng-if="platformType == 0 && currentLang != 'en'">
+			<div class="faq-item" ng-click="toggleAnswer($event)">
+				<div class="question">
+					<span class="marker"></span><t>Why do we recommend brokers?</t>
+				</div>
+				<div class="answer">
+					<t>Where there’s money, there are frauds and scams like unregulated brokers.<br>Truth is: 1 out of every 3 online brokers uses shady methods. They target you with ads and push you to invest as much as possible, often taking a cut from your profits and losses. They’re commonly registered on small islands with no office and no one to answer customer complaints. <br>To protect you we recommend only those brokers who have passed strict regulations and are trusted by millions of real users!</t>
+				</div>
+			</div>
+			<div class="faq-item" ng-click="toggleAnswer($event)">
+				<div class="question">
+					<span class="marker"></span><t>Why do traders lose money?</t>
+				</div>
+				<div class="answer">
+					<t>Being consistently profitable takes time, discipline, and experience. Many beginners choose the wrong broker, the wrong approach, and have the wrong idea about trading. Thus they end up overcomplicating and losing their money. Don’t worry, losses are a part of the game, we teach you to keep your losses small and controlled.</t>
+				</div>
+			</div>
+			<div class="faq-item" ng-click="toggleAnswer($event)" ng-if="user.country != 'US'">
+				<div class="question">
+					<span class="marker"></span><t>What is the losing rate and what are CFDs?</t>
+				</div>
+				<div class="answer">
+					<t>Contract for difference or ‘CFD’ is a popular type of trading asset in 2022. It is a deal between a buyer and a seller on the price difference. For example, when buying an OIL CFD, you’re not actually buying oil. You’re buying a contract that pays you if the price increases.  Since 2018, European Securities and Markets Authority (ESMA) requires all CFD brokers to disclose the % of traders that lose money on their platform. This is great for transparency and it also tells you which platform offers the highest odds of you becoming a winner.</t>
+				</div>
+			</div>
+			<div class="faq-item" ng-click="toggleAnswer($event)" ng-if="user.country == 'US'">
+				<div class="question">
+					<span class="marker"></span><t>What is “commission free”?</t>
+				</div>
+				<div class="answer">
+					<t>'Commission-free' trading or 'commission-free investing' means the broker doesn't charge you for buying(and sometimes selling) certain assets. You don’t have to worry about calculating fees when trading and more of your money can be spent to make money, instead of fees.</t>
+				</div>
+			</div>
+		</div>
+
+		<div class="faq" ng-if="platformType == 0 && currentLang == 'en'">
+			<div class="faq-item" ng-click="toggleAnswer($event)">
+				<div class="question">
+					<span class="marker"></span><t>Why do we recommend platforms?</t>
+				</div>
+				<div class="answer">
+					<p><t>Since it’s impossible to trade without a trading platform, your success depends on choosing a reliable one. Our role is to guide you in choosing a trustworthy option that safeguards your capital and operates ethically.</t></p>
+					<p><t>We evaluate <b>strict regulation</b>, fees, available assets, and research tools to ensure your trading experience is not only simple but, more importantly, <b>secure</b>.</t></p>
+				</div>
+			</div>
+			<div class="faq-item" ng-click="toggleAnswer($event)" ng-if="user.country != 'US'">
+				<div class="question">
+					<span class="marker"></span><t>What are CFDs and losing rate?</t>
+				</div>
+				<div class="answer">
+					<p><t>Contract for Difference (CFD) is an asset that allows you to speculate on the price of an asset without owning it. The trading process is still the same – <b>you bet on price going up or down</b>.</t></p>
+					<p><t>Since 2018, European Securities and Markets Authority mandates CFD brokers to disclose the % of traders who lose money, adding <b>trust and transparency</b> to your experience.</t></p>
+				</div>
+			</div>
+			<div class="faq-item" ng-click="toggleAnswer($event)" ng-if="user.country == 'US'">
+				<div class="question">
+					<span class="marker"></span><t>What is “commission free”?</t>
+				</div>
+				<div class="answer">
+					<t>'Commission-free' trading or 'commission-free investing' means the broker doesn't charge you for buying(and sometimes selling) certain assets. You don’t have to worry about calculating fees when trading and more of your money can be spent to make money, instead of fees.</t>
+				</div>
+			</div>
+			<div class="faq-item" ng-click="toggleAnswer($event)">
+				<div class="question">
+					<span class="marker"></span><t>Why traders lose money?</t>
+				</div>
+				<div class="answer">
+					<p><t>Learning a new skill is always challening and includes setbacks. Common reasons beginners lose:</t></p>
+					<ol>
+						<li><t>neglecting risk management</t></li>
+						<li><t>prioritizing profit over learning</t></li>
+						<li><t>overtrading and losing control</t></li>
+					</ol>
+					<p><t>Experienced traders also face losses, but their success lies in <b>risk management</b>. They consistently lose slightly less than they earn. In contrast, beginners who see trading as a shortcut to riches must understand it demands patience and dedication.</t></p>
+				</div>
+			</div>
+		</div>
+  	</div>
+  </ion-content>
+</ion-view>

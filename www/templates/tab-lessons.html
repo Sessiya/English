@@ -1,0 +1,29 @@
+<ion-view class="lessons">
+  <ion-content has-bouncing="false" overflow-scroll="true">
+		<div class="lessons-header">
+			<img src="img/lessons-header-{{currentLang || 'en'}}.png">
+			<span class="best-time" ng-click="open(5, 'best-time')" ng-bind-html="bestTradingTime"></span>
+		</div>
+
+		<ion-list class="lessons">
+			<a ng-repeat="(index, lesson) in ::lessons[0]" type="item-text-wrap" nav-direction="enter" ng-click="open(lesson.id)" class="item item-thumbnail-left" ng-class="{'completed': lesson.isCompleted}">
+				<!-- <div ng-if="lesson.id == 999">
+					<div class="lesson-index quiz">Q</div>
+					<div class="lesson-info">
+						<h2><span class="lesson-title"><t>QUIZ: Predict Trend</t></span></h2>
+						<p class="lesson-duration">Answer 5 questions correctly and win $200</p>
+					</div>
+				</div> -->
+				<div class="lesson-index" ng-show="!lesson.isCompleted">{{ ::index + (index < 4 ? 1 : 0) }}</div>
+				<div class="lesson-index" ng-show="lesson.isCompleted"><t>OK</t></div>
+				<div class="lesson-info">
+					<h2><span class="lesson-title">{{ ::lesson.title}} &nbsp; </span></h2>
+					<div class="lesson-rewards">
+						<!--<span class="duration" ng-bind-html="::getDuration(lesson.id)"></span>--><span class="reward" ng-bind-html="::getReward(lesson.id)"></span><span class="completed"><t>Completed</t></span>
+					</div>
+				</div>
+			</a>
+		</ion-list>
+
+  </ion-content>
+</ion-view>

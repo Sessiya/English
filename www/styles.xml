@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.AppCompat.FullScreen" parent="@style/Theme.AppCompat">
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+</resources>

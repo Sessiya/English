@@ -1,0 +1,58 @@
+.top-content {margin:0; padding:0; font-family:"Myriad Pro", Arial;} 
+
+.top-content .container{width:100%; margin:0 auto;}
+.top-content .header{width:100%; float:left; padding:50px 0 0 0;}
+.top-content h1.top_heading{ width:100%; text-align:center; float:left; margin:0; padding:0;;font-family:'BebasBold';font-size:80px !important;color:#515050;}
+.top-content .heading_date{ width:100%; float:left; text-align:right; font-family:"Myriad Pro";color:#5ea4ee;font-size:24px;}
+
+.top-content .banner{width:100%; float:left; text-align:center;}
+.top-content .banner img{width:540px; margin:0 auto;}
+
+.top-content .nav{float:left; width:100%; float:left; color:#fff; background:#888d92; font-size:20px; margin-bottom:10px;}
+.top-content .nav ul{margin:0px;padding:0px;list-style:none;}
+.top-content .nav li{ width:143px; float:left; border-right:1px solid #666; text-align:center; height:65px; padding:20px 0 0 0;}
+.top-content .nav li.nospace{border:0; width:144px;}
+
+.top-content .download_list{float:left;border-bottom:1px solid #525456; width:100%; padding:10px 0;}
+.top-content .download_list ul{margin:0px;padding:0px;list-style:none;}
+.top-content .download_list li{float:left;color:#515050;font-family:"Myriad Pro";font-size:32px;text-align:center; width:20%}
+.top-content .download_list li span{font-size:15px; float:left; width:100%; text-align:right; font-weight:bold;}
+.top-content .download_list li span img{float:left;}
+
+/*** for ipad tablts***/
+@media only screen and (max-width:760px), (max-width:960px), (max-width:100%) {
+.top-content img{width:100%; display:block;}
+
+.top-content .container{width:100%; margin:0 auto; float:left; padding:0 2%;}
+.top-content h1.top_heading{font-size:80px !important; font-weight: bold;}
+.top-content .heading_date{ width:97%;}
+
+.top-content .nav li{ width:19.9%; float:left;}
+.top-content .nav li.nospace{border:0; width:20%;}
+
+.top-content .download_list{float:left;border-bottom:1px solid #525456; width:100%; padding:10px 0;}
+.top-content .download_list ul{margin:0px;padding:0px;list-style:none;}
+.top-content .download_list li{float:left;color:#515050;font-family:"Myriad Pro";font-size:32px;text-align:center; width:20%}
+.top-content .download_list li span{font-size:15px; float:left; width:100%; text-align:right; font-weight:bold;}
+.top-content .download_list li span img{float:left; width:77px;}
+.top-content .download_list li img.visit{width:100%;}
+.top-content .download_list li img.logos{width:95%;}
+
+}
+
+/*** FOR MOBILE BROWERS ***/
+@media only screen and (max-width:320px),(max-width:300px),(max-width:600px){
+.top-content img{width:100%; display:block;}
+
+.top-content h1.top_heading{font-size:500% !important;}
+.top-content .heading_date{ width:100%; text-align:center; border-bottom:1px solid #ccc; padding:0 0 20px 0;}
+.top-content .banner {padding:20px 0;}
+.top-content .banner img{width:100%;}
+
+.top-content .nav{font-size:13px;}
+.top-content .nav li{height:70px; padding:20px 0 0 0;}
+.top-content .nav li.nospace{border:0; width:19%;}
+
+.top-content .download_list li{font-size:15px;}
+.top-content .download_list li span img{float:left; width:100%;}
+}

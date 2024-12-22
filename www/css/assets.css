@@ -1,0 +1,1630 @@
+.bar-instruments .swiper-container .swiper-slide.asset-BATTLE .asset,
+.trade-history .trade > div.asset-BATTLE .asset,
+.fav-assets .asset-block > div.asset-BATTLE .asset,
+.instrument-logo.asset-BATTLE .asset,
+.position-result .logo.asset-BATTLE .asset,
+ion-view ion-content #asset-select div.asset.asset-BATTLE .asset,
+.preload div.asset-BATTLE .asset {
+  background-image: url(../img/tg/instruments/battle.png);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-EURUSD .asset,
+.trade-history .trade > div.asset-EURUSD .asset,
+.fav-assets .asset-block > div.asset-EURUSD .asset,
+.instrument-logo.asset-EURUSD .asset,
+.position-result .logo.asset-EURUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-EURUSD .asset,
+.preload div.asset-EURUSD .asset {
+  background-image: url(../img/tg/instruments/eurusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-USDJPY .asset,
+.trade-history .trade > div.asset-USDJPY .asset,
+.fav-assets .asset-block > div.asset-USDJPY .asset,
+.instrument-logo.asset-USDJPY .asset,
+.position-result .logo.asset-USDJPY .asset,
+ion-view ion-content #asset-select div.asset.asset-USDJPY .asset,
+.preload div.asset-USDJPY .asset {
+  background-image: url(../img/tg/instruments/usdjpy.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-GBPUSD .asset,
+.trade-history .trade > div.asset-GBPUSD .asset,
+.fav-assets .asset-block > div.asset-GBPUSD .asset,
+.instrument-logo.asset-GBPUSD .asset,
+.position-result .logo.asset-GBPUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-GBPUSD .asset,
+.preload div.asset-GBPUSD .asset {
+  background-image: url(../img/tg/instruments/gbpusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-USDCAD .asset,
+.trade-history .trade > div.asset-USDCAD .asset,
+.fav-assets .asset-block > div.asset-USDCAD .asset,
+.instrument-logo.asset-USDCAD .asset,
+.position-result .logo.asset-USDCAD .asset,
+ion-view ion-content #asset-select div.asset.asset-USDCAD .asset,
+.preload div.asset-USDCAD .asset {
+  background-image: url(../img/tg/instruments/usdcad.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-OILUSD .asset,
+.trade-history .trade > div.asset-OILUSD .asset,
+.fav-assets .asset-block > div.asset-OILUSD .asset,
+.instrument-logo.asset-OILUSD .asset,
+.position-result .logo.asset-OILUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-OILUSD .asset,
+.preload div.asset-OILUSD .asset {
+  background-image: url(../img/tg/instruments/oil.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-GOOUSD .asset,
+.trade-history .trade > div.asset-GOOUSD .asset,
+.fav-assets .asset-block > div.asset-GOOUSD .asset,
+.instrument-logo.asset-GOOUSD .asset,
+.position-result .logo.asset-GOOUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-GOOUSD .asset,
+.preload div.asset-GOOUSD .asset {
+  background-image: url(../img/tg/instruments/google.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AAPUSD .asset,
+.trade-history .trade > div.asset-AAPUSD .asset,
+.fav-assets .asset-block > div.asset-AAPUSD .asset,
+.instrument-logo.asset-AAPUSD .asset,
+.position-result .logo.asset-AAPUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-AAPUSD .asset,
+.preload div.asset-AAPUSD .asset {
+  background-image: url(../img/tg/instruments/apple.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TSLUSD .asset,
+.trade-history .trade > div.asset-TSLUSD .asset,
+.fav-assets .asset-block > div.asset-TSLUSD .asset,
+.instrument-logo.asset-TSLUSD .asset,
+.position-result .logo.asset-TSLUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-TSLUSD .asset,
+.preload div.asset-TSLUSD .asset {
+  background-image: url(../img/tg/instruments/tesla.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-USDZAR .asset,
+.trade-history .trade > div.asset-USDZAR .asset,
+.fav-assets .asset-block > div.asset-USDZAR .asset,
+.instrument-logo.asset-USDZAR .asset,
+.position-result .logo.asset-USDZAR .asset,
+ion-view ion-content #asset-select div.asset.asset-USDZAR .asset,
+.preload div.asset-USDZAR .asset {
+  background-image: url(../img/tg/instruments/usdzar.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-XAUUSD .asset,
+.trade-history .trade > div.asset-XAUUSD .asset,
+.fav-assets .asset-block > div.asset-XAUUSD .asset,
+.instrument-logo.asset-XAUUSD .asset,
+.position-result .logo.asset-XAUUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-XAUUSD .asset,
+.preload div.asset-XAUUSD .asset {
+  background-image: url(../img/tg/instruments/xauusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ETHUSD .asset,
+.trade-history .trade > div.asset-ETHUSD .asset,
+.fav-assets .asset-block > div.asset-ETHUSD .asset,
+.instrument-logo.asset-ETHUSD .asset,
+.position-result .logo.asset-ETHUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-ETHUSD .asset,
+.preload div.asset-ETHUSD .asset {
+  background-image: url(../img/tg/instruments/ethusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-BTCUSD .asset,
+.trade-history .trade > div.asset-BTCUSD .asset,
+.fav-assets .asset-block > div.asset-BTCUSD .asset,
+.instrument-logo.asset-BTCUSD .asset,
+.position-result .logo.asset-BTCUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-BTCUSD .asset,
+.preload div.asset-BTCUSD .asset {
+  background-image: url(../img/tg/instruments/btcusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-XOMUSD .asset,
+.trade-history .trade > div.asset-XOMUSD .asset,
+.fav-assets .asset-block > div.asset-XOMUSD .asset,
+.instrument-logo.asset-XOMUSD .asset,
+.position-result .logo.asset-XOMUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-XOMUSD .asset,
+.preload div.asset-XOMUSD .asset {
+  background-image: url(../img/tg/instruments/exxon.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NKEUSD .asset,
+.trade-history .trade > div.asset-NKEUSD .asset,
+.fav-assets .asset-block > div.asset-NKEUSD .asset,
+.instrument-logo.asset-NKEUSD .asset,
+.position-result .logo.asset-NKEUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-NKEUSD .asset,
+.preload div.asset-NKEUSD .asset {
+  background-image: url(../img/tg/instruments/nike.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-DISUSD .asset,
+.trade-history .trade > div.asset-DISUSD .asset,
+.fav-assets .asset-block > div.asset-DISUSD .asset,
+.instrument-logo.asset-DISUSD .asset,
+.position-result .logo.asset-DISUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-DISUSD .asset,
+.preload div.asset-DISUSD .asset {
+  background-image: url(../img/tg/instruments/disney.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NDQUSD .asset,
+.trade-history .trade > div.asset-NDQUSD .asset,
+.fav-assets .asset-block > div.asset-NDQUSD .asset,
+.instrument-logo.asset-NDQUSD .asset,
+.position-result .logo.asset-NDQUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-NDQUSD .asset,
+.preload div.asset-NDQUSD .asset {
+  background-image: url(../img/tg/instruments/ndqusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SPXUSD .asset,
+.trade-history .trade > div.asset-SPXUSD .asset,
+.fav-assets .asset-block > div.asset-SPXUSD .asset,
+.instrument-logo.asset-SPXUSD .asset,
+.position-result .logo.asset-SPXUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SPXUSD .asset,
+.preload div.asset-SPXUSD .asset {
+  background-image: url(../img/tg/instruments/spxusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-GEREUR .asset,
+.trade-history .trade > div.asset-GEREUR .asset,
+.fav-assets .asset-block > div.asset-GEREUR .asset,
+.instrument-logo.asset-GEREUR .asset,
+.position-result .logo.asset-GEREUR .asset,
+ion-view ion-content #asset-select div.asset.asset-GEREUR .asset,
+.preload div.asset-GEREUR .asset {
+  background-image: url(../img/tg/instruments/gereur.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-MSFUSD .asset,
+.trade-history .trade > div.asset-MSFUSD .asset,
+.fav-assets .asset-block > div.asset-MSFUSD .asset,
+.instrument-logo.asset-MSFUSD .asset,
+.position-result .logo.asset-MSFUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-MSFUSD .asset,
+.preload div.asset-MSFUSD .asset {
+  background-image: url(../img/tg/instruments/msfusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-XMIHKD .asset,
+.trade-history .trade > div.asset-XMIHKD .asset,
+.fav-assets .asset-block > div.asset-XMIHKD .asset,
+.instrument-logo.asset-XMIHKD .asset,
+.position-result .logo.asset-XMIHKD .asset,
+ion-view ion-content #asset-select div.asset.asset-XMIHKD .asset,
+.preload div.asset-XMIHKD .asset {
+  background-image: url(../img/tg/instruments/xmiusd.png);
+  border-radius: 100%;
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NFLUSD .asset,
+.trade-history .trade > div.asset-NFLUSD .asset,
+.fav-assets .asset-block > div.asset-NFLUSD .asset,
+.instrument-logo.asset-NFLUSD .asset,
+.position-result .logo.asset-NFLUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-NFLUSD .asset,
+.preload div.asset-NFLUSD .asset {
+  background-image: url(../img/tg/instruments/nflusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SNAUSD .asset,
+.trade-history .trade > div.asset-SNAUSD .asset,
+.fav-assets .asset-block > div.asset-SNAUSD .asset,
+.instrument-logo.asset-SNAUSD .asset,
+.position-result .logo.asset-SNAUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SNAUSD .asset,
+.preload div.asset-SNAUSD .asset {
+  background-image: url(../img/tg/instruments/snausd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-COPUSD .asset,
+.trade-history .trade > div.asset-COPUSD .asset,
+.fav-assets .asset-block > div.asset-COPUSD .asset,
+.instrument-logo.asset-COPUSD .asset,
+.position-result .logo.asset-COPUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-COPUSD .asset,
+.preload div.asset-COPUSD .asset {
+  background-image: url(../img/tg/instruments/copusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-GASUSD .asset,
+.trade-history .trade > div.asset-GASUSD .asset,
+.fav-assets .asset-block > div.asset-GASUSD .asset,
+.instrument-logo.asset-GASUSD .asset,
+.position-result .logo.asset-GASUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-GASUSD .asset,
+.preload div.asset-GASUSD .asset {
+  background-image: url(../img/tg/instruments/gasusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-PLAUSD .asset,
+.trade-history .trade > div.asset-PLAUSD .asset,
+.fav-assets .asset-block > div.asset-PLAUSD .asset,
+.instrument-logo.asset-PLAUSD .asset,
+.position-result .logo.asset-PLAUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-PLAUSD .asset,
+.preload div.asset-PLAUSD .asset {
+  background-image: url(../img/tg/instruments/plausd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-XAGUSD .asset,
+.trade-history .trade > div.asset-XAGUSD .asset,
+.fav-assets .asset-block > div.asset-XAGUSD .asset,
+.instrument-logo.asset-XAGUSD .asset,
+.position-result .logo.asset-XAGUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-XAGUSD .asset,
+.preload div.asset-XAGUSD .asset {
+  background-image: url(../img/tg/instruments/xagusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-FBXUSD .asset,
+.trade-history .trade > div.asset-FBXUSD .asset,
+.fav-assets .asset-block > div.asset-FBXUSD .asset,
+.instrument-logo.asset-FBXUSD .asset,
+.position-result .logo.asset-FBXUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-FBXUSD .asset,
+.preload div.asset-FBXUSD .asset {
+  background-image: url(../img/tg/instruments/fbxusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SPOUSD .asset,
+.trade-history .trade > div.asset-SPOUSD .asset,
+.fav-assets .asset-block > div.asset-SPOUSD .asset,
+.instrument-logo.asset-SPOUSD .asset,
+.position-result .logo.asset-SPOUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SPOUSD .asset,
+.preload div.asset-SPOUSD .asset {
+  background-image: url(../img/tg/instruments/spousd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AMZUSD .asset,
+.trade-history .trade > div.asset-AMZUSD .asset,
+.fav-assets .asset-block > div.asset-AMZUSD .asset,
+.instrument-logo.asset-AMZUSD .asset,
+.position-result .logo.asset-AMZUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-AMZUSD .asset,
+.preload div.asset-AMZUSD .asset {
+  background-image: url(../img/tg/instruments/amzusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-USDTRY .asset,
+.trade-history .trade > div.asset-USDTRY .asset,
+.fav-assets .asset-block > div.asset-USDTRY .asset,
+.instrument-logo.asset-USDTRY .asset,
+.position-result .logo.asset-USDTRY .asset,
+ion-view ion-content #asset-select div.asset.asset-USDTRY .asset,
+.preload div.asset-USDTRY .asset {
+  background-image: url(../img/tg/instruments/usdtry.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NZDUSD .asset,
+.trade-history .trade > div.asset-NZDUSD .asset,
+.fav-assets .asset-block > div.asset-NZDUSD .asset,
+.instrument-logo.asset-NZDUSD .asset,
+.position-result .logo.asset-NZDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-NZDUSD .asset,
+.preload div.asset-NZDUSD .asset {
+  background-image: url(../img/tg/instruments/nzdusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AUDJPY .asset,
+.trade-history .trade > div.asset-AUDJPY .asset,
+.fav-assets .asset-block > div.asset-AUDJPY .asset,
+.instrument-logo.asset-AUDJPY .asset,
+.position-result .logo.asset-AUDJPY .asset,
+ion-view ion-content #asset-select div.asset.asset-AUDJPY .asset,
+.preload div.asset-AUDJPY .asset {
+  background-image: url(../img/tg/instruments/audjpy.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AUDUSD .asset,
+.trade-history .trade > div.asset-AUDUSD .asset,
+.fav-assets .asset-block > div.asset-AUDUSD .asset,
+.instrument-logo.asset-AUDUSD .asset,
+.position-result .logo.asset-AUDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-AUDUSD .asset,
+.preload div.asset-AUDUSD .asset {
+  background-image: url(../img/tg/instruments/audusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-USDCNH .asset,
+.trade-history .trade > div.asset-USDCNH .asset,
+.fav-assets .asset-block > div.asset-USDCNH .asset,
+.instrument-logo.asset-USDCNH .asset,
+.position-result .logo.asset-USDCNH .asset,
+ion-view ion-content #asset-select div.asset.asset-USDCNH .asset,
+.preload div.asset-USDCNH .asset {
+  background-image: url(../img/tg/instruments/usdcny.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-EURCHF .asset,
+.trade-history .trade > div.asset-EURCHF .asset,
+.fav-assets .asset-block > div.asset-EURCHF .asset,
+.instrument-logo.asset-EURCHF .asset,
+.position-result .logo.asset-EURCHF .asset,
+ion-view ion-content #asset-select div.asset.asset-EURCHF .asset,
+.preload div.asset-EURCHF .asset {
+  background-image: url(../img/tg/instruments/eurchf.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-EOSUSD .asset,
+.trade-history .trade > div.asset-EOSUSD .asset,
+.fav-assets .asset-block > div.asset-EOSUSD .asset,
+.instrument-logo.asset-EOSUSD .asset,
+.position-result .logo.asset-EOSUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-EOSUSD .asset,
+.preload div.asset-EOSUSD .asset {
+  background-image: url(../img/tg/instruments/eosusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-XMRUSD .asset,
+.trade-history .trade > div.asset-XMRUSD .asset,
+.fav-assets .asset-block > div.asset-XMRUSD .asset,
+.instrument-logo.asset-XMRUSD .asset,
+.position-result .logo.asset-XMRUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-XMRUSD .asset,
+.preload div.asset-XMRUSD .asset {
+  background-image: url(../img/tg/instruments/xmrusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-XRPUSD .asset,
+.trade-history .trade > div.asset-XRPUSD .asset,
+.fav-assets .asset-block > div.asset-XRPUSD .asset,
+.instrument-logo.asset-XRPUSD .asset,
+.position-result .logo.asset-XRPUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-XRPUSD .asset,
+.preload div.asset-XRPUSD .asset {
+  background-image: url(../img/tg/instruments/xrpusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-LTCUSD .asset,
+.trade-history .trade > div.asset-LTCUSD .asset,
+.fav-assets .asset-block > div.asset-LTCUSD .asset,
+.instrument-logo.asset-LTCUSD .asset,
+.position-result .logo.asset-LTCUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-LTCUSD .asset,
+.preload div.asset-LTCUSD .asset {
+  background-image: url(../img/tg/instruments/ltcusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NEOUSD .asset,
+.trade-history .trade > div.asset-NEOUSD .asset,
+.fav-assets .asset-block > div.asset-NEOUSD .asset,
+.instrument-logo.asset-NEOUSD .asset,
+.position-result .logo.asset-NEOUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-NEOUSD .asset,
+.preload div.asset-NEOUSD .asset {
+  background-image: url(../img/tg/instruments/neousd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-VOWEUR .asset,
+.trade-history .trade > div.asset-VOWEUR .asset,
+.fav-assets .asset-block > div.asset-VOWEUR .asset,
+.instrument-logo.asset-VOWEUR .asset,
+.position-result .logo.asset-VOWEUR .asset,
+ion-view ion-content #asset-select div.asset.asset-VOWEUR .asset,
+.preload div.asset-VOWEUR .asset {
+  background-image: url(../img/tg/instruments/voweur.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NESCHF .asset,
+.trade-history .trade > div.asset-NESCHF .asset,
+.fav-assets .asset-block > div.asset-NESCHF .asset,
+.instrument-logo.asset-NESCHF .asset,
+.position-result .logo.asset-NESCHF .asset,
+ion-view ion-content #asset-select div.asset.asset-NESCHF .asset,
+.preload div.asset-NESCHF .asset {
+  background-image: url(../img/tg/instruments/neschf.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-FXXUSD .asset,
+.trade-history .trade > div.asset-FXXUSD .asset,
+.fav-assets .asset-block > div.asset-FXXUSD .asset,
+.instrument-logo.asset-FXXUSD .asset,
+.position-result .logo.asset-FXXUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-FXXUSD .asset,
+.preload div.asset-FXXUSD .asset {
+  background-image: url(../img/tg/instruments/fxxusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-RDSUSD .asset,
+.trade-history .trade > div.asset-RDSUSD .asset,
+.fav-assets .asset-block > div.asset-RDSUSD .asset,
+.instrument-logo.asset-RDSUSD .asset,
+.position-result .logo.asset-RDSUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-RDSUSD .asset,
+.preload div.asset-RDSUSD .asset {
+  background-image: url(../img/tg/instruments/rdsusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-CGCUSD .asset,
+.trade-history .trade > div.asset-CGCUSD .asset,
+.fav-assets .asset-block > div.asset-CGCUSD .asset,
+.instrument-logo.asset-CGCUSD .asset,
+.position-result .logo.asset-CGCUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-CGCUSD .asset,
+.preload div.asset-CGCUSD .asset {
+  background-image: url(../img/tg/instruments/cgcusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TLRUSD .asset,
+.trade-history .trade > div.asset-TLRUSD .asset,
+.fav-assets .asset-block > div.asset-TLRUSD .asset,
+.instrument-logo.asset-TLRUSD .asset,
+.position-result .logo.asset-TLRUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-TLRUSD .asset,
+.preload div.asset-TLRUSD .asset {
+  background-image: url(../img/tg/instruments/tlrusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-CROUSD .asset,
+.trade-history .trade > div.asset-CROUSD .asset,
+.fav-assets .asset-block > div.asset-CROUSD .asset,
+.instrument-logo.asset-CROUSD .asset,
+.position-result .logo.asset-CROUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-CROUSD .asset,
+.preload div.asset-CROUSD .asset {
+  background-image: url(../img/tg/instruments/crousd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-BABUSD .asset,
+.trade-history .trade > div.asset-BABUSD .asset,
+.fav-assets .asset-block > div.asset-BABUSD .asset,
+.instrument-logo.asset-BABUSD .asset,
+.position-result .logo.asset-BABUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-BABUSD .asset,
+.preload div.asset-BABUSD .asset {
+  background-image: url(../img/tg/instruments/babusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-DJIUSD .asset,
+.trade-history .trade > div.asset-DJIUSD .asset,
+.fav-assets .asset-block > div.asset-DJIUSD .asset,
+.instrument-logo.asset-DJIUSD .asset,
+.position-result .logo.asset-DJIUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-DJIUSD .asset,
+.preload div.asset-DJIUSD .asset {
+  background-image: url(../img/tg/instruments/djiusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TCTHKD .asset,
+.trade-history .trade > div.asset-TCTHKD .asset,
+.fav-assets .asset-block > div.asset-TCTHKD .asset,
+.instrument-logo.asset-TCTHKD .asset,
+.position-result .logo.asset-TCTHKD .asset,
+ion-view ion-content #asset-select div.asset.asset-TCTHKD .asset,
+.preload div.asset-TCTHKD .asset {
+  background-image: url(../img/tg/instruments/tcthkd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-HSBUSD .asset,
+.trade-history .trade > div.asset-HSBUSD .asset,
+.fav-assets .asset-block > div.asset-HSBUSD .asset,
+.instrument-logo.asset-HSBUSD .asset,
+.position-result .logo.asset-HSBUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-HSBUSD .asset,
+.preload div.asset-HSBUSD .asset {
+  background-image: url(../img/tg/instruments/hsbusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SBXUSD .asset,
+.trade-history .trade > div.asset-SBXUSD .asset,
+.fav-assets .asset-block > div.asset-SBXUSD .asset,
+.instrument-logo.asset-SBXUSD .asset,
+.position-result .logo.asset-SBXUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SBXUSD .asset,
+.preload div.asset-SBXUSD .asset {
+  background-image: url(../img/tg/instruments/sbxusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-FITUSD .asset,
+.trade-history .trade > div.asset-FITUSD .asset,
+.fav-assets .asset-block > div.asset-FITUSD .asset,
+.instrument-logo.asset-FITUSD .asset,
+.position-result .logo.asset-FITUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-FITUSD .asset,
+.preload div.asset-FITUSD .asset {
+  background-image: url(../img/tg/instruments/fitusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ASOGBP .asset,
+.trade-history .trade > div.asset-ASOGBP .asset,
+.fav-assets .asset-block > div.asset-ASOGBP .asset,
+.instrument-logo.asset-ASOGBP .asset,
+.position-result .logo.asset-ASOGBP .asset,
+ion-view ion-content #asset-select div.asset.asset-ASOGBP .asset,
+.preload div.asset-ASOGBP .asset {
+  background-image: url(../img/tg/instruments/asogbp.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AMDUSD .asset,
+.trade-history .trade > div.asset-AMDUSD .asset,
+.fav-assets .asset-block > div.asset-AMDUSD .asset,
+.instrument-logo.asset-AMDUSD .asset,
+.position-result .logo.asset-AMDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-AMDUSD .asset,
+.preload div.asset-AMDUSD .asset {
+  background-image: url(../img/tg/instruments/amdusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-BYNUSD .asset,
+.trade-history .trade > div.asset-BYNUSD .asset,
+.fav-assets .asset-block > div.asset-BYNUSD .asset,
+.instrument-logo.asset-BYNUSD .asset,
+.position-result .logo.asset-BYNUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-BYNUSD .asset,
+.preload div.asset-BYNUSD .asset {
+  background-image: url(../img/tg/instruments/bynusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-BOAUSD .asset,
+.trade-history .trade > div.asset-BOAUSD .asset,
+.fav-assets .asset-block > div.asset-BOAUSD .asset,
+.instrument-logo.asset-BOAUSD .asset,
+.position-result .logo.asset-BOAUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-BOAUSD .asset,
+.preload div.asset-BOAUSD .asset {
+  background-image: url(../img/tg/instruments/boausd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-INTUSD .asset,
+.trade-history .trade > div.asset-INTUSD .asset,
+.fav-assets .asset-block > div.asset-INTUSD .asset,
+.instrument-logo.asset-INTUSD .asset,
+.position-result .logo.asset-INTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-INTUSD .asset,
+.preload div.asset-INTUSD .asset {
+  background-image: url(../img/tg/instruments/intusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-MCDUSD .asset,
+.trade-history .trade > div.asset-MCDUSD .asset,
+.fav-assets .asset-block > div.asset-MCDUSD .asset,
+.instrument-logo.asset-MCDUSD .asset,
+.position-result .logo.asset-MCDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-MCDUSD .asset,
+.preload div.asset-MCDUSD .asset {
+  background-image: url(../img/tg/instruments/mcdusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NVDUSD .asset,
+.trade-history .trade > div.asset-NVDUSD .asset,
+.fav-assets .asset-block > div.asset-NVDUSD .asset,
+.instrument-logo.asset-NVDUSD .asset,
+.position-result .logo.asset-NVDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-NVDUSD .asset,
+.preload div.asset-NVDUSD .asset {
+  background-image: url(../img/tg/instruments/nvdusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-UBRUSD .asset,
+.trade-history .trade > div.asset-UBRUSD .asset,
+.fav-assets .asset-block > div.asset-UBRUSD .asset,
+.instrument-logo.asset-UBRUSD .asset,
+.position-result .logo.asset-UBRUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-UBRUSD .asset,
+.preload div.asset-UBRUSD .asset {
+  background-image: url(../img/tg/instruments/ubrusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-RMCSAR .asset,
+.trade-history .trade > div.asset-RMCSAR .asset,
+.fav-assets .asset-block > div.asset-RMCSAR .asset,
+.instrument-logo.asset-RMCSAR .asset,
+.position-result .logo.asset-RMCSAR .asset,
+ion-view ion-content #asset-select div.asset.asset-RMCSAR .asset,
+.preload div.asset-RMCSAR .asset {
+  background-image: url(../img/tg/instruments/rmcsar.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-USDINR .asset,
+.trade-history .trade > div.asset-USDINR .asset,
+.fav-assets .asset-block > div.asset-USDINR .asset,
+.instrument-logo.asset-USDINR .asset,
+.position-result .logo.asset-USDINR .asset,
+ion-view ion-content #asset-select div.asset.asset-USDINR .asset,
+.preload div.asset-USDINR .asset {
+  background-image: url(../img/tg/instruments/usdinr.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-YESINR .asset,
+.trade-history .trade > div.asset-YESINR .asset,
+.fav-assets .asset-block > div.asset-YESINR .asset,
+.instrument-logo.asset-YESINR .asset,
+.position-result .logo.asset-YESINR .asset,
+ion-view ion-content #asset-select div.asset.asset-YESINR .asset,
+.preload div.asset-YESINR .asset {
+  background-image: url(../img/tg/instruments/yesinr.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-VODINR .asset,
+.trade-history .trade > div.asset-VODINR .asset,
+.fav-assets .asset-block > div.asset-VODINR .asset,
+.instrument-logo.asset-VODINR .asset,
+.position-result .logo.asset-VODINR .asset,
+ion-view ion-content #asset-select div.asset.asset-VODINR .asset,
+.preload div.asset-VODINR .asset {
+  background-image: url(../img/tg/instruments/vodinr.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-DHFINR .asset,
+.trade-history .trade > div.asset-DHFINR .asset,
+.fav-assets .asset-block > div.asset-DHFINR .asset,
+.instrument-logo.asset-DHFINR .asset,
+.position-result .logo.asset-DHFINR .asset,
+ion-view ion-content #asset-select div.asset.asset-DHFINR .asset,
+.preload div.asset-DHFINR .asset {
+  background-image: url(../img/tg/instruments/dhfinr.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ADAUSD .asset,
+.trade-history .trade > div.asset-ADAUSD .asset,
+.fav-assets .asset-block > div.asset-ADAUSD .asset,
+.instrument-logo.asset-ADAUSD .asset,
+.position-result .logo.asset-ADAUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-ADAUSD .asset,
+.preload div.asset-ADAUSD .asset {
+  background-image: url(../img/tg/instruments/adausd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ADIEUR .asset,
+.trade-history .trade > div.asset-ADIEUR .asset,
+.fav-assets .asset-block > div.asset-ADIEUR .asset,
+.instrument-logo.asset-ADIEUR .asset,
+.position-result .logo.asset-ADIEUR .asset,
+ion-view ion-content #asset-select div.asset.asset-ADIEUR .asset,
+.preload div.asset-ADIEUR .asset {
+  background-image: url(../img/tg/instruments/adieur.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AIRUSD .asset,
+.trade-history .trade > div.asset-AIRUSD .asset,
+.fav-assets .asset-block > div.asset-AIRUSD .asset,
+.instrument-logo.asset-AIRUSD .asset,
+.position-result .logo.asset-AIRUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-AIRUSD .asset,
+.preload div.asset-AIRUSD .asset {
+  background-image: url(../img/tg/instruments/airusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-BCHUSD .asset,
+.trade-history .trade > div.asset-BCHUSD .asset,
+.fav-assets .asset-block > div.asset-BCHUSD .asset,
+.instrument-logo.asset-BCHUSD .asset,
+.position-result .logo.asset-BCHUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-BCHUSD .asset,
+.preload div.asset-BCHUSD .asset {
+  background-image: url(../img/tg/instruments/bchusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-COCUSD .asset,
+.trade-history .trade > div.asset-COCUSD .asset,
+.fav-assets .asset-block > div.asset-COCUSD .asset,
+.instrument-logo.asset-COCUSD .asset,
+.position-result .logo.asset-COCUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-COCUSD .asset,
+.preload div.asset-COCUSD .asset {
+  background-image: url(../img/tg/instruments/cocusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-COLUSD .asset,
+.trade-history .trade > div.asset-COLUSD .asset,
+.fav-assets .asset-block > div.asset-COLUSD .asset,
+.instrument-logo.asset-COLUSD .asset,
+.position-result .logo.asset-COLUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-COLUSD .asset,
+.preload div.asset-COLUSD .asset {
+  background-image: url(../img/tg/instruments/colusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-COTUSD .asset,
+.trade-history .trade > div.asset-COTUSD .asset,
+.fav-assets .asset-block > div.asset-COTUSD .asset,
+.instrument-logo.asset-COTUSD .asset,
+.position-result .logo.asset-COTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-COTUSD .asset,
+.preload div.asset-COTUSD .asset {
+  background-image: url(../img/tg/instruments/cotusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-DAIEUR .asset,
+.trade-history .trade > div.asset-DAIEUR .asset,
+.fav-assets .asset-block > div.asset-DAIEUR .asset,
+.instrument-logo.asset-DAIEUR .asset,
+.position-result .logo.asset-DAIEUR .asset,
+ion-view ion-content #asset-select div.asset.asset-DAIEUR .asset,
+.preload div.asset-DAIEUR .asset {
+  background-image: url(../img/tg/instruments/daieur.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-DSHUSD .asset,
+.trade-history .trade > div.asset-DSHUSD .asset,
+.fav-assets .asset-block > div.asset-DSHUSD .asset,
+.instrument-logo.asset-DSHUSD .asset,
+.position-result .logo.asset-DSHUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-DSHUSD .asset,
+.preload div.asset-DSHUSD .asset {
+  background-image: url(../img/tg/instruments/dshusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-EURGBP .asset,
+.trade-history .trade > div.asset-EURGBP .asset,
+.fav-assets .asset-block > div.asset-EURGBP .asset,
+.instrument-logo.asset-EURGBP .asset,
+.position-result .logo.asset-EURGBP .asset,
+ion-view ion-content #asset-select div.asset.asset-EURGBP .asset,
+.preload div.asset-EURGBP .asset {
+  background-image: url(../img/tg/instruments/eurgbp.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-EURJPY .asset,
+.trade-history .trade > div.asset-EURJPY .asset,
+.fav-assets .asset-block > div.asset-EURJPY .asset,
+.instrument-logo.asset-EURJPY .asset,
+.position-result .logo.asset-EURJPY .asset,
+ion-view ion-content #asset-select div.asset.asset-EURJPY .asset,
+.preload div.asset-EURJPY .asset {
+  background-image: url(../img/tg/instruments/eurjpy.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-FTSGBP .asset,
+.trade-history .trade > div.asset-FTSGBP .asset,
+.fav-assets .asset-block > div.asset-FTSGBP .asset,
+.instrument-logo.asset-FTSGBP .asset,
+.position-result .logo.asset-FTSGBP .asset,
+ion-view ion-content #asset-select div.asset.asset-FTSGBP .asset,
+.preload div.asset-FTSGBP .asset {
+  background-image: url(../img/tg/instruments/ftsgbp.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-GBPJPY .asset,
+.trade-history .trade > div.asset-GBPJPY .asset,
+.fav-assets .asset-block > div.asset-GBPJPY .asset,
+.instrument-logo.asset-GBPJPY .asset,
+.position-result .logo.asset-GBPJPY .asset,
+ion-view ion-content #asset-select div.asset.asset-GBPJPY .asset,
+.preload div.asset-GBPJPY .asset {
+  background-image: url(../img/tg/instruments/gbpjpy.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-GSAUSD .asset,
+.trade-history .trade > div.asset-GSAUSD .asset,
+.fav-assets .asset-block > div.asset-GSAUSD .asset,
+.instrument-logo.asset-GSAUSD .asset,
+.position-result .logo.asset-GSAUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-GSAUSD .asset,
+.preload div.asset-GSAUSD .asset {
+  background-image: url(../img/tg/instruments/gsausd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-IOTUSD .asset,
+.trade-history .trade > div.asset-IOTUSD .asset,
+.fav-assets .asset-block > div.asset-IOTUSD .asset,
+.instrument-logo.asset-IOTUSD .asset,
+.position-result .logo.asset-IOTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-IOTUSD .asset,
+.preload div.asset-IOTUSD .asset {
+  background-image: url(../img/tg/instruments/iotusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-JDXUSD .asset,
+.trade-history .trade > div.asset-JDXUSD .asset,
+.fav-assets .asset-block > div.asset-JDXUSD .asset,
+.instrument-logo.asset-JDXUSD .asset,
+.position-result .logo.asset-JDXUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-JDXUSD .asset,
+.preload div.asset-JDXUSD .asset {
+  background-image: url(../img/tg/instruments/jdxusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-JNJUSD .asset,
+.trade-history .trade > div.asset-JNJUSD .asset,
+.fav-assets .asset-block > div.asset-JNJUSD .asset,
+.instrument-logo.asset-JNJUSD .asset,
+.position-result .logo.asset-JNJUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-JNJUSD .asset,
+.preload div.asset-JNJUSD .asset {
+  background-image: url(../img/tg/instruments/jnjusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-MASUSD .asset,
+.trade-history .trade > div.asset-MASUSD .asset,
+.fav-assets .asset-block > div.asset-MASUSD .asset,
+.instrument-logo.asset-MASUSD .asset,
+.position-result .logo.asset-MASUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-MASUSD .asset,
+.preload div.asset-MASUSD .asset {
+  background-image: url(../img/tg/instruments/masusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-PLDUSD .asset,
+.trade-history .trade > div.asset-PLDUSD .asset,
+.fav-assets .asset-block > div.asset-PLDUSD .asset,
+.instrument-logo.asset-PLDUSD .asset,
+.position-result .logo.asset-PLDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-PLDUSD .asset,
+.preload div.asset-PLDUSD .asset {
+  background-image: url(../img/tg/instruments/pldusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SAMKRW .asset,
+.trade-history .trade > div.asset-SAMKRW .asset,
+.fav-assets .asset-block > div.asset-SAMKRW .asset,
+.instrument-logo.asset-SAMKRW .asset,
+.position-result .logo.asset-SAMKRW .asset,
+ion-view ion-content #asset-select div.asset.asset-SAMKRW .asset,
+.preload div.asset-SAMKRW .asset {
+  background-image: url(../img/tg/instruments/samkrw.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-STLUSD .asset,
+.trade-history .trade > div.asset-STLUSD .asset,
+.fav-assets .asset-block > div.asset-STLUSD .asset,
+.instrument-logo.asset-STLUSD .asset,
+.position-result .logo.asset-STLUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-STLUSD .asset,
+.preload div.asset-STLUSD .asset {
+  background-image: url(../img/tg/instruments/stlusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SUGUSD .asset,
+.trade-history .trade > div.asset-SUGUSD .asset,
+.fav-assets .asset-block > div.asset-SUGUSD .asset,
+.instrument-logo.asset-SUGUSD .asset,
+.position-result .logo.asset-SUGUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SUGUSD .asset,
+.preload div.asset-SUGUSD .asset {
+  background-image: url(../img/tg/instruments/sugusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TEZUSD .asset,
+.trade-history .trade > div.asset-TEZUSD .asset,
+.fav-assets .asset-block > div.asset-TEZUSD .asset,
+.instrument-logo.asset-TEZUSD .asset,
+.position-result .logo.asset-TEZUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-TEZUSD .asset,
+.preload div.asset-TEZUSD .asset {
+  background-image: url(../img/tg/instruments/tezusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TOYUSD .asset,
+.trade-history .trade > div.asset-TOYUSD .asset,
+.fav-assets .asset-block > div.asset-TOYUSD .asset,
+.instrument-logo.asset-TOYUSD .asset,
+.position-result .logo.asset-TOYUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-TOYUSD .asset,
+.preload div.asset-TOYUSD .asset {
+  background-image: url(../img/tg/instruments/toyusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TROPHY .asset,
+.trade-history .trade > div.asset-TROPHY .asset,
+.fav-assets .asset-block > div.asset-TROPHY .asset,
+.instrument-logo.asset-TROPHY .asset,
+.position-result .logo.asset-TROPHY .asset,
+ion-view ion-content #asset-select div.asset.asset-TROPHY .asset,
+.preload div.asset-TROPHY .asset {
+  background-image: url(../img/tg/instruments/trophy.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TROUSD .asset,
+.trade-history .trade > div.asset-TROUSD .asset,
+.fav-assets .asset-block > div.asset-TROUSD .asset,
+.instrument-logo.asset-TROUSD .asset,
+.position-result .logo.asset-TROUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-TROUSD .asset,
+.preload div.asset-TROUSD .asset {
+  background-image: url(../img/tg/instruments/trousd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-USDCHF .asset,
+.trade-history .trade > div.asset-USDCHF .asset,
+.fav-assets .asset-block > div.asset-USDCHF .asset,
+.instrument-logo.asset-USDCHF .asset,
+.position-result .logo.asset-USDCHF .asset,
+ion-view ion-content #asset-select div.asset.asset-USDCHF .asset,
+.preload div.asset-USDCHF .asset {
+  background-image: url(../img/tg/instruments/usdchf.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-VISUSD .asset,
+.trade-history .trade > div.asset-VISUSD .asset,
+.fav-assets .asset-block > div.asset-VISUSD .asset,
+.instrument-logo.asset-VISUSD .asset,
+.position-result .logo.asset-VISUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-VISUSD .asset,
+.preload div.asset-VISUSD .asset {
+  background-image: url(../img/tg/instruments/visusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-WHEUSD .asset,
+.trade-history .trade > div.asset-WHEUSD .asset,
+.fav-assets .asset-block > div.asset-WHEUSD .asset,
+.instrument-logo.asset-WHEUSD .asset,
+.position-result .logo.asset-WHEUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-WHEUSD .asset,
+.preload div.asset-WHEUSD .asset {
+  background-image: url(../img/tg/instruments/wheusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ZOMUSD .asset,
+.trade-history .trade > div.asset-ZOMUSD .asset,
+.fav-assets .asset-block > div.asset-ZOMUSD .asset,
+.instrument-logo.asset-ZOMUSD .asset,
+.position-result .logo.asset-ZOMUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-ZOMUSD .asset,
+.preload div.asset-ZOMUSD .asset {
+  background-image: url(../img/tg/instruments/zomusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-COIUSD .asset,
+.trade-history .trade > div.asset-COIUSD .asset,
+.fav-assets .asset-block > div.asset-COIUSD .asset,
+.instrument-logo.asset-COIUSD .asset,
+.position-result .logo.asset-COIUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-COIUSD .asset,
+.preload div.asset-COIUSD .asset {
+  background-image: url(../img/tg/instruments/coiusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-DOGUSD .asset,
+.trade-history .trade > div.asset-DOGUSD .asset,
+.fav-assets .asset-block > div.asset-DOGUSD .asset,
+.instrument-logo.asset-DOGUSD .asset,
+.position-result .logo.asset-DOGUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-DOGUSD .asset,
+.preload div.asset-DOGUSD .asset {
+  background-image: url(../img/tg/instruments/dogusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AVAUSD .asset,
+.trade-history .trade > div.asset-AVAUSD .asset,
+.fav-assets .asset-block > div.asset-AVAUSD .asset,
+.instrument-logo.asset-AVAUSD .asset,
+.position-result .logo.asset-AVAUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-AVAUSD .asset,
+.preload div.asset-AVAUSD .asset {
+  background-image: url(../img/tg/instruments/avausd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-BNBUSD .asset,
+.trade-history .trade > div.asset-BNBUSD .asset,
+.fav-assets .asset-block > div.asset-BNBUSD .asset,
+.instrument-logo.asset-BNBUSD .asset,
+.position-result .logo.asset-BNBUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-BNBUSD .asset,
+.preload div.asset-BNBUSD .asset {
+  background-image: url(../img/tg/instruments/bnbusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-CPTUSD .asset,
+.trade-history .trade > div.asset-CPTUSD .asset,
+.fav-assets .asset-block > div.asset-CPTUSD .asset,
+.instrument-logo.asset-CPTUSD .asset,
+.position-result .logo.asset-CPTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-CPTUSD .asset,
+.preload div.asset-CPTUSD .asset {
+  background-image: url(../img/tg/instruments/cptusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-DOTUSD .asset,
+.trade-history .trade > div.asset-DOTUSD .asset,
+.fav-assets .asset-block > div.asset-DOTUSD .asset,
+.instrument-logo.asset-DOTUSD .asset,
+.position-result .logo.asset-DOTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-DOTUSD .asset,
+.preload div.asset-DOTUSD .asset {
+  background-image: url(../img/tg/instruments/dotusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-LUNUSD .asset,
+.trade-history .trade > div.asset-LUNUSD .asset,
+.fav-assets .asset-block > div.asset-LUNUSD .asset,
+.instrument-logo.asset-LUNUSD .asset,
+.position-result .logo.asset-LUNUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-LUNUSD .asset,
+.preload div.asset-LUNUSD .asset {
+  background-image: url(../img/tg/instruments/lunusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-MANUSD .asset,
+.trade-history .trade > div.asset-MANUSD .asset,
+.fav-assets .asset-block > div.asset-MANUSD .asset,
+.instrument-logo.asset-MANUSD .asset,
+.position-result .logo.asset-MANUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-MANUSD .asset,
+.preload div.asset-MANUSD .asset {
+  background-image: url(../img/tg/instruments/manusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-MATUSD .asset,
+.trade-history .trade > div.asset-MATUSD .asset,
+.fav-assets .asset-block > div.asset-MATUSD .asset,
+.instrument-logo.asset-MATUSD .asset,
+.position-result .logo.asset-MATUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-MATUSD .asset,
+.preload div.asset-MATUSD .asset {
+  background-image: url(../img/tg/instruments/matusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SHIUSD .asset,
+.trade-history .trade > div.asset-SHIUSD .asset,
+.fav-assets .asset-block > div.asset-SHIUSD .asset,
+.instrument-logo.asset-SHIUSD .asset,
+.position-result .logo.asset-SHIUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SHIUSD .asset,
+.preload div.asset-SHIUSD .asset {
+  background-image: url(../img/tg/instruments/shiusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SOLUSD .asset,
+.trade-history .trade > div.asset-SOLUSD .asset,
+.fav-assets .asset-block > div.asset-SOLUSD .asset,
+.instrument-logo.asset-SOLUSD .asset,
+.position-result .logo.asset-SOLUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SOLUSD .asset,
+.preload div.asset-SOLUSD .asset {
+  background-image: url(../img/tg/instruments/solusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AVEUSD .asset,
+.trade-history .trade > div.asset-AVEUSD .asset,
+.fav-assets .asset-block > div.asset-AVEUSD .asset,
+.instrument-logo.asset-AVEUSD .asset,
+.position-result .logo.asset-AVEUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-AVEUSD .asset,
+.preload div.asset-AVEUSD .asset {
+  background-image: url(../img/tg/instruments/aveusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-COSUSD .asset,
+.trade-history .trade > div.asset-COSUSD .asset,
+.fav-assets .asset-block > div.asset-COSUSD .asset,
+.instrument-logo.asset-COSUSD .asset,
+.position-result .logo.asset-COSUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-COSUSD .asset,
+.preload div.asset-COSUSD .asset {
+  background-image: url(../img/tg/instruments/cosusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-DAIUSD .asset,
+.trade-history .trade > div.asset-DAIUSD .asset,
+.fav-assets .asset-block > div.asset-DAIUSD .asset,
+.instrument-logo.asset-DAIUSD .asset,
+.position-result .logo.asset-DAIUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-DAIUSD .asset,
+.preload div.asset-DAIUSD .asset {
+  background-image: url(../img/tg/instruments/daiusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-FILUSD .asset,
+.trade-history .trade > div.asset-FILUSD .asset,
+.fav-assets .asset-block > div.asset-FILUSD .asset,
+.instrument-logo.asset-FILUSD .asset,
+.position-result .logo.asset-FILUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-FILUSD .asset,
+.preload div.asset-FILUSD .asset {
+  background-image: url(../img/tg/instruments/filusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-HEDUSD .asset,
+.trade-history .trade > div.asset-HEDUSD .asset,
+.fav-assets .asset-block > div.asset-HEDUSD .asset,
+.instrument-logo.asset-HEDUSD .asset,
+.position-result .logo.asset-HEDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-HEDUSD .asset,
+.preload div.asset-HEDUSD .asset {
+  background-image: url(../img/tg/instruments/hedusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-LDOUSD .asset,
+.trade-history .trade > div.asset-LDOUSD .asset,
+.fav-assets .asset-block > div.asset-LDOUSD .asset,
+.instrument-logo.asset-LDOUSD .asset,
+.position-result .logo.asset-LDOUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-LDOUSD .asset,
+.preload div.asset-LDOUSD .asset {
+  background-image: url(../img/tg/instruments/ldousd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-LNKUSD .asset,
+.trade-history .trade > div.asset-LNKUSD .asset,
+.fav-assets .asset-block > div.asset-LNKUSD .asset,
+.instrument-logo.asset-LNKUSD .asset,
+.position-result .logo.asset-LNKUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-LNKUSD .asset,
+.preload div.asset-LNKUSD .asset {
+  background-image: url(../img/tg/instruments/lnkusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-MKRUSD .asset,
+.trade-history .trade > div.asset-MKRUSD .asset,
+.fav-assets .asset-block > div.asset-MKRUSD .asset,
+.instrument-logo.asset-MKRUSD .asset,
+.position-result .logo.asset-MKRUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-MKRUSD .asset,
+.preload div.asset-MKRUSD .asset {
+  background-image: url(../img/tg/instruments/mkrusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SANUSD .asset,
+.trade-history .trade > div.asset-SANUSD .asset,
+.fav-assets .asset-block > div.asset-SANUSD .asset,
+.instrument-logo.asset-SANUSD .asset,
+.position-result .logo.asset-SANUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SANUSD .asset,
+.preload div.asset-SANUSD .asset {
+  background-image: url(../img/tg/instruments/sanusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SFPUSD .asset,
+.trade-history .trade > div.asset-SFPUSD .asset,
+.fav-assets .asset-block > div.asset-SFPUSD .asset,
+.instrument-logo.asset-SFPUSD .asset,
+.position-result .logo.asset-SFPUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SFPUSD .asset,
+.preload div.asset-SFPUSD .asset {
+  background-image: url(../img/tg/instruments/sfpusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SUIUSD .asset,
+.trade-history .trade > div.asset-SUIUSD .asset,
+.fav-assets .asset-block > div.asset-SUIUSD .asset,
+.instrument-logo.asset-SUIUSD .asset,
+.position-result .logo.asset-SUIUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SUIUSD .asset,
+.preload div.asset-SUIUSD .asset {
+  background-image: url(../img/tg/instruments/suiusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-THOUSD .asset,
+.trade-history .trade > div.asset-THOUSD .asset,
+.fav-assets .asset-block > div.asset-THOUSD .asset,
+.instrument-logo.asset-THOUSD .asset,
+.position-result .logo.asset-THOUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-THOUSD .asset,
+.preload div.asset-THOUSD .asset {
+  background-image: url(../img/tg/instruments/thousd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ABBCHF .asset,
+.trade-history .trade > div.asset-ABBCHF .asset,
+.fav-assets .asset-block > div.asset-ABBCHF .asset,
+.instrument-logo.asset-ABBCHF .asset,
+.position-result .logo.asset-ABBCHF .asset,
+ion-view ion-content #asset-select div.asset.asset-ABBCHF .asset,
+.preload div.asset-ABBCHF .asset {
+  background-image: url(../img/tg/instruments/abbchf.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ACNUSD .asset,
+.trade-history .trade > div.asset-ACNUSD .asset,
+.fav-assets .asset-block > div.asset-ACNUSD .asset,
+.instrument-logo.asset-ACNUSD .asset,
+.position-result .logo.asset-ACNUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-ACNUSD .asset,
+.preload div.asset-ACNUSD .asset {
+  background-image: url(../img/tg/instruments/acnusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ABDUSD .asset,
+.trade-history .trade > div.asset-ABDUSD .asset,
+.fav-assets .asset-block > div.asset-ABDUSD .asset,
+.instrument-logo.asset-ABDUSD .asset,
+.position-result .logo.asset-ABDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-ABDUSD .asset,
+.preload div.asset-ABDUSD .asset {
+  background-image: url(../img/tg/instruments/adbusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ADSUSD .asset,
+.trade-history .trade > div.asset-ADSUSD .asset,
+.fav-assets .asset-block > div.asset-ADSUSD .asset,
+.instrument-logo.asset-ADSUSD .asset,
+.position-result .logo.asset-ADSUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-ADSUSD .asset,
+.preload div.asset-ADSUSD .asset {
+  background-image: url(../img/tg/instruments/adsusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ADYEUR .asset,
+.trade-history .trade > div.asset-ADYEUR .asset,
+.fav-assets .asset-block > div.asset-ADYEUR .asset,
+.instrument-logo.asset-ADYEUR .asset,
+.position-result .logo.asset-ADYEUR .asset,
+ion-view ion-content #asset-select div.asset.asset-ADYEUR .asset,
+.preload div.asset-ADYEUR .asset {
+  background-image: url(../img/tg/instruments/adyeur.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AMCUSD .asset,
+.trade-history .trade > div.asset-AMCUSD .asset,
+.fav-assets .asset-block > div.asset-AMCUSD .asset,
+.instrument-logo.asset-AMCUSD .asset,
+.position-result .logo.asset-AMCUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-AMCUSD .asset,
+.preload div.asset-AMCUSD .asset {
+  background-image: url(../img/tg/instruments/amcusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ATTUSD .asset,
+.trade-history .trade > div.asset-ATTUSD .asset,
+.fav-assets .asset-block > div.asset-ATTUSD .asset,
+.instrument-logo.asset-ATTUSD .asset,
+.position-result .logo.asset-ATTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-ATTUSD .asset,
+.preload div.asset-ATTUSD .asset {
+  background-image: url(../img/tg/instruments/attusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-AVTUSD .asset,
+.trade-history .trade > div.asset-AVTUSD .asset,
+.fav-assets .asset-block > div.asset-AVTUSD .asset,
+.instrument-logo.asset-AVTUSD .asset,
+.position-result .logo.asset-AVTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-AVTUSD .asset,
+.preload div.asset-AVTUSD .asset {
+  background-image: url(../img/tg/instruments/avtusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-BDDUSD .asset,
+.trade-history .trade > div.asset-BDDUSD .asset,
+.fav-assets .asset-block > div.asset-BDDUSD .asset,
+.instrument-logo.asset-BDDUSD .asset,
+.position-result .logo.asset-BDDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-BDDUSD .asset,
+.preload div.asset-BDDUSD .asset {
+  background-image: url(../img/tg/instruments/bddusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-BRCGBP .asset,
+.trade-history .trade > div.asset-BRCGBP .asset,
+.fav-assets .asset-block > div.asset-BRCGBP .asset,
+.instrument-logo.asset-BRCGBP .asset,
+.position-result .logo.asset-BRCGBP .asset,
+ion-view ion-content #asset-select div.asset.asset-BRCGBP .asset,
+.preload div.asset-BRCGBP .asset {
+  background-image: url(../img/tg/instruments/brcgbp.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-CAIUSD .asset,
+.trade-history .trade > div.asset-CAIUSD .asset,
+.fav-assets .asset-block > div.asset-CAIUSD .asset,
+.instrument-logo.asset-CAIUSD .asset,
+.position-result .logo.asset-CAIUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-CAIUSD .asset,
+.preload div.asset-CAIUSD .asset {
+  background-image: url(../img/tg/instruments/caiusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-CHGUSD .asset,
+.trade-history .trade > div.asset-CHGUSD .asset,
+.fav-assets .asset-block > div.asset-CHGUSD .asset,
+.instrument-logo.asset-CHGUSD .asset,
+.position-result .logo.asset-CHGUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-CHGUSD .asset,
+.preload div.asset-CHGUSD .asset {
+  background-image: url(../img/tg/instruments/chgusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-CMCUSD .asset,
+.trade-history .trade > div.asset-CMCUSD .asset,
+.fav-assets .asset-block > div.asset-CMCUSD .asset,
+.instrument-logo.asset-CMCUSD .asset,
+.position-result .logo.asset-CMCUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-CMCUSD .asset,
+.preload div.asset-CMCUSD .asset {
+  background-image: url(../img/tg/instruments/cmcusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-CRMUSD .asset,
+.trade-history .trade > div.asset-CRMUSD .asset,
+.fav-assets .asset-block > div.asset-CRMUSD .asset,
+.instrument-logo.asset-CRMUSD .asset,
+.position-result .logo.asset-CRMUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-CRMUSD .asset,
+.preload div.asset-CRMUSD .asset {
+  background-image: url(../img/tg/instruments/crmusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-CRWUSD .asset,
+.trade-history .trade > div.asset-CRWUSD .asset,
+.fav-assets .asset-block > div.asset-CRWUSD .asset,
+.instrument-logo.asset-CRWUSD .asset,
+.position-result .logo.asset-CRWUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-CRWUSD .asset,
+.preload div.asset-CRWUSD .asset {
+  background-image: url(../img/tg/instruments/crwusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-CSCUSD .asset,
+.trade-history .trade > div.asset-CSCUSD .asset,
+.fav-assets .asset-block > div.asset-CSCUSD .asset,
+.instrument-logo.asset-CSCUSD .asset,
+.position-result .logo.asset-CSCUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-CSCUSD .asset,
+.preload div.asset-CSCUSD .asset {
+  background-image: url(../img/tg/instruments/cscusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-EAIUSD .asset,
+.trade-history .trade > div.asset-EAIUSD .asset,
+.fav-assets .asset-block > div.asset-EAIUSD .asset,
+.instrument-logo.asset-EAIUSD .asset,
+.position-result .logo.asset-EAIUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-EAIUSD .asset,
+.preload div.asset-EAIUSD .asset {
+  background-image: url(../img/tg/instruments/eaiusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-EMBSEK .asset,
+.trade-history .trade > div.asset-EMBSEK .asset,
+.fav-assets .asset-block > div.asset-EMBSEK .asset,
+.instrument-logo.asset-EMBSEK .asset,
+.position-result .logo.asset-EMBSEK .asset,
+ion-view ion-content #asset-select div.asset.asset-EMBSEK .asset,
+.preload div.asset-EMBSEK .asset {
+  background-image: url(../img/tg/instruments/embsek.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-GLNGBP .asset,
+.trade-history .trade > div.asset-GLNGBP .asset,
+.fav-assets .asset-block > div.asset-GLNGBP .asset,
+.instrument-logo.asset-GLNGBP .asset,
+.position-result .logo.asset-GLNGBP .asset,
+ion-view ion-content #asset-select div.asset.asset-GLNGBP .asset,
+.preload div.asset-GLNGBP .asset {
+  background-image: url(../img/tg/instruments/glngbp.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-GRBUSD .asset,
+.trade-history .trade > div.asset-GRBUSD .asset,
+.fav-assets .asset-block > div.asset-GRBUSD .asset,
+.instrument-logo.asset-GRBUSD .asset,
+.position-result .logo.asset-GRBUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-GRBUSD .asset,
+.preload div.asset-GRBUSD .asset {
+  background-image: url(../img/tg/instruments/grbusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-KVUUSD .asset,
+.trade-history .trade > div.asset-KVUUSD .asset,
+.fav-assets .asset-block > div.asset-KVUUSD .asset,
+.instrument-logo.asset-KVUUSD .asset,
+.position-result .logo.asset-KVUUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-KVUUSD .asset,
+.preload div.asset-KVUUSD .asset {
+  background-image: url(../img/tg/instruments/kvuusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-LLOGBP .asset,
+.trade-history .trade > div.asset-LLOGBP .asset,
+.fav-assets .asset-block > div.asset-LLOGBP .asset,
+.instrument-logo.asset-LLOGBP .asset,
+.position-result .logo.asset-LLOGBP .asset,
+ion-view ion-content #asset-select div.asset.asset-LLOGBP .asset,
+.preload div.asset-LLOGBP .asset {
+  background-image: url(../img/tg/instruments/llogbp.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-MRVUSD .asset,
+.trade-history .trade > div.asset-MRVUSD .asset,
+.fav-assets .asset-block > div.asset-MRVUSD .asset,
+.instrument-logo.asset-MRVUSD .asset,
+.position-result .logo.asset-MRVUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-MRVUSD .asset,
+.preload div.asset-MRVUSD .asset {
+  background-image: url(../img/tg/instruments/mrvusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NEEUSD .asset,
+.trade-history .trade > div.asset-NEEUSD .asset,
+.fav-assets .asset-block > div.asset-NEEUSD .asset,
+.instrument-logo.asset-NEEUSD .asset,
+.position-result .logo.asset-NEEUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-NEEUSD .asset,
+.preload div.asset-NEEUSD .asset {
+  background-image: url(../img/tg/instruments/neeusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NETUSD .asset,
+.trade-history .trade > div.asset-NETUSD .asset,
+.fav-assets .asset-block > div.asset-NETUSD .asset,
+.instrument-logo.asset-NETUSD .asset,
+.position-result .logo.asset-NETUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-NETUSD .asset,
+.preload div.asset-NETUSD .asset {
+  background-image: url(../img/tg/instruments/netusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NIBSEK .asset,
+.trade-history .trade > div.asset-NIBSEK .asset,
+.fav-assets .asset-block > div.asset-NIBSEK .asset,
+.instrument-logo.asset-NIBSEK .asset,
+.position-result .logo.asset-NIBSEK .asset,
+ion-view ion-content #asset-select div.asset.asset-NIBSEK .asset,
+.preload div.asset-NIBSEK .asset {
+  background-image: url(../img/tg/instruments/nibsek.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NIOHKD .asset,
+.trade-history .trade > div.asset-NIOHKD .asset,
+.fav-assets .asset-block > div.asset-NIOHKD .asset,
+.instrument-logo.asset-NIOHKD .asset,
+.position-result .logo.asset-NIOHKD .asset,
+ion-view ion-content #asset-select div.asset.asset-NIOHKD .asset,
+.preload div.asset-NIOHKD .asset {
+  background-image: url(../img/tg/instruments/niohkd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-NUXUSD .asset,
+.trade-history .trade > div.asset-NUXUSD .asset,
+.fav-assets .asset-block > div.asset-NUXUSD .asset,
+.instrument-logo.asset-NUXUSD .asset,
+.position-result .logo.asset-NUXUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-NUXUSD .asset,
+.preload div.asset-NUXUSD .asset {
+  background-image: url(../img/tg/instruments/nuxusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-PAHEUR .asset,
+.trade-history .trade > div.asset-PAHEUR .asset,
+.fav-assets .asset-block > div.asset-PAHEUR .asset,
+.instrument-logo.asset-PAHEUR .asset,
+.position-result .logo.asset-PAHEUR .asset,
+ion-view ion-content #asset-select div.asset.asset-PAHEUR .asset,
+.preload div.asset-PAHEUR .asset {
+  background-image: url(../img/tg/instruments/paheur.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-PALUSD .asset,
+.trade-history .trade > div.asset-PALUSD .asset,
+.fav-assets .asset-block > div.asset-PALUSD .asset,
+.instrument-logo.asset-PALUSD .asset,
+.position-result .logo.asset-PALUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-PALUSD .asset,
+.preload div.asset-PALUSD .asset {
+  background-image: url(../img/tg/instruments/palusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-PFEUSD .asset,
+.trade-history .trade > div.asset-PFEUSD .asset,
+.fav-assets .asset-block > div.asset-PFEUSD .asset,
+.instrument-logo.asset-PFEUSD .asset,
+.position-result .logo.asset-PFEUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-PFEUSD .asset,
+.preload div.asset-PFEUSD .asset {
+  background-image: url(../img/tg/instruments/pfeusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-RBLUSD .asset,
+.trade-history .trade > div.asset-RBLUSD .asset,
+.fav-assets .asset-block > div.asset-RBLUSD .asset,
+.instrument-logo.asset-RBLUSD .asset,
+.position-result .logo.asset-RBLUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-RBLUSD .asset,
+.preload div.asset-RBLUSD .asset {
+  background-image: url(../img/tg/instruments/rblusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-RELINR .asset,
+.trade-history .trade > div.asset-RELINR .asset,
+.fav-assets .asset-block > div.asset-RELINR .asset,
+.instrument-logo.asset-RELINR .asset,
+.position-result .logo.asset-RELINR .asset,
+ion-view ion-content #asset-select div.asset.asset-RELINR .asset,
+.preload div.asset-RELINR .asset {
+  background-image: url(../img/tg/instruments/relinr.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-RIOUSD .asset,
+.trade-history .trade > div.asset-RIOUSD .asset,
+.fav-assets .asset-block > div.asset-RIOUSD .asset,
+.instrument-logo.asset-RIOUSD .asset,
+.position-result .logo.asset-RIOUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-RIOUSD .asset,
+.preload div.asset-RIOUSD .asset {
+  background-image: url(../img/tg/instruments/riousd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-RRHGBP .asset,
+.trade-history .trade > div.asset-RRHGBP .asset,
+.fav-assets .asset-block > div.asset-RRHGBP .asset,
+.instrument-logo.asset-RRHGBP .asset,
+.position-result .logo.asset-RRHGBP .asset,
+ion-view ion-content #asset-select div.asset.asset-RRHGBP .asset,
+.preload div.asset-RRHGBP .asset {
+  background-image: url(../img/tg/instruments/rrhgbp.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SHPUSD .asset,
+.trade-history .trade > div.asset-SHPUSD .asset,
+.fav-assets .asset-block > div.asset-SHPUSD .asset,
+.instrument-logo.asset-SHPUSD .asset,
+.position-result .logo.asset-SHPUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SHPUSD .asset,
+.preload div.asset-SHPUSD .asset {
+  background-image: url(../img/tg/instruments/shpusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SNWUSD .asset,
+.trade-history .trade > div.asset-SNWUSD .asset,
+.fav-assets .asset-block > div.asset-SNWUSD .asset,
+.instrument-logo.asset-SNWUSD .asset,
+.position-result .logo.asset-SNWUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SNWUSD .asset,
+.preload div.asset-SNWUSD .asset {
+  background-image: url(../img/tg/instruments/snwusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SOUUSD .asset,
+.trade-history .trade > div.asset-SOUUSD .asset,
+.fav-assets .asset-block > div.asset-SOUUSD .asset,
+.instrument-logo.asset-SOUUSD .asset,
+.position-result .logo.asset-SOUUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SOUUSD .asset,
+.preload div.asset-SOUUSD .asset {
+  background-image: url(../img/tg/instruments/souusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TCSINR .asset,
+.trade-history .trade > div.asset-TCSINR .asset,
+.fav-assets .asset-block > div.asset-TCSINR .asset,
+.instrument-logo.asset-TCSINR .asset,
+.position-result .logo.asset-TCSINR .asset,
+ion-view ion-content #asset-select div.asset.asset-TCSINR .asset,
+.preload div.asset-TCSINR .asset {
+  background-image: url(../img/tg/instruments/tcsinr.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TGTUSD .asset,
+.trade-history .trade > div.asset-TGTUSD .asset,
+.fav-assets .asset-block > div.asset-TGTUSD .asset,
+.instrument-logo.asset-TGTUSD .asset,
+.position-result .logo.asset-TGTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-TGTUSD .asset,
+.preload div.asset-TGTUSD .asset {
+  background-image: url(../img/tg/instruments/tgtusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TSLAUD .asset,
+.trade-history .trade > div.asset-TSLAUD .asset,
+.fav-assets .asset-block > div.asset-TSLAUD .asset,
+.instrument-logo.asset-TSLAUD .asset,
+.position-result .logo.asset-TSLAUD .asset,
+ion-view ion-content #asset-select div.asset.asset-TSLAUD .asset,
+.preload div.asset-TSLAUD .asset {
+  background-image: url(../img/tg/instruments/tlsaud.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TSMUSD .asset,
+.trade-history .trade > div.asset-TSMUSD .asset,
+.fav-assets .asset-block > div.asset-TSMUSD .asset,
+.instrument-logo.asset-TSMUSD .asset,
+.position-result .logo.asset-TSMUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-TSMUSD .asset,
+.preload div.asset-TSMUSD .asset {
+  background-image: url(../img/tg/instruments/tsmusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-UAIUSD .asset,
+.trade-history .trade > div.asset-UAIUSD .asset,
+.fav-assets .asset-block > div.asset-UAIUSD .asset,
+.instrument-logo.asset-UAIUSD .asset,
+.position-result .logo.asset-UAIUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-UAIUSD .asset,
+.preload div.asset-UAIUSD .asset {
+  background-image: url(../img/tg/instruments/uaiusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-USSUSD .asset,
+.trade-history .trade > div.asset-USSUSD .asset,
+.fav-assets .asset-block > div.asset-USSUSD .asset,
+.instrument-logo.asset-USSUSD .asset,
+.position-result .logo.asset-USSUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-USSUSD .asset,
+.preload div.asset-USSUSD .asset {
+  background-image: url(../img/tg/instruments/ussusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-UXXUSD .asset,
+.trade-history .trade > div.asset-UXXUSD .asset,
+.fav-assets .asset-block > div.asset-UXXUSD .asset,
+.instrument-logo.asset-UXXUSD .asset,
+.position-result .logo.asset-UXXUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-UXXUSD .asset,
+.preload div.asset-UXXUSD .asset {
+  background-image: url(../img/tg/instruments/uxxusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-WBDUSD .asset,
+.trade-history .trade > div.asset-WBDUSD .asset,
+.fav-assets .asset-block > div.asset-WBDUSD .asset,
+.instrument-logo.asset-WBDUSD .asset,
+.position-result .logo.asset-WBDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-WBDUSD .asset,
+.preload div.asset-WBDUSD .asset {
+  background-image: url(../img/tg/instruments/wbdusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-WFCUSD .asset,
+.trade-history .trade > div.asset-WFCUSD .asset,
+.fav-assets .asset-block > div.asset-WFCUSD .asset,
+.instrument-logo.asset-WFCUSD .asset,
+.position-result .logo.asset-WFCUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-WFCUSD .asset,
+.preload div.asset-WFCUSD .asset {
+  background-image: url(../img/tg/instruments/wfcusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-WIXUSD .asset,
+.trade-history .trade > div.asset-WIXUSD .asset,
+.fav-assets .asset-block > div.asset-WIXUSD .asset,
+.instrument-logo.asset-WIXUSD .asset,
+.position-result .logo.asset-WIXUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-WIXUSD .asset,
+.preload div.asset-WIXUSD .asset {
+  background-image: url(../img/tg/instruments/wixusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-WMTUSD .asset,
+.trade-history .trade > div.asset-WMTUSD .asset,
+.fav-assets .asset-block > div.asset-WMTUSD .asset,
+.instrument-logo.asset-WMTUSD .asset,
+.position-result .logo.asset-WMTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-WMTUSD .asset,
+.preload div.asset-WMTUSD .asset {
+  background-image: url(../img/tg/instruments/wmtusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-UNIUSD .asset,
+.trade-history .trade > div.asset-UNIUSD .asset,
+.fav-assets .asset-block > div.asset-UNIUSD .asset,
+.instrument-logo.asset-UNIUSD .asset,
+.position-result .logo.asset-UNIUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-UNIUSD .asset,
+.preload div.asset-UNIUSD .asset {
+  background-image: url(../img/tg/instruments/uniusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-APRKRW .asset,
+.trade-history .trade > div.asset-APRKRW .asset,
+.fav-assets .asset-block > div.asset-APRKRW .asset,
+.instrument-logo.asset-APRKRW .asset,
+.position-result .logo.asset-APRKRW .asset,
+ion-view ion-content #asset-select div.asset.asset-APRKRW .asset,
+.preload div.asset-APRKRW .asset {
+  background-image: url(../img/tg/instruments/aprkrw.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-XLFUSD .asset,
+.trade-history .trade > div.asset-XLFUSD .asset,
+.fav-assets .asset-block > div.asset-XLFUSD .asset,
+.instrument-logo.asset-XLFUSD .asset,
+.position-result .logo.asset-XLFUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-XLFUSD .asset,
+.preload div.asset-XLFUSD .asset {
+  background-image: url(../img/tg/instruments/xlfusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-XLUUSD .asset,
+.trade-history .trade > div.asset-XLUUSD .asset,
+.fav-assets .asset-block > div.asset-XLUUSD .asset,
+.instrument-logo.asset-XLUUSD .asset,
+.position-result .logo.asset-XLUUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-XLUUSD .asset,
+.preload div.asset-XLUUSD .asset {
+  background-image: url(../img/tg/instruments/xluusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-QQQUSD .asset,
+.trade-history .trade > div.asset-QQQUSD .asset,
+.fav-assets .asset-block > div.asset-QQQUSD .asset,
+.instrument-logo.asset-QQQUSD .asset,
+.position-result .logo.asset-QQQUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-QQQUSD .asset,
+.preload div.asset-QQQUSD .asset {
+  background-image: url(../img/tg/instruments/qqqusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-GLDUSD .asset,
+.trade-history .trade > div.asset-GLDUSD .asset,
+.fav-assets .asset-block > div.asset-GLDUSD .asset,
+.instrument-logo.asset-GLDUSD .asset,
+.position-result .logo.asset-GLDUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-GLDUSD .asset,
+.preload div.asset-GLDUSD .asset {
+  background-image: url(../img/tg/instruments/gldusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-IEFUSD .asset,
+.trade-history .trade > div.asset-IEFUSD .asset,
+.fav-assets .asset-block > div.asset-IEFUSD .asset,
+.instrument-logo.asset-IEFUSD .asset,
+.position-result .logo.asset-IEFUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-IEFUSD .asset,
+.preload div.asset-IEFUSD .asset {
+  background-image: url(../img/tg/instruments/iefusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-SPYUSD .asset,
+.trade-history .trade > div.asset-SPYUSD .asset,
+.fav-assets .asset-block > div.asset-SPYUSD .asset,
+.instrument-logo.asset-SPYUSD .asset,
+.position-result .logo.asset-SPYUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-SPYUSD .asset,
+.preload div.asset-SPYUSD .asset {
+  background-image: url(../img/tg/instruments/spyusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-TLTUSD .asset,
+.trade-history .trade > div.asset-TLTUSD .asset,
+.fav-assets .asset-block > div.asset-TLTUSD .asset,
+.instrument-logo.asset-TLTUSD .asset,
+.position-result .logo.asset-TLTUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-TLTUSD .asset,
+.preload div.asset-TLTUSD .asset {
+  background-image: url(../img/tg/instruments/tltusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-VOOUSD .asset,
+.trade-history .trade > div.asset-VOOUSD .asset,
+.fav-assets .asset-block > div.asset-VOOUSD .asset,
+.instrument-logo.asset-VOOUSD .asset,
+.position-result .logo.asset-VOOUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-VOOUSD .asset,
+.preload div.asset-VOOUSD .asset {
+  background-image: url(../img/tg/instruments/voousd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-ADBUSD .asset,
+.trade-history .trade > div.asset-ADBUSD .asset,
+.fav-assets .asset-block > div.asset-ADBUSD .asset,
+.instrument-logo.asset-ADBUSD .asset,
+.position-result .logo.asset-ADBUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-ADBUSD .asset,
+.preload div.asset-ADBUSD .asset {
+  background-image: url(../img/tg/instruments/adbusd.svg);
+}
+.bar-instruments .swiper-container .swiper-slide.asset-XLVUSD .asset,
+.trade-history .trade > div.asset-XLVUSD .asset,
+.fav-assets .asset-block > div.asset-XLVUSD .asset,
+.instrument-logo.asset-XLVUSD .asset,
+.position-result .logo.asset-XLVUSD .asset,
+ion-view ion-content #asset-select div.asset.asset-XLVUSD .asset,
+.preload div.asset-XLVUSD .asset {
+  background-image: url(../img/tg/instruments/xlvusd.svg);
+}

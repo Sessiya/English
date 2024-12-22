@@ -1,0 +1,172 @@
+@media only screen and (min-device-width:0px) and (max-device-width:500px){
+
+	.button {
+		border-width: 1px;
+	}
+
+	ion-header-bar.bar.bar-instruments {
+		border-top-width: 1px;
+	}
+
+	#mainmenu-wrap #mainmenu-onemore #mainmenu .item h2 p.new {
+		left: 1px;
+	}
+
+	.bar .row.buttons {
+		border-bottom-width: 1px;
+	}
+
+	.bar .row.buttons#pro-tabs {
+		border-top-width: 1px;
+	}
+
+	.bar .row.buttons#pro-tabs .button {
+		padding-top: 1px;
+		margin-bottom: -1px;
+	}
+
+	.bar .row.buttons#pro-tabs .button.active {
+		padding-top: 1px;
+		margin-top: -1px;
+	}
+
+	#time-to #time-to-label {
+		border-width: 1px;
+	}
+
+	#time-to #time-to-label #time-info {
+		border-width: 1px;
+	}
+
+	.countdown div {
+		margin-left: 1px;
+	}
+
+	.lessons .item p {
+		margin-top: 1px;
+	}
+
+	.answers .item-thumbnail-left {
+		border-width: 1px;
+		margin-left: 1px;
+	}
+
+	.complete-lesson-btn .end-heading .sideline {
+		border-top-width: 1px;
+		height: 1px;
+	}
+
+	hr {
+		border-width: 1px;
+	}
+
+	.question-image {
+		border-width: 1px;
+	}
+
+	.q-answer {
+		border-bottom-width: 1px;
+	}
+
+	.q-answer .answers li.wrong.picked .answer-inner {
+		border-width: 1px;
+	}
+
+	.menu-content {
+		-webkit-box-shadow: 0 0 2vmin 1px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0 0 2vmin 1px rgba(0, 0, 0, 0.75);
+		box-shadow: 0 0 2vmin 1px rgba(0, 0, 0, 0.75);
+	}
+	br.small {
+		font-size: 1px;
+		line-height: 1px;
+	}
+
+	.slide-container.up h1.instrument-name span .instrument-name-text {
+		text-shadow: 0.2vmin 0.2vmin 0.2vmin rgba(104, 177, 159, 0.6);
+	}
+
+	h2.instrument-mid-price .price-bottom-border {
+		margin-left: 1px;
+	}
+	.bottom-container .buysell-container .opentrade-button,
+	.bottom-container .buysell-container .position-menu.trans-started .stoploss-button-container {
+		border-bottom-width: 1px;
+	}
+
+	.bottom-container .buysell-container .opentrade-button-shade {
+		border-top-width: 1px;
+		margin-bottom: 1px;
+	}
+
+	.buysell-menu table {
+		border-top-width: 1px;
+	}
+
+	.buysell-menu .row {
+		border-top-width: 1px;
+		border-bottom-width: 1px;
+	}
+	.buysell-menu .col.amount {
+		border-right-width: 1px;
+	}
+	.bottom-container .buysell-container {
+		border-top-width: 1px;
+	}
+	.bottom-container .buysell-container .trans-started .open-transaction table tr td:first-of-type {
+		border-right-width: 1px;
+	}
+	.bottom-container .buysell-container .trans-started .open-transaction table tr.hot-leverage td.leverage-sep {
+		border-right-width: 1px;
+	}
+	.bottom-container .buysell-container .trans-started .open-transaction table tr.hot-leverage td.leverage-sep hr {
+		border-bottom-width: 1px;
+	}
+	.stopLossMenu {
+		border: 1px;
+		border-width: 1px 0;
+	}
+	.stopLossShades {
+		border-bottom-width: 1px;
+	}
+	.stopLossShades div {
+		border-width: 1px;
+	}
+	.closePositionContainer {
+		border-top-width: 1px;
+	}
+	.stopLossSwitch .label {
+		border-width: 1px;
+	}
+	.white-bottom-border {
+		border-bottom-width: 1px;
+	}
+	.bar-instruments .button {
+		margin-bottom: -1px;
+	}
+	.portfolioInfo {
+		border-width: 1px;
+		border-bottom-width: 1px;
+		box-shadow: 0 0.2vmin 0 0 #a4aab0;
+	}
+	.portfolioInfo .row {
+		border-bottom-width: 1px;
+	}
+	.portfolioInfo .row .col-50:first-child {
+		border-right-width: 1px;
+	}
+	.rank-item.friends-count {
+		border-top-width: 1px;
+		border-bottom-width: 1px;
+	}
+	.top-self-outer {
+		border-top-width: 10px;
+		border-bottom-width: 1px;
+	}
+	.top-list {
+		border-bottom: 0.2vmin solid #dae1e8;
+	}
+	.rank-item {
+		border-width: 1px;
+	}
+}

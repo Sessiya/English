@@ -1,0 +1,96 @@
+<ion-view>
+  <ion-content has-bouncing="false"  overflow-scroll="true">
+
+	<table style="min-height: 100%; width: 100%; height: 100%;" class="quiz-categories">
+	<tr><td style="height: 90%;"  ng-class="{'quiz-amateur': category == 0, 'quiz-pro-unlocked': (category == 1) && !isProLocked, 'quiz-pro-locked': (category == 1) && isProLocked}">
+
+	<h1 class="quiz-h1"><t af="true">Select Quiz level</t></h1>
+
+  	<div class="row quiz-head">
+		<div class="col col-50 amateur" ng-click="setCategory(0)" ng-class="{'active': category == 0}">
+			<div class="cat-img">
+				<div class="actual-cat-img"></div>
+				<span class="selection-check"></span>
+			</div>
+			<div class="selection"></div>
+		</div>
+		<div class="col col-50 professional" ng-click="setCategory(1)" ng-class="{'locked': isProLocked, 'active': category == 1}">
+			<div class="cat-img">
+				<div class="actual-cat-img"></div>
+				<span class="selection-check"></span>
+			</div>
+			<div class="selection"></div>
+			<span class="lock"></span>
+		</div>
+	</div>
+
+	<div class="quiz-rules quiz-rules-0">
+		<div class="score-rules">
+			<t>Answer: </t>
+			<span>
+				<span class="c-w"><t>Correct</t></span>
+				<span class="correct">+ ${{ leverage }}</span>
+			</span>
+			<span>
+				<span class="c-w"><t>Wrong</t></span>
+				<span class="wrong">- $0</span>
+			</span>
+		</div>
+
+		<div class="quiz-description">
+			<t>Start playing without any added risk! You will master Forex trading skills in a fun, easy and safe manner.</t>
+		</div>
+	</div>
+
+	<div class="quiz-rules quiz-rules-1">
+		<div class="score-rules">
+			<t>Answer: </t>
+			<span>
+				<span class="c-w"><t>Correct</t></span>
+				<span class="correct">+ ${{ leverage }}</span>
+			</span>
+			<span>
+				<span class="c-w"><t>Wrong</t></span>
+				<span class="wrong">- ${{ leverage / 2 }}</span>
+			</span>
+
+<!--
+			<div class="quiz-leverage">
+				<t>Leverage:</t>
+				<span class="leverage" ng-click="leverage = 20" ng-class="{'selected': leverage == 20}">x20</span>
+				<span class="leverage" ng-click="leverage = 50" ng-class="{'selected': leverage == 50}">x50</span>
+			</div>
+-->
+		</div>
+
+		<div class="quiz-description">
+			<t>In this game you will train to make the right trading decisions.</t>
+		</div>
+	</div>
+
+	<div class="quiz-rules pro-rules quiz-rules-locked">
+		<h2>
+			<t>To unlock The Professional game</t>
+		</h2>
+		<div class="quiz-description">
+			<ul>
+				<li ng-class="{'unlocked': proPass[0]}"><span class="check"></span><t>Reach $2000 portfolio value</t></li>
+				<li ng-class="{'unlocked': proPass[1]}"><span class="check"></span><t>Finish</t> <a nav-direction="enter" ng-click="openLesson(1)"><t>Forex Basics</t></a></li>
+				<li ng-class="{'unlocked': proPass[2]}"><span class="check"></span><t>Finish</t> <a nav-direction="enter" ng-click="openLesson(2)"><t>How to Read Charts</t></a></li>
+			</ul>
+		</div>
+	</div>
+
+	</td></tr>
+
+	<tr><td style="vertical-align: bottom;">
+
+	<div id="play-game">
+		<a class="button quiz-game-href" ng-class="{'button-balanced': ((category == 0) || ((category == 1 ) && !isProLocked)), 'button-stable': (category == 1) && isProLocked}" href="#/tab/game/0"><t>Play Game</t></a>
+	</div>
+
+	</td></tr>
+	</table>
+
+  </ion-content>
+</ion-view>

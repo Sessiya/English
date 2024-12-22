@@ -1,0 +1,26 @@
+<ion-view>
+  <ion-content has-bouncing="false" id="alerts-all" overflow-scroll="true">
+
+    <div class="alert" ng-repeat="alert in alertList track by $index" ng-if="$index == 0 || isUserPro">
+      <span class="close-alert" ng-click="removeSavedAlert(alert.id)"></span>
+      <p class="date-title" ng-if="alert.alertDate">{{alert.alertDateFormatted}} - {{alert.title}}</p>
+      <p class="date-title" ng-if="!alert.alertDate">{{alert.title}}</p>
+      <p class="text" ng-bind-html="alert.text"></p>
+
+      <div class="button-container" ng-if="alert.voteEnabled">
+        <span class="vote-results"><span class="left-answer-fill" style="width: {{alert.voteDataPercent[0] + '%'}}"></span></span>
+        <span class="answer left"><span class="your-vote" ng-if="alert.yourVote == 0"></span>{{alert.voteText[0]}} {{alert.voteDataPercent[0]}}%</span>
+        <span class="answer right"><span class="your-vote" ng-if="alert.yourVote == 1"></span>{{alert.voteText[1]}} {{alert.voteDataPercent[1]}}%</span>
+      </div>
+
+      <p class="vote-count" ng-if="alert.voteEnabled"><span class="icon icon-chart"></span>{{alert.totalVotes}} <t>voted</t><span class="icon icon-heart"></span><span class="icon icon-pray"></span></p>
+
+    </div>
+
+    <div class="not-pro-user" ng-if="!isUserPro" ng-click="goToPro()">
+      <p><t>Full news archive available only for PRO users</t></p>
+      <p class="flex-center"><span class="go-pro-text"><t>GO PRO</t></span></p>
+    </div>
+
+  </ion-content>
+</ion-view>

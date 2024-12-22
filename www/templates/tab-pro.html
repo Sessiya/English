@@ -1,0 +1,49 @@
+<ion-view>
+  <ion-content has-bouncing="false" id="pro" overflow-scroll="true">
+
+	<div class="pro-container friends-option">
+		<div class="limited"><t>Limited</t></div>
+		<h2><t>INVITE 3 FRIENDS TO GET PRO LIFETIME FOR <span class="pink">FREE</span></t></h2>
+		<div class="progress">
+			<div class="progress-bar"><div class="progress-bar-fill" style="width: {{(friendsInvited/3)*100 | number : 2}}%">{{friendsInvited}}</div></div>
+		</div>
+		<div class="invite-link" ng-click="copyLink()">
+			<span class="link-flex"><span class="link">{{inviteLink || 'https://pro.goforex.app/xayzy23'}}</span></span>
+		</div>
+		<div class="copy-invite-button-wrapper">
+			<button class="copy-invite-button" ng-if="!copyLinkSuccess" ng-click="inviteShare()"><t>Copy Link</t></button>
+			<button class="copy-invite-button copied" ng-if="copyLinkSuccess"><t>Copied</t></button>
+		</div>
+	</div>
+
+	<div class="pro-container regular-option">
+		<h2 ng-if="currentLang != 'en'"><t>GO PRO<br>ACCESS</t></h2>
+		<h2 ng-if="currentLang == 'en'"><t>UNLOCK YOUR POTENTIAL AND BECOME A PRO</t></h2>
+		<ul ng-if="currentLang != 'en'">
+			<li><t>Full analyse collection</t></li>
+			<li><t>No Ads</li>
+			<li><t>More assets to trade</t></li>
+			<li><t>Pro trader and friend trades appear on the chart</t></li>
+			<li><t>Access full news archive</t></li>
+			<li><t><span class="icon-pro-badge"></span>Badge</t></li>
+			<li><t>Higher leverage</t></li>
+		</ul>
+		<ul ng-if="currentLang == 'en'">
+			<li><t><span class="icon-pro-badge"></span>Badge</t></li>
+			<li><t>Ad-Free Experience</t></li>
+			<li><t>Full Analysis Library</li>
+			<li><t>Full Market Signals Archive</t></li>
+			<li><t>Increased Leverage</t></li>
+			<li><t>More Chart Tools + Future Updates</t></li>
+			<li><t>Exclusive First-Access To New Lessons</t></li>
+		</ul>
+		<div class="go-pro-button-wrapper">
+			<button class="pro-monthly-button" ng-click="buyPro('monthly')"><b>{{defaultOffers['monthly'].priceString || '$12.90'}}/</b><t>Monthly</t></button>
+			<button class="pro-lifetime-button" ng-click="buyPro('lifetime')"><span class="limited smaller"><t>50% OFF</t></span><b>{{defaultOffers['lifetime'].priceString || '$61.50'}}/</b><t>Lifetime</t></button>
+		</div>
+	</div>
+
+	<div class="restore-purchases" ng-click="restorePurchases()"><t>restore purchases</t></div>
+
+  </ion-content>
+</ion-view>

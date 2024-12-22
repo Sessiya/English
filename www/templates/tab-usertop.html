@@ -1,0 +1,310 @@
+<ion-view class="view-usertop">
+	<ion-content has-bouncing="false" id="usertop" overflow-scroll="true" ng-class="{'week': topIndex == 1, 'friends': topIndex == 2}">
+
+		<div class="usertop-bg"></div>
+
+		<div class="search-users">
+			<div class="search-input">
+				<input type="text" ng-keypress="closeKeyboard($event)" ng-model="searchText.name" ng-change="searchTextChange()" placeholder="{{defaultSearchText}}" />
+				<span class="search-icon"></span>
+				<span class="close-button" ng-click="clearUserSearch()" ng-show="searchText && searchText.name"></span>
+			</div>
+		</div>
+
+		<div class="search-results" ng-if="displaySearchResults">
+			<div class="search-criteria" ng-if="displaySearchCriteria">
+				<p><t>Type in at least 3 symbols</t></p>
+			</div>
+
+			<div class="loading-spinner" ng-if="searchingUsers"></div>
+
+			<div class="row rank-item" ng-repeat="user in searchedBatches track by $index" ng-click="openUserStats(user, $event)" ng-if="!searchingUsers">
+				<div class="col col-15 top-badge place-{{ user.rank.week + 1 }}">
+					<span ng-if="user.rank.week > 2">
+					{{ user.rank.week }}
+					</span>
+				</div>
+				<div class="col col-10 top-avatar">
+					<table even-width>
+						<tr>
+							<td>
+								<img ng-src="{{user.picture ? user.picture : 'img/avatars/' + user.avatar}}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='img/avatars/avatar-100.png';" />
+								<div class="lds-dual-ring"></div>
+								<span class="pro" ng-if="user.isUserPro"></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col col-60 top-details">
+					<div>
+						<span ng-if="user.name" class="name">{{ user.name }}</span>
+						<span ng-if="!user.name" class="name"><t>Trader</t> #{{ user.fiId }}</span>
+					</div>
+					<div class="secondary">
+						<span class="growth growth-7" ng-class="{'negative': user.growth.week < 0}"><span class="plus">+</span>${{ user.growth.week | number:2 }}</span>
+					</div>
+				</div>
+				<div class="col col-15 user-flag f32">
+					<div class="rounded" ng-if="user.country && user.country != 'EU' && user.country != ''"><span class="flag {{ user.country | lowercase }}"></span></div>
+					<div class="rounded" ng-if="!user.country || user.country == 'EU' || user.country == ''"><span class="flag _European_Union"></span></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="podium type-{{ topIndex }} placeholder" ng-if="!viewReady && !displaySearchResults"></div>
+
+		<div class="podium type-{{ topIndex }}" ng-if="viewReady && !displaySearchResults">
+			<div class="show-0 show-1">
+				<div class="podium-kudos">
+					<span class="show-0"><t>Give it up 👏 for yesterday’s winners</t></span>
+					<span class="show-1"><t>Applause 👏 to last week's winners</t></span>
+				</div>
+				<div class="row show-{{ $index }}" ng-repeat="type in topTypesMongo track by $index" ng-if="type[1] != 'friends'">
+					<div class="col place-{{ rank + 1}}" ng-repeat="(rank, user) in prevPeriod[topIndex] track by $index" type="topIndex" ng-click="openUserStats(user, $event)">
+						<div class="img-border">
+							<img class="show-0" ng-if="topIndex == 0" ng-src="{{user.picture ? user.picture : 'img/avatars/' + user.avatar}}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='img/avatars/avatar-100.png';" />
+							<img class="show-1" ng-if="topIndex == 1" ng-src="{{user.picture ? user.picture : 'img/avatars/' + user.avatar}}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='img/avatars/avatar-100.png';" />
+							<span class="pro" ng-if="user.isUserPro"></span>
+							<span class="award"></span>
+						</div>
+
+						<div class="name">{{ user.name }}</div>
+
+						<div class="growth growth-1 show-0" ng-class="{'negative': user.growth.day < 0}"><span class="plus">+</span>${{ user.growth.day | number:2 }}</div>
+						<div class="growth growth-7 show-1" ng-class="{'negative': user.growth.week < 0}"><span class="plus">+</span>${{ user.growth.week | number:2 }}</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="show-2">
+				<div class="compare-container">
+					<div class="compare-chart-title"><t>Performance Over the Last 7 Days</t></div>
+					<div class="compare-chart-wrapper">
+						<div class="compare-user-list">
+							<div class="compared-user" ng-repeat="cu in userDataArray track by $index">
+								<div class="compared-user-avatar" ng-class="{'winner': growthWinnerId == cu._id}">
+									<div class="cu-avatar-wrapper" ng-if="$index == 0">
+										<span class="cu-avatar-you"><t>YOU</t></span>
+									</div>
+									<div class="cu-avatar-wrapper" ng-if="self._id != cu._id && $index != 0">
+										<img ng-src="{{cu.picture ? cu.picture : 'img/avatars/' + cu.avatar}}" class="{{cu.color}}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='img/avatars/avatar-100.png';" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<growth-chart updateCallback="updateCallback"></growth-chart>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="top-info-wrapper type-{{ topIndex }} placeholder" ng-if="!viewReady && !displaySearchResults">
+			<div class="top-info show-0" ng-if="0 == topIndex"></div>
+			<div class="top-info show-1" ng-if="1 == topIndex"></div>
+		</div>
+
+		<div class="top-info-wrapper type-{{ topIndex }}" ng-show="viewReady && !displaySearchResults">
+			<div class="top-info show-0">
+				<p><t>Daily top 50 resets in</t> <span class="reset-time"><span id="top-reset-time-0">{{:topresets:resetsIn[0]}}</span></span></p>
+			</div>
+
+			<div class="top-info show-1">
+				<p><t>Weekly Top 50 resets in</t> <span class="reset-time"><span id="top-reset-time-1">{{:topresets:resetsIn[1]}}</span></span></p>
+			</div>
+
+			<div class="top-info show-2">
+				<p><t>Compare your performance with friends or top traders</t></p>
+			</div>
+		</div>
+
+		<div class="top-time" ng-if="!displaySearchResults">
+			<div class="time type-{{type[1]}}" ng-click="setTopIndex($index, false, true)" ng-class="{'selected': topIndex == $index}" ng-repeat="type in topTypes track by $index">
+				<span>
+					{{type[0]}}
+					<span class="beta" ng-if="$index == 2">BETA</span>
+				</span>
+			</div>
+		</div>
+
+		<div ng-if="!displaySearchResults">
+
+			<div class="topList">
+				<div class="top-self-outer" ng-if="topIndex < 2 && viewReady">
+					<div class="top-self type-{{topIndex}}" ng-if="self">
+
+						<div class="row rank-item">
+							<div class="col col-15 top-badge place-{{ selfRank[topIndex] }}" ng-if="selfRank[topIndex]">
+								<span ng-if="selfRank[topIndex] == 'NA'">N/A</span>
+								<span ng-if="selfRank[topIndex] != 'NA' && selfRank[topIndex] > 2">{{ selfRank[topIndex] }}</span>
+								<!-- <span ng-if="topIndex == 1 && appConfig.giftCards[selfRank[topIndex]]" class="gift-card-amt">{{ appConfig.giftCards[selfRank[topIndex]] }}</span> -->
+							</div>
+							<div class="col col-10 top-avatar">
+								<table even-width>
+									<tr>
+										<td>
+											<img class="show-0" ng-if="topIndex == 0" ng-src="{{user.picture ? user.picture : 'img/avatars/' + user.avatar}}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='img/avatars/avatar-100.png';" />
+											<img class="show-1" ng-if="topIndex == 1" ng-src="{{user.picture ? user.picture : 'img/avatars/' + user.avatar}}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='img/avatars/avatar-100.png';" />
+											<span class="pro" ng-if="self.isUserPro"></span>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="col col-60 top-details">
+								<div>
+									<span class="name"><t>YOU</t></span>
+								</div>
+								<div class="secondary">
+									<span class="growth growth-1 show-0" ng-if="topIndex == 0" ng-class="{'negative': self.growth.day < 0}"><span class="plus">+</span>${{ self.growth.day | number:2 }}</span>
+									<span class="growth growth-7 show-1" ng-if="topIndex >= 1" ng-class="{'negative': self.growth.week < 0}"><span class="plus">+</span>${{ self.growth.week | number:2 }}</span>
+								</div>
+							</div>
+							<div class="col col-15 user-flag f32">
+								<div class="rounded"><span ng-if="self.country && self.country != 'EU'" class="flag {{ self.country | lowercase }}"></span></div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="top-self-outer placeholder" ng-if="topIndex < 2 && !viewReady">
+					<div class="top-self type-{{topIndex}}">
+						<div class="row rank-item">
+						</div>
+					</div>
+				</div>
+
+				<!-- <div class="top-info top-hof" ng-if="2 == topIndex">
+				<div class="hof-header">
+				<p><span><t>Congrats to Week # {{ week }} winners!</t></span></p>
+				<p><span><t>Welcome to Hall of Fame {{ year }}</t></span></p>
+				</div>
+
+				<div ng-include="'toplist.html'" ng-init="topIndex = 1"></div>
+
+				<div class="hof-title"><t>Hall of Famers</t> {{ year }}</div>
+				</div> -->
+
+				<div class="top-divider" ng-if="topIndex < 2"></div>
+
+				<div ng-include="'toplist.html'"></div>
+
+				<div class="invite" ng-if="topIndex == 2">
+					<div class="friends-tip" ng-if="!friendsTipSeen">
+						<span class="close-tip" ng-click="closeFriendsTip()"></span>
+						<h2><span class="icon-lightbulb"></span><t>Add more friends:</t></h2>
+						<p><t>Studying with friends is good for your mental health and can <b>improve your long term results by 14%</b></t></p>
+						<p><t>Friends keep you motivated and reduce procrastination</t></p>
+					</div>
+
+					<h2><t>Invite your friends</t></h2>
+					<p><t>Improve your long-term success by learning with friends. Even science says it works.</t></p>
+					<div class="invite-link" ng-click="copyLink()">
+						<span class="link-flex"><span class="link">{{inviteLink}}</span></span>
+						<span class="copy-button" ng-if="!copyLinkSuccess"><t>Copy</t></span>
+						<span class="copy-button copied" ng-if="copyLinkSuccess"><t>Copied</t></span>
+					</div>
+					<div class="invite-other" ng-click="inviteShare()">
+						<span><t>Other methods</t></span>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</ion-content>
+
+	<div class="account-login-toggler" ng-if="!user.oauthID && !loginActive" ng-click="expandLogin(true)">
+		<p>&nbsp;</p>
+	</div>
+
+	<div class="account-login" ng-class="{'open': loginActive}" ng-if="!user.oauthID" click-outside="closeLogin()" outside-if="close-login" outside-if-not="account-login-toggler" drag-down close="closeLogin()">
+		<div class="close-login"></div>
+		<p><t><strong>Sign up to save your progress</strong>, appear<br /> on the leaderboard and win prizes.</t></p>
+		<ul class="login-buttons">
+			<div class="btn btn-signup btn-apple" ng-click="oauthLogin('apple')" ng-if="isIOS"><t>Sign Up With Apple</t></div>
+			<div class="btn btn-signup btn-google" ng-click="oauthLogin('google')"><t>Sign Up With Google</t></div>
+			<div class="btn btn-signup btn-facebook" ng-click="oauthLogin('facebook')" ng-if="::!appConfig.disableFacebookLogin"><t>Sign Up With Facebook</t></div>
+		</ul>
+	</div>
+</ion-view>
+
+<script type="text/ng-template" id="toplist.html">
+	<div class="top-list type-{{topIndex}}" ng-if="viewReady && topIndex < 2">
+
+		<div class="row rank-item" ng-repeat="(rank, user) in loadedTopItems[topIndex] track by $index" type="topIndex" ng-click="openUserStats(user, $event)">
+			<div class="col col-15 top-badge place-{{ rank + 1 }}">
+				<span ng-if="rank > 2">{{ rank + 1 }}</span>
+			</div>
+			<div class="col col-10 top-avatar">
+				<table even-width>
+					<tr>
+						<td>
+							<img class="show-0" ng-if="topIndex == 0" ng-src="{{user.picture ? user.picture : 'img/avatars/' + user.avatar}}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='img/avatars/avatar-100.png';" />
+							<img class="show-1" ng-if="topIndex == 1" ng-src="{{user.picture ? user.picture : 'img/avatars/' + user.avatar}}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='img/avatars/avatar-100.png';" />
+							<div class="lds-dual-ring"></div>
+							<span class="pro" ng-if="user.isUserPro"></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="col col-60 top-details">
+				<div>
+					<span ng-if="user.name" class="name">{{ user.name }}</span>
+					<span ng-if="!user.name" class="name"><t>Trader</t> #{{ user.fiId }}</span>
+				</div>
+				<div class="secondary">
+					<span class="growth growth-1 show-0" ng-if="topIndex == 0" ng-class="{'negative': user.growth.day < 0}"><span class="plus">+</span>${{ user.growth.day | number:2 }}</span>
+					<span class="growth growth-7 show-1" ng-if="topIndex >= 1" ng-class="{'negative': user.growth.week < 0}"><span class="plus">+</span>${{ user.growth.week | number:2 }}</span>
+				</div>
+			</div>
+			<div class="col col-15 user-flag f32">
+				<div class="rounded"><span ng-if="user.country && user.country != 'EU'" class="flag {{ user.country | lowercase }}"></span></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div style="font-size: 12px;">{{userDataArray}}</div> -->
+
+	<div class="top-list type-{{topIndex}}" ng-if="viewReady && topIndex == 2">
+		<span class="compete-max" ng-if="loadedTopItems[topIndex]">
+			<t>Compete With<br/>(Max 2)</t>
+		</span>
+		<div class="row rank-item" ng-repeat="(rank, user) in loadedTopItems[topIndex] track by $index" type="topIndex" ng-click="openUserStats(user, $event)">
+			<div class="top-avatar">
+				<table even-width>
+					<tr>
+						<td>
+							<img ng-src="{{user.picture ? user.picture : 'img/avatars/' + user.avatar}}" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='img/avatars/avatar-100.png';" />
+							<span class="is-online" ng-class="{'online': user.isOnline}"></span>
+							<div class="lds-dual-ring"></div>
+							<span class="pro" ng-if="user.isUserPro"></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="top-details">
+				<div>
+					<span ng-if="user.name" class="name">{{ user.name }}</span>
+					<span ng-if="!user.name" class="name"><t>Trader</t> #{{ user.fiId }}</span>
+				</div>
+				<div class="secondary">
+					<span class="growth growth-7" ng-class="{'negative': user.portfolio < 0}"><!--<span class="plus">+</span>-->${{ user.portfolio | number:2 }}</span>
+				</div>
+			</div>
+			<div class="top-check-compare">
+				<div class="check-wrapper" ng-class="{'self-border': self._id == user._id}" ng-click="compareAgainst(user, $event);">
+					<span class="check-bg" ng-class="{'purple': isBeingCompared(user) == 'purple', 'orange': isBeingCompared(user) == 'orange', 'blue': self._id == user._id}"></span>
+					<span class="checkmark"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="top-refresh-notice" ng-if="topIndex < 2"><t>Top50 refreshes every 5 minutes</t></div>
+
+	</div>
+
+	<div class="top-list type-{{topIndex}} placeholder" ng-if="!viewReady">
+		<div class="row rank-item" ng-repeat="i in placeholderRankArray"></div>
+		<div class="top-refresh-notice" ng-if="topIndex < 2"><t>Top50 refreshes every 5 minutes</t></div>
+	</div>
+</script>

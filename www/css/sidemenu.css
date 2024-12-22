@@ -1,0 +1,289 @@
+.menu-left {
+  background-color: #101522;
+  background-image: none;
+  width: 95vw !important;
+  z-index: 1 !important;
+  transition: 100ms linear;
+}
+.menu-left ion-content {
+  position: static !important;
+  top: auto !important;
+}
+.menu-left ion-content > .scroll {
+  width: 100% !important;
+  display: block;
+  min-width: 95vw;
+}
+.menu-left ion-content .menu-close {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  background-image: url(../img/tg/close-x-white.svg);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.menu-left ion-content .settings-wrapper {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.menu-left ion-content .settings-wrapper .app-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5rem;
+  color: #C1C1C1;
+  padding: 0 1rem 0.2rem;
+  pointer-events: auto;
+  text-align: left;
+  opacity: 0.7;
+  font-family: 'InterRegular';
+}
+.menu-left ion-content .settings-wrapper .app-data .privacy {
+  text-align: right;
+  font-family: 'InterBold';
+}
+.menu-left ion-content .settings-wrapper .app-data .privacy a {
+  text-decoration: underline;
+  font-family: 'InterBold';
+}
+.menu-left ion-content .settings-container {
+  width: 100%;
+  text-align: center;
+  background-color: #101522;
+  padding-right: 1rem;
+  overflow: auto;
+  position: relative;
+  flex: 2;
+  align-items: center;
+}
+.menu-left ion-content .settings-container .setting {
+  color: #B3BCE4;
+  font-family: 'RobotoRegular';
+  font-size: 0.95rem;
+  line-height: 2em;
+  text-align: left;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+.menu-left ion-content .settings-container .setting span {
+  flex: 5;
+}
+.menu-left ion-content .settings-container .setting .icon {
+  min-width: 4rem;
+  display: block;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  padding: 0;
+  flex: 1;
+}
+.menu-left ion-content .settings-container .setting .icon.icon-thumb-up {
+  background-image: url(../img/tg/side-rate.svg);
+}
+.menu-left ion-content .settings-container .setting .icon.icon-feedback {
+  background-image: url(../img/tg/side-feedback.svg);
+}
+.menu-left ion-content .settings-container .setting .icon.icon-howto {
+  background-image: url(../img/tg/side-howto.svg);
+}
+.menu-left ion-content .settings-container .setting .icon.icon-reset {
+  background-image: url(../img/tg/side-reset.svg);
+}
+.menu-left ion-content .settings-container .setting .icon.icon-language {
+  background-image: url(../img/tg/side-language.svg);
+}
+.menu-left ion-content .settings-container .setting .icon.icon-notification {
+  background-image: url(../img/tg/side-notification.svg);
+}
+.menu-left ion-content .settings-container .setting .icon.icon-delete {
+  background-image: url(../img/tg/side-delete.svg);
+}
+.menu-left ion-content .settings-container .setting .icon.icon-cancel-pro {
+  background-image: url(../img/tg/side-cancel-pro.svg);
+}
+.menu-left ion-content .settings-container .setting .icon.icon-bonus {
+  background-image: url(../img/tg/side-bonus.svg);
+}
+.menu-left ion-content .settings-container .setting .icon.icon-darkmode {
+  background-image: url(../img/tg/moon.svg);
+}
+.menu-left ion-content .settings-container .setting.cancel-pro {
+  margin-top: 1.75rem;
+}
+.menu-left ion-content .settings-container .setting.toggle-brightness label.toggle {
+  pointer-events: none;
+}
+.menu-left ion-content .settings-container .change-language-button {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  min-height: 2em;
+  line-height: 1.5em;
+  background-color: #6a75a0;
+  color: #bbbfd2;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.menu-left ion-content .settings-container .change-language-button.activated {
+  background-color: #5a6694;
+}
+.menu-left ion-content .settings-container .change-language-button.account-button {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.menu-left ion-content .settings-container .item-toggle {
+  pointer-events: auto;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  top: 0;
+  min-height: 40px;
+  flex: 1;
+  min-width: 40px;
+  margin-left: -40px;
+  padding-top: 0.7rem;
+  justify-content: end;
+  overflow: visible;
+}
+.menu-left ion-content .settings-container .item-toggle .toggle {
+  position: relative;
+  top: auto !important;
+  right: auto;
+}
+.menu-left ion-content .settings-container .item-toggle .track {
+  width: 1.9rem;
+  height: 1.2rem;
+  position: relative;
+  display: block;
+}
+.menu-left ion-content .settings-container .item-toggle .track .handle {
+  height: 0.9rem;
+  width: 0.9rem;
+  box-shadow: none;
+  left: 0.2rem;
+}
+.menu-left ion-content .settings-container .item-toggle.toggle-small .toggle {
+  top: 16px;
+}
+.menu-left ion-content .settings-container .item-toggle .toggle {
+  top: 7px;
+  padding: 0;
+  position: relative;
+}
+.menu-left ion-content .settings-container .item-toggle .toggle .track {
+  border-color: #ff6881;
+  background-color: #ff6881;
+  overflow: hidden;
+  border-radius: 10rem;
+  border: 0 !important;
+}
+.menu-left ion-content .settings-container .item-toggle .toggle .track .handle {
+  background: #ffffff;
+  top: 0.15rem;
+  position: relative;
+}
+.menu-left ion-content .settings-container .item-toggle .toggle .track .handle::before {
+  display: none;
+}
+.menu-left ion-content .settings-container .item-toggle .toggle input:checked + .track {
+  border-color: #4FA692;
+  background-color: #4FA692;
+}
+.menu-left ion-content .settings-container .item-toggle .toggle input:checked + .track .handle {
+  transform: translate3d(0.6rem, 0, 0);
+}
+.menu-left ion-content .settings-container .item-toggle.disabled-events .toggle {
+  pointer-events: none;
+}
+.menu-left ion-content .settings-container .item-toggle.disabled-events .toggle .track {
+  pointer-events: none;
+}
+.menu-left ion-content .settings-container .item-toggle.disabled .toggle {
+  pointer-events: none;
+}
+.menu-left ion-content .settings-container .item-toggle.disabled .toggle .track {
+  pointer-events: none;
+  border-color: #909090;
+  background-color: #909090;
+}
+.settings {
+  background-position: top right;
+  background-repeat: repeat-y;
+  color: #B3BCE4;
+}
+.settings #share {
+  flex: 1;
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.settings #share p {
+  font-family: 'RobotoMedium';
+  color: #CAD1EC;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.4em;
+  margin-bottom: 1.5rem;
+}
+.settings #share .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.settings #share .buttons a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.settings #share .buttons a span {
+  font-family: 'RobotoMedium';
+  font-size: 0.6rem;
+  color: #B3BCE4;
+}
+.settings #share .buttons a span.share-icon {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+.settings #share .buttons a span.share-icon.instagram {
+  background-image: url('../img/tg/social-instagram.svg');
+}
+.settings #share .buttons a span.share-icon.tiktok {
+  background-image: url('../img/tg/social-tiktok.svg');
+}
+.settings #share .buttons a span.share-icon.youtube {
+  background-image: url('../img/tg/social-youtube.svg');
+}
+.settings #share .buttons a span.share-icon.facebook {
+  background-image: url('../img/tg/social-facebook.svg');
+}
+.settings #share .buttons a.facebook span {
+  background-image: url(../img/icon-facebook.png);
+}
+.settings #share .buttons a.instagram span {
+  background-image: url(../img/icon-instagram.png);
+}
+.settings #share .buttons a.rate span {
+  background-image: url(../img/icon-rate.png);
+}
+.settings #share .buttons a.activated {
+  filter: brightness(90%);
+}

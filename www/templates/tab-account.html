@@ -1,0 +1,125 @@
+<ion-view class="lessons account">
+  <ion-content has-bouncing="false" overflow-scroll="true" id="account-content" ng-class="{'state-offline': !isOnline, 'disable-scroll': showAvatars}">
+
+  	<div class="account-info">
+  		<div class="user-info">
+  			<div class="profile-pic" ng-if="!user.picture">
+  				<div class="pic">
+  					<img ng-src="img/avatars/{{ currentAvatar }}"/>
+  				</div>
+				<span class="icon-pro-badge" ng-if="user.isUserPro"></span>
+  				<span class="change-avatar" ng-click="toggleAvatars()" ng-class="{'right-side': user.isUserPro}"></span>
+  			</div>
+  			<div class="profile-pic" ng-if="user.picture">
+				<div class="pic">
+					<img ng-src="{{ user.picture }}" referrerpolicy="no-referrer"/>
+					<span class="icon-pro-badge" ng-if="user.isUserPro"></span>
+				</div>
+			</div>
+  			<div class="flex-direction-column">
+	  			<div class="user-tag">
+	  				<span ng-if="!user.name">
+						Hi, Trader <span ng-show="user.fiId">#{{user.fiId}}</span>
+					</span>
+					<span ng-if="user.name">
+						Hi, {{ user.name }}
+					</span>
+					<div class="user-flag f32"  ng-if="user.country && user.country != 'EU'">
+						<div class="rounded"><span class="flag {{ user.country | lowercase }}"></span></div>
+					</div>
+	  			</div>
+
+	  			<div class="join-date">
+	  				<span ng-if="currentRank">Ranked {{'#' + currentRank}}. </span><span class="trading-since"><t>You are trading for {{daysTrading}} {{daysTrading == 1 ? 'day' : 'days'}}</t></span>
+	  			</div>
+  			</div>
+  		</div>
+
+  		<div class="user-stats">
+  			<div class="stat">
+  				<span class="icon icon-return"></span>
+  				<span class="type"><t>Total return</t></span>
+  				<span class="value">{{return}}%</span>
+  			</div>
+  			<div class="stat">
+  				<span class="icon icon-wallet"></span>
+  				<span class="type"><t>Portfolio value</t></span>
+  				<span class="value" id="account-portfolio-value">${{portfolioVal}}</span>
+  			</div>
+  			<div class="stat">
+  				<span class="icon icon-lightning"></span>
+  				<span class="type"><t>Trades won</t></span>
+  				<span class="value">{{ profitable() }}%</span>
+  			</div>
+  		</div>
+  	</div>
+
+  	<div class="trade-history" ng-if="user">
+  		<h2 ng-if="totalTrades"><t>Trades</t> (<span class="trade-count">{{totalTrades}}</span>)</h2>
+  		<h2 ng-if="!totalTrades"><t>Trades</t> (<span class="trade-count">0</span>)</h2>
+  		<div class="combined-day" ng-repeat="(key, value) in tradeHistory track by $index" ng-if="totalTrades">
+  			<div class="day">{{tradeHistoryDayPerf[key].db}} <span class="performance" ng-class="{'negative': tradeHistoryDayPerf[key].sum < 0}"><span ng-show="tradeHistoryDayPerf[key].sum > 0">+</span>${{tradeHistoryDayPerf[key].sum}}</span></div>
+  			<div class="trade" ng-repeat="trade in tradeHistory[key]">
+  				<div class="asset-{{trade.instrument}}">
+  					<span class="asset"></span>
+  				</div>
+  				<div class="info">
+  					<div class="asset-name"><span class="type" ng-class="{'sell': trade.type == 'sell'}">{{tradeTypes[trade.type]}}</span> {{symbolNames[trade.instrument]}}</div>
+  					<div class="amount">{{getSymbolPricePrefix(trade.instrument) + trade.amount + getSymbolPriceSuffix(trade.instrument)}} x {{trade.leverage}}</div>
+  					<div class="price">@ {{getSymbolPricePrefix(trade.instrument) + trade.openPrice + getSymbolPriceSuffix(trade.instrument)}} -> @ {{getSymbolPricePrefix(trade.instrument) + trade.closePrice + getSymbolPriceSuffix(trade.instrument)}}</div>
+  				</div>
+  				<div class="performance" ng-class="{'loss': trade.valuePct < 0}">
+  					<div class="flat-value" ng-if="trade.length == 0">
+  						<span ng-show="trade.valuePct > 0">+</span><span ng-show="trade.valuePct < 0">-</span>${{trade.valueAbs}}
+  					</div>
+					<div class="flat-value value-undo" ng-if="trade.length == 1">
+						<span id="undo-countdown"></span>
+						<t>Cancelled</t>
+					</div>
+  					<div class="percent-value" ng-if="trade.length == 0">
+  						<span ng-show="trade.valuePct > 0">+</span>{{trade.valuePct}}%
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+
+  		<div class="no-trades-yet" ng-if="!totalTrades">
+  			<p><t>Your journey starts with the<br>first closed trade!</t></p>
+  			<div class="image-point-to-trade"></div>
+  		</div>
+
+  		<div class="more-history" ng-class="{'loading': loadingHistory}"></div>
+  	</div>
+
+	<div class="loading-data" ng-if="!user">
+		<div class="loading"></div>
+	</div>
+
+  </ion-content>
+  
+	<div class="avatars" ng-class="{'visible': showAvatars}" drag-down close="toggleAvatars()">
+		<span class="close-avatars" ng-click="toggleAvatars()"></span>
+		<h2><t>Select an avatar to change</t></h2>
+		<div class="avatar-list">
+			<div class="avatar" ng-repeat="a in avatarList track by $index">
+				<img ng-src="img/avatars/{{a}}" ng-click="selectAvatar(a)"/>
+			</div>
+		</div>
+	</div>
+
+  <div class="account-login-toggler" ng-if="!user.oauthID && !loginActive && !showAvatars" ng-click="expandLogin(true)">
+  	<p>
+		&nbsp;
+	</p>
+  </div>
+
+	<div class="account-login" ng-class="{'open': loginActive}" ng-if="!user.oauthID && !showAvatars" click-outside="closeLogin()" outside-if="close-login" outside-if-not="account-login-toggler" drag-down close="closeLogin()">
+		<div class="close-login"></div>
+		<p><t><strong>Sign up to save your progress</strong>, appear<br /> on the leaderboard and win prizes.</t></p>
+		<ul class="login-buttons">
+			<div class="btn btn-signup btn-apple" ng-click="oauthLogin('apple')" ng-if="isIOS"><t>Sign Up with Apple</t></div>
+			<div class="btn btn-signup btn-google" ng-click="oauthLogin('google')"><t>Sign Up with Google</t></div>
+			<div class="btn btn-signup btn-facebook" ng-click="oauthLogin('facebook')" ng-if="::!appConfig.disableFacebookLogin"><t>Sign Up with Facebook</t></div>
+		</ul>
+	</div>
+</ion-view>

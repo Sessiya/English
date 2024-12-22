@@ -1,0 +1,85 @@
+<!-- <ion-view view-title="{{ lesson.title }}" class="lessons"> -->
+<!-- <ion-view view-title="{{ title }}" class="lessons"> -->
+<ion-view class="lessons">
+	<ion-content has-bouncing="false" overflow-scroll="true" id="mainScroll_{{ id }}">
+		<div class="lesson-header" ng-if="lesson.image">
+			<lesson-head-image src="{{ ::lesson.image }}"></lesson-head-image>
+		</div>
+		<div class="lesson-container" id="lessonContainer" ng-class="{'answered': isCompleted}">
+			<!-- data-tap-disabled="true" style="-webkit-user-select: auto" !-->
+			<div class="lesson-text">
+				<rendered-lesson id="{{ ::lesson.id }}"></rendered-lesson>
+			</div>
+
+			<div class="complete-lesson-btn lesson-text">
+				<table class="end-heading">
+					<tr>
+						<td>
+							<span class="sideline"></span>
+						</td>						
+						<td>
+							<t>Lesson End</t>
+						</td>
+						<td>
+							<span class="sideline"></span>
+						</td>
+					</tr>
+				</table>
+
+				<div ng-hide="alreadyCompleted">
+					<div ng-show="!isCompleted" class="complete-info">
+						<div ng-show="::lesson.questions">
+							{{ ::finishMsg }}
+						</div>
+
+						<div ng-click="completeLesson()">
+							<button class="button button-balanced">
+								<span ng-show="lesson.questions"><span ng-bind-html="::reward"></span></span>
+								<span ng-show="!lesson.questions"><t>Finish Lesson</t></span>
+							</button>
+						</div>
+					</div>
+
+					<div class="item-animate" ng-show="showQuestion">
+						<div ng-show="isCompleted" class="hooray">
+							<t>Congrats, you have completed the lesson and {{ ::getRewardComplete(lesson.id) }}!</t>
+						</div>
+					</div>
+				</div>
+				
+				<div ng-show="isCompleted" class="hooray">
+					<div ng-show="::isSocialTrading" style="color: #555;" ng-click="openLink('https://financeillustrated.com/top-traders', 'fi_traders_lesson_social')">
+						<br><t>Most copied trader list <a href ng-click="openLink('https://financeillustrated.com/top-traders', 'fi_traders_lesson_social')">here</a></t>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sub-lessons">
+			<table class="lessons-bottom-menu">
+				<tr>
+					<td>
+						<a href="#/tab/lessons" class="all-lessons">
+							<span class="bg"></span>
+							<t>All Lessons</t>
+						</a>
+					</td>
+
+					<td>
+						<a ng-show="!isLast" ng-click="open(nextLessonID)" class="next-lesson">
+							<t>Next Lesson</t>
+							<span class="bg"></span>
+						</a>
+
+						<a ng-show="isLast" href="#/tab/lessons" class="next-lesson">
+							<t>Back</t>
+							<span class="bg"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</ion-content>
+</ion-view>

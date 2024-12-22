@@ -1,0 +1,330 @@
+<ion-side-menus enable-menu-with-back-views="true" class="colorful-top">
+
+  <ion-side-menu-content drag-content="true" edge-drag-threshold="30">
+  	<div class="menu-backdrop"></div>
+
+    <ion-nav-bar class="">
+		<ion-nav-buttons side="left">
+
+		 <a class="fx-icon ion-navicon" menu-toggle="left"><span></span></a>
+		 <a class="fx-icon ion-back" ng-click="toggleMenu()" nav-direction="enter"><span></span></a>
+
+<!--
+		 <a class="fx-icon" ng-click="simulatePause()" style="border: 1px solid red; width: 2vmin; height: 2vmin;">PAUSE</a>
+		 <a class="fx-icon" ng-click="simulateResume()" style="border: 1px solid green; width: 2vmin; height: 2vmin;">RESUME</a>
+-->
+
+		</ion-nav-buttons>
+
+		<span class="topbar-bg"></span>
+
+		<div class="help-wrapper" ng-if="helpVisible">
+			<div class="help-top" ng-click="nextHelpStep()">
+			</div>
+		</div>
+
+		<div class="persistant-tab-title nav-bar-block colorful-top" ng-class="{'hide': sideMenuOpen}"><span class="portfolio-disclaimer" ng-class="{'delayed-hide': hidePortfDisclaimer}" ng-if="screen == 'pro'"><t>virtual money</t></span><span class="portfolio-value"></span></div>
+
+		<ion-nav-buttons side="right">
+			<!-- <span>{{ screen }}</span> -->
+			<!-- <a class="fx-icon ion-home" href="#/tab/dash" ng-click="trackHome($event)" nav-direction="enter"><span></span></a> -->
+			<a class="fx-icon ion-mission" href="#/tab/mission" nav-direction="enter"><span></span></a>
+			 <a class="fx-icon ion-account" ng-class="{'icon-pro-badge': isUserPro && screen != 'account'}" href="#/tab/account" nav-direction="enter"><span></span></a>
+		</ion-nav-buttons>
+
+		<div class="go-pro-button-wrapper" ng-if="!isUserPro && !helpVisible && screen != 'pro' && (screen == 'play' && isHowToSeen || screen != 'play')">
+			<div class="go-pro-button">
+				<a href="#/tab/pro" nav-direction="enter" class="nav-item pro" go-native>
+					<div class="nav-item-icon"></div>
+					<div class="nav-item-text"><t>GO PRO</t></div>
+				</a>
+			</div>
+		</div>
+
+    </ion-nav-bar>
+
+    <ion-nav-view class="game-container" animation="slide-left-right"></ion-nav-view>
+
+		<div id="navigation-wrapper" ng-class="{'hidden': helpStep == 6 && helpVisible}">
+			<a href="#/tab/play" nav-direction="enter" class="nav-item play" go-native>
+				<div class="nav-item-icon"></div>
+				<div class="nav-item-text"><t>Trade</t></div>
+			</a>
+			<a href="#/tab/lessons" nav-direction="enter" class="nav-item lessons" go-native>
+				<div class="nav-item-icon"></div>
+				<div class="nav-item-text"><t>Learn</t></div>
+			</a>
+			<a href="#/tab/analyze" nav-direction="enter" class="nav-item analyze" ng-class="{'cases-update': showCasesUpdated}" go-native>
+				<span class="cases-update-icon"><t>UPDATED</t></span>
+				<div class="nav-item-icon"></div>
+				<div class="nav-item-text"><t>Analyse</t></div>
+			</a>
+			<a href="#/tab/usertop" nav-direction="enter" class="nav-item usertop" go-native>
+				<div class="nav-item-icon"></div>
+				<div class="nav-item-text"><t>Top</t></div>
+			</a>
+			<a href="#/tab/top" nav-direction="enter" class="nav-item top" go-native>
+				<div class="nav-item-icon"></div>
+				<div class="nav-item-text"><t>Platforms</t></div>
+			</a>
+		</div>
+
+	  <!-- <div style="display: block; width: auto; height: auto; position: absolute; left: 0; top: 33%; z-index: 5000; background-color: rgba(155, 155, 155, 0.5); opacity: 1; color: #000;" ng-if=":pings:pingData">
+	  	<p ng-repeat="(key, ping) in :pings:pingData" style="margin: 0; line-height; 1.1;">{{key}}: {{ping}}</p>
+	  </div> -->
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" width="{{ ::0.77 * devWidth}}">
+    <ion-content class="settings no-scroll">
+    	<div class="settings-wrapper" ng-if=":lang:!reloadSideMenu">
+
+			<div class="settings-container">
+				<div class="setting" ng-click="toggleReviewFeedback('settings')"><span class="icon icon-thumb-up"></span><t>Rate Us</t></div>
+				<div class="setting" ng-click="toggleFeedback()"><span class="icon icon-feedback"></span><t>Send Feedback</t></div>
+				<div class="setting" ng-click="showHelp()" menu-toggle="left"><span class="icon icon-howto"></span><t>How To Use App</t></div>
+				<div class="setting" ng-click="resetAccountConfirmation()"><span class="icon icon-reset"></span><t>Reset Game Money</t></div>
+				<div class="setting" ng-click="showLanguageMenu()"><span class="icon icon-language"></span><t>Change Language</t></div>
+				<div class="setting" ng-click="openSettingsNow()">
+					<span class="icon icon-notification"></span><t>Notifications</t>
+					<ion-toggle ng-model="systemNotificationsEnabled" class="setting toggle-setting disabled-events" ng-show="sideMenuOpen == true"></ion-toggle>
+				</div>
+
+				<div class="setting" ng-click="deleteAccountConfirmation()"><span class="icon icon-delete"></span><t>Delete Account</t></div>
+
+				<div class="setting cancel-pro" ng-click="cancelPro()" ng-if="isUserPro && isUserProSubscription"><span class="icon icon-pro-badge"></span><t>Cancel</t></div>
+			</div>
+
+			<div id="share" menu-close>
+				<p><t>Follow us to get important insights from our analysts:</t></p>
+				<div class="buttons">
+					<!-- https://www.facebook.com/GoForexApp/ -->
+					<a ng-click="openLink('https://goforex.app/facebook/index.html', 'settings_facebook')">
+						<span class="share-icon facebook"></span>
+						<span>{{followerData.fb}}</span>
+					</a>
+					<!-- https://www.youtube.com/channel/UCENynJx0uiziHgfnZ4lvI8g -->
+					<a ng-click="openLink('https://financeillustrated.com/yt/index.html', 'settings_youtube')">
+						<span class="share-icon youtube"></span>
+						<span>{{followerData.yt}}</span>
+					</a>
+				</div>
+			</div>
+
+			<div class="privacy">
+				<p>Copyright Agfin Sia</p>
+				<p><a ng-click="openLink('https://goforex.app/privacy.txt', 'privacy')"><t>Privacy Policy</t></a><!-- & <a ng-click="openLink('https://goforex.app/terms.txt', 'terms')"><t>Terms And Conditions</t></a>--></p>
+			</div>
+
+			<div class="app-data">
+				<p>User ID: {{fiId}}</p>
+				<p>App version: {{::getAppVersion()}}</p>
+			</div>
+
+		</div>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+
+	<div id="lang-select" style="display: none;" ng-init="selected = {lang: getCurrentLang() || 'en'}">
+		<div id="lang-select-header"><t>Select<br>language</t></div>
+
+		<div id="lang-select-menu">
+			<div id="lang-select-body">
+
+				<ion-list class="languages">
+					<a ng-repeat="lang in ::getLanguages() track by $index" class="{{ ::lang.code }}" ng-class="{'selected': selected.lang == lang.code}" ng-click="selected.lang = lang.code" type="item-text-wrap">
+						<span class="row">
+							<span class="col col-20 check">
+								<div class="radioblocker"></div>
+								<input type="radio" name="lang" ng-model="selected.lang" value="{{ ::lang.code }}" />
+							</span>
+							<span class="col col-40 langname">{{ ::lang.name }}</span>
+							<span class="col col-40 flags"><span class="flag1"></span><span class="flag2"></span></span>
+						</span>
+					</a>
+				</ion-list>
+
+			</div>
+		</div>
+
+		<div class="ok" ng-click="setInitLang(selected.lang)">OK</div>
+	</div>
+
+	<div id="app-setup" style="display: none;">
+		<div class="question-part" ng-if="!settingUpScreen">
+			<div class="header">
+				<img src="img/icon-goforex-logo.png" />
+			</div>
+			<div class="loading-data" ng-if="!setupQuestions">
+				<div class="loading"></div>
+			</div>
+			<div class="setup-slider" ng-if="setupQuestions">
+				<div class="content" ng-repeat="q in setupQuestions track by $index" style="transform: translateX({{($index - currentSetupQuestion) * 100}}%)">
+					<div class="title">{{q.title}}</div>
+					<div class="text">{{q.text}}</div>
+					<div class="buttons">
+						<div class="answer-button" ng-click="setAnswer($index)" ng-repeat="answer in q.answers track by $index">{{answer}}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="setting-up-part" ng-if="settingUpScreen">
+			<img src="img/icon-goforex-logo.png" />
+			<t>Please wait, <br>setting up</t>
+		</div>
+	</div>
+
+	<div id="how-to" class="scrollable-content" style="display: none;">
+		<div class="scrollable-content">
+			<div class="header-image"></div>
+			<div class="how-to-content">
+				<p><t></t></p>
+				<p class="center"><t>Answer is in:</t></p>
+				<p class="extra-bold"><span class="red-underline" ng-class="{'small-font': getCurrentLang() != 'en'}"><t>100+ million trades from 3+ million traders</t></span></p>
+				<br>
+					<p><t>We analysed the data👆 and made an easy-to-use app that vastly improves your trading win rate.</t></p>
+					<p><u><t>Its built on 3 core principles that help you start a successful trading career:</t></u></p>
+					<ul>
+						<li><t>Most successful beginners trade no more than ≈ 5 assets at a time. We’ll help you win by focusing on <b>quality over quantity.</b></t></li>
+						<li><t>82% of novices saw success in real money markets after:<br>1) Graduating our <b>Trading School</b><br>2) Completing at least 50+ trades in the built-in simulator.</t></li>
+						<li><t>98% of succesful beginners trade the most popular assets <b>they know best.</b> Our 120+ asset offering covers 80% of global financial market liquidity.</t></li>
+					</ul>
+					<div class="analysts">
+						<p><t>Learning will be easy and fun. <span class="yellow-bg">Our experienced market <span class="analyst-pictures"></span> analysts will send you actionable trading insights 2X a day</span> so you can boost your trading skills and make smarter investing decisions.</t></p>
+					</div>
+					<div class="ok" ng-click="closeHowTo()"><t>Let's go</t></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="feedback" drag-down close="toggleFeedback(true)" style="display:none;" click-outside="toggleFeedback(true)" outside-if-not="settings-container">
+	<div class="close" ng-click="toggleFeedback(true)"></div>
+		<h1><t>Send Feedback</t></h1>
+
+		<div class="description"><t>Feel free to write us!</t><br></div>
+
+		<textarea id="feedback-textarea" minlength="4" maxlength="5000" required ng-model="commentText.t" placeholder="">
+		</textarea>
+
+		<div class="reaction">
+			<div class="r-item happy" ng-class="{'selected': commentText.happy == 1}" ng-click="commentText.happy = 1"></div>
+			<div class="r-item bug" ng-class="{'selected': commentText.happy == 2}" ng-click="commentText.happy = 2"></div>
+			<div class="r-item sad" ng-class="{'selected': commentText.happy == 0}" ng-click="commentText.happy = 0"></div>
+		</div>
+
+		<a class="button button-balanced comment" ng-click="sendComment()" ng-class="{'button-warning': showRequirement}">
+			<span ng-show="!isSendingComment && !showRequirement"><t>Send</t></span>
+			<span ng-show="isSendingComment"><t>Sending...</t></span>
+			<span ng-show="showRequirement && !isSendingComment"><t>Minimum 4 symbols...</t></span>
+		</a>
+	</div>
+
+	<div id="review-feedback" drag-down close="toggleReviewFeedback('close')">
+		<div class="close" ng-click="toggleReviewFeedback('close')"></div>
+		<h1><t>Enjoying Go Forex App?</t></h1>
+		<div class="button-container">
+			<div class="button-not-sure" ng-click="closeReviewOpenFeedback()"><span class="icon icon-sad"></span><span><t>NOT SURE</t></span></div>
+			<div class="button-enjoy-yes" ng-click="closeReviewOpenRate()"><span class="icon icon-happy"></span><span><t>YES</t></span></div>
+		</div>
+	</div>
+
+	<div id="review-happy-rate" class="review-happy-rate" drag-down close="toggleHappyRate('true')" click-outside="closeHappyRate('true')" outside-if-not="review-happy-rate">
+		<span class="icon-love-eyes"></span>
+		<h1><t>Awesome!</t></h1>
+		<p><t>We are excited to hear that! Help us to spread the word by rating our app</t></p>
+		<div class="stars"><span></span><span></span><span></span><span></span><span></span></div>
+		<div class="button-container">
+			<div class="button-rate-us" ng-click="rateHappy()"><span><t>RATE US!</t></span></div>
+		</div>
+	</div>
+
+	<div class="alert-bg" ng-class="{'open': alertOpen}" ng-show="screen == 'play' && alert && !alertsOpen">
+		<div class="alert-wrapper">
+			<div class="alert" ng-click="openAlert()" drag-down close="closeAlert(true, alertOpen)">
+				<span class="close-alert" ng-click="closeAlert(true, alertOpen); $event.stopPropagation();"></span>
+				<div class="date-title" ng-bind-html="alert.title"></div>
+				<div ng-show="!alertOpen">
+					<div class="text" ng-if="alert.smallText" ng-bind-html="alert.smallText"></div><span class="read-more" ng-if="alert.smallText">read more<span class="arrow-down-blue"></span></span>
+					<div class="text" ng-if="!alert.smallText" ng-bind-html="alert.text"></div>
+				</div>
+				<div ng-show="alertOpen">
+					<div class="text text-full" ng-show="alertOpen" ng-bind-html="toTrusted(alert.text)"></div>
+					<div class="alert-disclaimer"><t>Disclaimer: This is not financial advice. All information is for simulation and educational purposes only.</t></div>
+					<div class="button-container" ng-if="alert.voteEnabled && !alert.voted">
+						<div class="button button-left" ng-click="updateVote(0)"><span class="icon icon-arrow-down"></span>{{alert.voteText[0]}}</div>
+						<div class="button button-right" ng-click="updateVote(1)"><span class="icon icon-arrow-up"></span>{{alert.voteText[1]}}</div>
+					</div>
+					<div class="button-container" ng-if="alert.voteEnabled && alert.voted">
+						<span class="vote-results"><span class="left-answer-fill" style="width: {{alert.voteDataPercent[0] + '%'}}"></span></span>
+						<span class="answer left">{{alert.voteText[0]}} {{alert.voteDataPercent[0]}}%</span>
+						<span class="answer right">{{alert.voteText[1]}} {{alert.voteDataPercent[1]}}%</span>
+					</div>
+					<div ng-if="!alert.voted">
+					</div>
+					<div ng-if="alert.voted">
+						<p class="vote-count"><span class="icon icon-chart"></span>{{alert.totalVotes}} <t>voted</t><span class="icon icon-heart"></span><span class="icon icon-pray"></span></p>
+					</div>
+				</div>
+				<p class="save-info" ng-click="saveAlert(alert.id)" ng-if="alert.voted && alertOpen"><t>Save</t><span class="icon icon-arrow-right"></span><span class="icon icon-folder"></span></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="help-wrapper" ng-if="helpVisible">
+
+		<div class="help-bottom" ng-click="nextHelpStep()" ng-class="{'big': helpStep == 6}">
+		<div class="help-step-circles" ng-if="helpStep != 6">
+				<span class="step-circle" ng-repeat="step in helpStepArray track by $index" ng-class="{'blue-{{$index}}': $index < helpStep}"></span>
+		</div>
+		<div class="button-container" ng-if="helpStep == 6">
+			<div class="button button-final" ng-click="closeHelp()"><t>Let's go</t></div>
+		</div>
+		</div>
+
+		<div class="help-steps">
+		<div class="step step-1" ng-show="helpStep == 1">
+			<div class="tooltip-container">
+				<h2><t>Welcome!</t><span class="icon-wave"></span></h2>
+				<p><t>Here’s <strong>$10 000</strong> in game money.<br>Start trading, try to 2x or 3x it, and climb the leaderboard.<br>Top Traders are honored with weekly awards.</t></p>
+				<p class="tip">⚡<t>Fresh Start? Reset money in <b>Settings</b></t></p>
+			</div>
+		</div>
+
+		<div class="step step-2" ng-show="helpStep == 2">
+			<div class="tooltip-container">
+				<p><t>Your personal asset watchlist. <br>Select from world's most popular trading assets, use<span class="icon-change-asset"></span>to switch.</t></p>
+			</div>
+		</div>
+
+		<div class="step step-3" ng-show="helpStep == 3">
+			<div class="tooltip-container">
+				<p><t><b>Market price -</b> the amount at which the asset is trading right now.<br>It’s constantly changing due to fluctuating supply and demand for the asset.</t></p>
+			</div>
+		</div>
+
+		<div class="step step-4" ng-show="helpStep == 4">
+			<div class="tooltip-container">
+				<p><t>There’s a small difference between the Buy and Sell prices called the spread. It’s a fee charged by the broker and your goal is to make more than the spread with each trade.</t></p>
+				<p class="tip"><span class="icon-excl"></span><t>More explained in <b>Basics</b></t></p>
+			</div>
+		</div>
+
+		<div class="step step-5" ng-show="helpStep == 5">
+			<div class="tooltip-container">
+				<p><t>Switch between chart types. Line chart is better for long-term investing while candles show more detail for short-term traders.</t></p>
+				<p><t>Try trading strategies with indicators to increase your success rate.</t></p>
+				<p class="tip"><span class="icon-excl"></span><t>More explained in <b>Navigating The Chart</b></t></p>
+			</div>
+		</div>
+
+		<div class="step step-6" ng-show="helpStep == 6">
+			<div class="tooltip-container">
+				<p><t>Change time frame here! Investors prefer longer time frames to check the overall trend and historical data. Traders use shorter time frames to spot chart patterns and accurate trade entries.</t></p>
+				<p class="tip"><span class="icon-excl"></span><t>More explained in <b>Navigating The Chart</b></t></p>
+			</div>
+		</div>
+		</div>
+	</div>
+
+  <audio id="gettin-money-sound" style=""><source src="gettin-money-sound.mp3" type="audio/mpeg"></audio>

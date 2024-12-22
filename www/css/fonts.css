@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'BebasBold';
+    src: url('font/BebasNeue Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('font/BebasNeue Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FSAlbertPro';
+    src: url('font/FSAlbertPro.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FSAlbertProExtraBold';
+    src: url('font/FSAlbertProExtraBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FSAlbertProBold';
+    src: url('font/FSAlbertProBold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('font/Roboto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('font/Roboto-BoldCondensed.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoBlack';
+    src: url('font/Roboto-Black.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KohinoorBold';
+    src: url('font/KohinoorBangla-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KohinoorRegular';
+    src: url('font/KohinoorBangla-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KohinoorSemibold';
+    src: url('font/KohinoorBangla-Semibold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KohinoorMedium';
+    src: url('font/KohinoorBangla-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaCond';
+    src: url('font/HelveticaNeue-Condensed.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterThin';
+    src: url('font/Inter.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterLight';
+    src: url('font/Inter.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterRegular';
+    src: url('font/Inter.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterMedium';
+    src: url('font/Inter.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterSemiBold';
+    src: url('font/Inter.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterBold';
+    src: url('font/Inter.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterBoldItalic';
+    src: url('font/Inter.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'InterExtraBold';
+    src: url('font/Inter.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InterBlack';
+    src: url('font/Inter.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AdventProSemiBold';
+    src: url('font/AdventPro-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('font/PoppinsRegular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url('font/Poppins-SemiBold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('font/PoppinsBold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AdventProBold';
+    src: url('font/AdventPro-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LarsseitLight';
+    src: url('font/Larsseit-Light.otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LarsseitBold';
+    src: url('font/Larsseit-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LarsseitExtraBold';
+    src: url('font/Larsseit-ExtraBold.otf');
+    font-weight: 800;
+    font-style: normal;
+}

@@ -1,0 +1,210 @@
+<ion-view>
+  <ion-content has-bouncing="false" overflow-scroll="true" class="game-play" ng-class="{'completed-screen': finished && !showAnswers, 'no-scroll': !showAnswers }">
+
+		<div id="progress">
+			<div class="progress-bar-item" ng-repeat="(i, q) in questions track by $index" ng-class="{'current-question': i == id, 'completed-question': i < id, 'correct-answer': isRightAnswer[i], 'wrong-bonus': bonus[i] < 0}"></div>
+		</div>
+
+		<div ng-show="started && !showAnswers" class="question-outer-container">
+
+			<div class="question-container nopad" ng-style="quizHeight" ng-show="!finished">
+				<table class="question-container-table">
+					<tr class="question-and-chart">
+						<td>
+							<img id="quiz-large-image" ng-src="img/{{ questions[id].image }}" ng-if="questions[id].image" ng-click="hideLarge()" />
+
+							<div ng-if="questions[id].image && !questions[id].chart" style="background-image: url(img/{{ questions[id].image }}); height: {{ imgHeight }};" class="question-image" ng-click="showLarge()">
+								<div class="question-image-inner"></div>
+							</div>
+
+							<div ng-if="questions[id].chart" class="question-chart" style="height: {{ imgHeight }} !important; max-height: {{ imgHeight }} !important;">
+								<quiz-chart data="questions[id].chart" question="true"></quiz-chart>
+							</div>
+
+							<div class="question-index"><t>Question</t> {{ id + 1 }}/{{ questions.length }}</div>
+
+							<div class="question-text-sizing"></div>
+							<div class="question" style="font-size: {{ fontSize }}">{{ questions[id].q }}</div>
+						</td>
+					</tr>
+
+					<tr class="answer-container">
+						<td class="answers answers-{{ questions[id].a.length }}">
+							<div class="answer-countdown-container">
+								<count-down-timer></count-down-timer>
+								<ion-list class="lessons answers">
+									<div ng-repeat="(i, answer) in questions[id].a" ng-click="setAnswer(i, questions[id].r == i, $event)" type="item-text-wrap" class="item item-thumbnail-left">
+									<table><tr><td>{{ questionLetter(i) }}</td>
+									<td><span>{{ answer }}</span></td></tr></table>
+									<div class="answer-bonus"><span class="bonus-correct">+ {{ correctBonus }}</span><span class="bonus-wrong" ng-show="reducedBonus">{{ reducedBonus }}</span></div>
+									</div>
+								</ion-list>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+
+			<table class="quiz-complete-wrapper" ng-if="finished && !showAnswers">
+				<tr><td style="height: 90%;">
+
+				<div id="quiz-completed">
+					<div class="row">
+						<div class="col col-50">
+							<div class="quiz-result-image">
+								<delayed-svg ng-if="level == 1" src="img/quiz-level-1.svg" start="true"></delayed-svg>
+								<delayed-svg ng-if="level == 2" src="img/quiz-level-2.svg" start="true"></delayed-svg>
+								<delayed-svg ng-if="level == 3" src="img/quiz-level-3.svg" start="true"></delayed-svg>
+								<delayed-svg ng-if="level == 4" src="img/quiz-level-4.svg" start="true"></delayed-svg>
+							</div>
+						</div>
+
+						<div class="col col-50">
+							<div ng-show="level == 1">
+								<h1><t>Looks like you're just starting!</t></h1>
+							</div>
+
+							<div ng-show="level == 2">
+								<h1><t>Hey, fast learner!</t></h1>
+							</div>
+
+							<div ng-show="level == 3">
+								<h1><t>Congrats, Wolf of the Forex!</t></h1>
+							</div>
+
+							<div ng-show="level == 4">
+								<h1><t>With all due respect, Forex King!</t></h1>
+							</div>
+
+							<div id="lesson-earnings">
+								<div class="quiz-score">{{ score }}/{{ questions.length }}</div>
+
+								<div class="earnings-amount">
+									<span ng-if="bonusTotal >= 0">${{ bonusTotal }}</span>
+									<span ng-if="bonusTotal < 0" class="quiz-loss-head">-${{ Math.abs(bonusTotal) }}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="result-feedback">
+					<div ng-show="level == 1">
+						<t>Every professional was once a “baby trader”. Keep on learning to grow and achieve better results!</t>
+					</div>
+
+					<div ng-show="level == 2">
+						<t>Very good for a beginner, but YOU CAN do better. Play again and level up even higher!</t>
+					</div>
+
+					<div ng-show="level == 3">
+						<t>Push your limits and never back down. We’re sure you will soon answer everything correctly for the perfect score!</t>
+					</div>
+
+					<div ng-show="level == 4">
+						<t>The markets are all yours. With this level of knowledge Bulls and Bears are in your control. Keep on trading!</t>
+					</div>
+				</div>
+
+			</td></tr>
+
+			<tr><td style="vertical-align: bottom;">
+
+				<div id="play-again">
+					<div id="correct-answers">
+						<button class="button button-balanced" ng-click="doShowAnswers()"><t>Inspect Answers</t> +$20</button>
+					</div>
+
+					<div id="connect-to-earn" ng-show="isOffline">
+						<t>Connect to internet to receive bonus for the correct answers</t>
+					</div>
+
+					<div class="play-again-btn">
+						<a ng-click="playAgain();"><t>Play Again</t></a>
+					</div>
+				</div>
+
+				<div class="sub-lessons">
+					<table class="lessons-bottom-menu">
+						<tr>
+							<td>
+								<a href="#/tab/game" class="all-lessons">
+									<span class="bg"></span>
+									<t>Back</t>
+								</a>
+							</td>
+
+							<td>
+								<a href="#/tab/top" class="next-lesson">
+									<t>Top Brokers</t>
+									<span class="bg"></span>
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+
+			</td></tr>
+		</table>
+
+		</div>
+
+		<div class="show-answers" ng-if="finished && showAnswers">
+			<div class="q-answer" ng-repeat="(qi, question) in ::questions track by $index">
+				<div class="q-title">
+					{{ ::qi + 1 }}. {{ ::question.q }}
+				</div>
+
+				<ul class="answers">
+					<li ng-repeat="(i, answer) in ::question.a track by $index" ng-class="{'picked': answers[qi] == i, 'correct': question.r == i, 'wrong': question.r != i}">
+						<div class="row">
+							<div class="col ans-text">
+								<div class="answer-inner">
+									<span class="letter">{{ ::questionLetter(i) }}&nbsp;&nbsp;&nbsp;</span>
+									{{ ::answer }}
+								</div>
+							</div>
+							<div class="col-20" ng-show="answers[qi] == i" style="text-align: right;">
+								<span ng-show="question.r == i" class="ans-correct">+${{ ::Math.abs(bonus[qi] || 0) }}</span>
+								<span ng-show="question.r != i" class="ans-incorrect">-${{ ::Math.abs(bonus[qi] || 0) }}</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<div ng-if="question.eimg" class="q-image">
+					<img ng-src="img/quiz/{{ ::question.eimg }}" />
+				</div>
+
+				<div ng-if="question.chart" class="question-chart">
+					<quiz-chart data="question.chart"></quiz-chart>
+				</div>
+
+				<div ng-show="question.e" class="q-explanation" ng-bind-html="question.e"></div>
+			</div>
+		</div>
+
+		<div class="sub-lessons" ng-if="finished && showAnswers">
+			<table class="lessons-bottom-menu">
+				<tr>
+					<td>
+						<a href="#/tab/game" class="all-lessons">
+							<span class="bg"></span>
+							<t>Back</t>
+						</a>
+					</td>
+
+					<td>
+						<a href="#/tab/top" class="next-lesson">
+							<t>Top Brokers</t>
+							<span class="bg"></span>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+  </ion-content>
+
+</ion-view>
